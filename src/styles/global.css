@@ -2125,3 +2125,5 @@ th {
 .lesson-fig .credit { display: block; font-size: .78rem; color: #6b6355; margin-top: .2rem; }
 .lesson-fig .credit a { color: #B08D3E; text-decoration: none; }
 .lesson-fig .credit a:hover { text-decoration: underline; }
+.lesson-fig.figure-drawing { max-width: 640px; }
+.lesson-fig.figure-drawing img { border: 0; padding: 0; background: transparent; max-height: none; }
