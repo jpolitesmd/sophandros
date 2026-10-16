@@ -411,7 +411,7 @@ a:hover {
 }
 
 .hero-promise {
-  margin: 1.35rem auto 0;
+  margin: 1.25rem auto 0;
   max-width: 18em;
   font-family: var(--display);
   font-size: clamp(1.7rem, 3.2vw, 2.35rem);
