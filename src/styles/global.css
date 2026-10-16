@@ -1,10 +1,10 @@
 :root {
-  --eggshell: #f0ead6;
+  --eggshell: #faf7f0;
   --navy: #14213d;
   --gold: #b08d3e;
-  --cream: var(--eggshell);
-  --cream-deep: #e4dcc4;
-  --paper: #f0ead6;
+  --cream: #faf7f0;
+  --cream-deep: #f3eee3;
+  --paper: #f3eee3;
   --ink: #141414;
   --terracotta: var(--gold);
   --terracotta-ink: var(--gold);
@@ -222,10 +222,17 @@ a:hover {
 }
 
 .brand-mark {
+  width: auto;
+  height: 52px;
+  max-width: none;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.brand-disk {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  flex-shrink: 0;
 }
 
 .brand-name {
@@ -557,7 +564,7 @@ a:hover {
 .step {
   padding: 1.15rem 1.1rem 1.25rem;
   border-top: 2px solid var(--olive);
-  background: #f4f1e6;
+  background: var(--paper);
 }
 
 .step span {
@@ -729,7 +736,7 @@ a:hover {
 }
 
 .toc a:hover {
-  background: #f6ebe4;
+  background: var(--paper);
 }
 
 .toc-code {
@@ -1000,7 +1007,7 @@ th {
 
 .todo {
   border: 1px solid var(--olive);
-  background: #f4f3ea;
+  background: var(--paper);
   padding: 0.9rem 1rem;
   max-width: 42rem;
 }
@@ -1367,7 +1374,7 @@ th {
 .foundation-course.is-current .foundation-n,
 .foundation-course.is-current .foundation-age,
 .foundation-course.is-current .foundation-start {
-  color: #f1e6d4;
+  color: var(--eggshell);
 }
 
 .foundation-name {
@@ -1587,7 +1594,7 @@ th {
 
 .word-day {
   padding: 1.1rem 1.2rem 1.25rem;
-  background: #f4f1e6;
+  background: var(--paper);
   border-top: 3px solid var(--olive-deep);
 }
 
