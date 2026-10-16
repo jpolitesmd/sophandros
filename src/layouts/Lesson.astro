@@ -1,0 +1,83 @@
+---
+import Base from "./Base.astro";
+import Quiz, { type QuizItem } from "../components/Quiz.astro";
+
+interface Props {
+  number: number;
+  title: string;
+  description: string;
+  kicker: string;
+  objectives: string[];
+  takeaways: string[];
+  summary: string;
+  quiz: QuizItem[];
+  optional?: string;
+  prev?: { href: string; label: string };
+  next?: { href: string; label: string };
+}
+
+const {
+  number,
+  title,
+  description,
+  kicker,
+  objectives,
+  takeaways,
+  summary,
+  quiz,
+  optional,
+  prev = { href: "/curriculum/the-heroic-code", label: "← The module" },
+  next,
+} = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <div class="wrap-narrow">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/curriculum">Curriculum</a></li>
+        <li><a href="/curriculum/the-heroic-code">The Heroic Code</a></li>
+        <li aria-current="page">Lesson {number}</li>
+      </ol>
+    </nav>
+
+    <header class="page-head" style="padding-top:1.25rem">
+      <p class="kicker">{kicker}</p>
+      <h1>{title}</h1>
+    </header>
+
+    <section class="learn" aria-labelledby="will-learn">
+      <h2 id="will-learn">In this lesson you will learn</h2>
+      <ul>
+        {objectives.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <div class="lesson-body">
+      <slot />
+    </div>
+
+    <Quiz items={quiz} />
+
+    {
+      optional && (
+        <p class="optional-note">
+          <strong>Optional.</strong> {optional}
+        </p>
+      )
+    }
+
+    <section class="takeaways" aria-labelledby="takeaways">
+      <h2 id="takeaways">Key takeaways</h2>
+      <ul>
+        {takeaways.map((item) => <li>{item}</li>)}
+      </ul>
+      <p class="summary">{summary}</p>
+    </section>
+
+    <nav class="pager" aria-label="Lessons">
+      <a href={prev.href}>{prev.label}</a>
+      {next && <a href={next.href}>{next.label}</a>}
+    </nav>
+  </div>
+</Base>

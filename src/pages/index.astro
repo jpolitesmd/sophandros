@@ -1,0 +1,271 @@
+---
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import Excerpt from "../components/Excerpt.astro";
+import Foundation from "../components/Foundation.astro";
+import WaitlistForm from "../components/WaitlistForm.astro";
+import logo from "../assets/brand/logo-lockup.jpg";
+import { homeExcerpt } from "../data/excerpts";
+import { site } from "../data/site";
+---
+
+<Base title={site.name} description={site.description}>
+  <section class="hero wrap">
+    <p class="kicker">Self-paced · Greece, Rome, the Renaissance</p>
+    <h1 class="hero-logo">
+      <Image
+        src={logo}
+        alt="Sophandros"
+        width={655}
+        height={590}
+        class="hero-logo-img"
+        loading="eager"
+      />
+    </h1>
+    <p class="tagline">{site.tagline}</p>
+    <p class="hero-promise">A modern revival of the classical education.</p>
+    <div class="actions">
+      <a class="button" href="/lessons/the-birth-of-civilization">Start with the prologue</a>
+      <a class="button ghost" href="/curriculum">Curriculum</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-head">
+        <span class="kicker">What it is</span>
+        <h2>The progression</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A classical education was a way of watching human ideals change, and of
+          watching the inventions and paradigm shifts that followed them. You see
+          why a form prospered and why it failed, and you come to understand why
+          we do what we do today. The American Founders used these books that way
+          when they argued about a republic: what to take from the old
+          constitutions, and what to change. Sophandros revives that education for a
+          working life now.
+        </p>
+        <p>
+          The reading keeps the old order. Greece builds one figure, layer by
+          layer, as that society grows more complex. You start with honor: the
+          warrior, in the Bronze Age world of the <em>Iliad</em>. Then a mind and
+          a home. Then a citizen who also fights. Then a conscience and a law.
+          Then a mind that examines itself. Then practical wisdom, with Aristotle
+          and the Parthenon.
+        </p>
+        <p>
+          Rome carries that person into duty and law. The Renaissance carries him
+          into the courtier, and into the professional you already are. Each
+          lesson is on this page, and the primary text is in the reader beside it.
+          The shorter path through the founding is the
+          <a href="/founders">Founders Edition</a>.
+        </p>
+      </div>
+      <Foundation />
+      <Excerpt excerpt={homeExcerpt} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-head">
+        <span class="kicker">Who it is for</span>
+        <h2>People whose weeks are already full</h2>
+      </div>
+      <div class="prose">
+        <p>
+          It is for a professional who wants the sequence behind the work itself:
+          why a practice, a law, or a building looks the way it does. The course
+          was shaped around a physician in training, someone who can give the work
+          a few hours, set it down, and pick it up again. Several of the Greece
+          questions ask what a text has to say to medicine, and to any craft that
+          judges particular cases.
+        </p>
+        <p>
+          You want Homer, Plato, Virgil, and Palladio, and enough Latin and Greek to
+          meet a sentence in the original. The stated aim is modest. By the end you
+          should be able to read adapted Caesar and Cicero, and Virgil with notes.
+          Full fluency is not the promise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">The arc</span>
+        <h2>Three phases</h2>
+      </div>
+      <p class="prose">
+        Four parts. Greece is the ideals, from a warrior’s honor to practical
+        wisdom, and the prologue and the first chapter can be read now. Rome is
+        duty and law. The Renaissance is what a later age made of that inheritance.
+        The Founding is the culmination. The later lessons are still to be written.
+      </p>
+      <div class="phases">
+        <article class="phase">
+          <span class="phase-num">I</span>
+          <h3>Greece</h3>
+          <p class="meta-line">About twelve months · Drafted</p>
+          <p>
+            Six layers, from the warrior’s honor to practical wisdom. Homer through
+            Aristotle and the Parthenon.
+          </p>
+          <a class="more" href="/curriculum#greece">Open the curriculum</a>
+        </article>
+        <article class="phase">
+          <span class="phase-num">II</span>
+          <h3>Rome</h3>
+          <p class="meta-line">About twelve months · Coming soon</p>
+          <p>
+            The same person, carried into duty and law: Livy, Cicero, the
+            <em>Aeneid</em>, Seneca, Marcus Aurelius, Vitruvius.
+          </p>
+          <a class="more" href="/curriculum#rome">Open the curriculum</a>
+        </article>
+        <article class="phase">
+          <span class="phase-num">III</span>
+          <h3>Renaissance</h3>
+          <p class="meta-line">About twelve months · Coming soon</p>
+          <p>
+            Then the courtier, and the modern professional: Petrarch to Palladio,
+            Ascham, Milton, and Montaigne.
+          </p>
+          <a class="more" href="/curriculum#renaissance">Open the curriculum</a>
+        </article>
+        <article class="phase">
+          <span class="phase-num">IV</span>
+          <h3>The Founding</h3>
+          <p class="meta-line">Coming soon</p>
+          <p>
+            The culmination: the nation, looking to the world. Greece, Rome, and
+            the Renaissance carried into a new republic.
+          </p>
+          <a class="more" href="/curriculum#founding">Open the curriculum</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">How it works</span>
+        <h2>Four steps, on this site</h2>
+      </div>
+      <p class="prose">
+        A lesson takes about half an hour. You are not sent out to buy the book
+        first. The text is already on the page.
+      </p>
+      <ol class="how-steps">
+        <li>
+          <span>1</span>
+          <h3>Read the lesson here</h3>
+          <p>A short essay tells you the context, the ideas, and why they matter.</p>
+        </li>
+        <li>
+          <span>2</span>
+          <h3>Study the primary text in the reader</h3>
+          <p>The public-domain translation is on the same page, with a note on the hard words.</p>
+        </li>
+        <li>
+          <span>3</span>
+          <h3>Practice the Latin or the Greek</h3>
+          <p>One word, and a line to say aloud. A grammar book is optional.</p>
+        </li>
+        <li>
+          <span>4</span>
+          <h3>Check yourself</h3>
+          <p>A few questions with the answers revealed, then a short reflection.</p>
+        </li>
+      </ol>
+      <p class="how-cta">
+        <a class="button" href="/lessons/the-birth-of-civilization">Start with the prologue</a>
+      </p>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-head">
+        <span class="kicker">The languages</span>
+        <h2>One word, on the lesson</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Each lesson gives you a Greek or Latin word from the reading, and a line
+          to say aloud. That is the practice. You can finish Lesson 1 with nothing
+          but this site.
+        </p>
+        <p>
+          A grammar book is a way to go further, not a requirement. If you want one
+          later: Wheelock’s <em>Latin</em> is grammar first, and Ørberg’s
+          <em>Lingua Latina per se Illustrata</em> is reading first. Greek, when you
+          come to it, can use <em>Athenaze</em>. None of those books is how you start.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-head">
+        <span class="kicker">Optional</span>
+        <h2>A tutor, a cohort, a journey</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The lesson stands on its own. A grammar book, a double translation in the
+          manner of Ascham’s <em>Scholemaster</em> (1570), and a tutor’s review of
+          that translation are later extras. So are the three things below.
+        </p>
+        <blockquote class="quote">
+          Not to learn Principles but to enlarge Experience.
+          <footer>John Milton, <cite>Of Education</cite> (1644), on seeing other countries</footer>
+        </blockquote>
+        <p>
+          Milton wants a journey to enlarge experience, after the reading. If you
+          take one, it closes a phase. It is not how a lesson begins.
+        </p>
+        <p>
+          <strong>A tutor.</strong> Thirty to forty-five minutes a month, or every
+          fortnight, with a classicist who marks translations and can write a
+          quarterly note.
+        </p>
+        <p>
+          <strong>A cohort.</strong> A live monthly seminar of eight to twelve, on
+          the text of the module.
+        </p>
+        <p>
+          <strong>Travel, as a capstone.</strong> A short Athens leg after Greece.
+          Rome and Naples after Rome. Then, if you wish, a Giro of fourteen to
+          twenty-one days through Florence, Rome, the Veneto, and Venice, with an
+          established operator. None of it is required to finish the course.
+        </p>
+        <p>
+          There is also a shorter outline, the
+          <a href="/founders">Founders Edition</a>: twelve weeks on the Greek and
+          Roman reading behind the American republic. And an elective still unwritten,
+          Physic: Hippocrates, Galen, and Vesalius.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="waitlist">
+    <div class="wrap-narrow">
+      <div class="section-head">
+        <span class="kicker">The list</span>
+        <h2>Ask to be told when it opens</h2>
+      </div>
+      <p class="prose">
+        Enrollment is not open. Pricing has not been set. Leave an address if you
+        want word when the first places are offered.
+      </p>
+      <WaitlistForm id="home-waitlist" compact />
+    </div>
+  </section>
+</Base>

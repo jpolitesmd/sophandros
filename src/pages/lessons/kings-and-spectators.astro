@@ -1,0 +1,285 @@
+---
+/**
+ * Lesson 2 stays inside layer 1, honor. It does not open a new layer.
+ * FLAG: the per-week “today we add” outline was not attached yet. The line
+ * below (“the public”) names what this reading already teaches — the assembly
+ * and the wall — and should be revised when that outline arrives.
+ */
+import Base from "../../layouts/Base.astro";
+import LessonChrome from "../../components/LessonChrome.astro";
+import Reader from "../../components/Reader.astro";
+import Reveal from "../../components/Reveal.astro";
+import References from "../../components/References.astro";
+import book2 from "../../data/iliad-book2.json";
+import book3 from "../../data/iliad-book3.json";
+
+const glossary = [
+  { word: "Jove", note: "Butler’s name for Zeus." },
+  { word: "Ulysses", note: "Butler’s name for Odysseus." },
+  { word: "Alexandrus", note: "Paris, the man who took Helen." },
+  { word: "Venus", note: "Butler’s name for Aphrodite, who favours Paris." },
+  { word: "Achæans", note: "The Greeks at Troy." },
+  { word: "Minerva", note: "Butler’s name for Athena." },
+];
+---
+
+<Base
+  title="Honor in a society of chieftains"
+  description="Iliad Books 2 and 3, on this page: a lying dream, Thersites in the assembly, Helen on the wall, and a duel Aphrodite will not let end the war."
+>
+  <LessonChrome slug="kings-and-spectators">
+    <header class="page-head">
+      <h1>Honor in a society of chieftains</h1>
+      <p class="lede">
+        Today we add rank and reputation to the foundation. Homer, <em>Iliad</em>,
+        Books 2 and 3, are in the reader.
+      </p>
+    </header>
+
+    <section class="learn" aria-labelledby="will-learn">
+      <h2 id="will-learn">What you’ll learn</h2>
+      <ul>
+        <li>Zeus begins to keep his promise by sending Agamemnon a dream that says Troy will fall that day.</li>
+        <li>The army tries to go home. Odysseus turns it back, and he silences Thersites, who had repeated Achilles’ charge.</li>
+        <li>From the wall, Priam blames the gods for the war, and Helen wishes she had died rather than come.</li>
+        <li>Paris and Menelaus fight for Helen. Aphrodite carries Paris away, so the settlement fails.</li>
+      </ul>
+    </section>
+
+    <div class="lesson-body">
+      <p class="scene-today">Today we add rank and reputation to the foundation.</p>
+      <h3>An army of chieftains</h3>
+      <p>
+        The history lesson set two worlds side by side: the palace kingdoms the
+        poems remember, and the later audience of the poet. The date when the
+        epics were written down is debated. What you can see in the text, without
+        that date, is the kind of army this is. It is not one king’s household
+        troops alone. It is many kings, each with his followers, brought into one
+        assembly under Agamemnon. Honor here is not a private feeling. It is a
+        place in that order, and a name the assembly can hear.
+      </p>
+      <h3>The nod has to start somewhere</h3>
+      <p>
+        Lesson 1 laid honor as the first stone: a prize between two men, and no one
+        above them who could settle it. Today we stay on that stone. We watch the
+        same honor said out loud, in an army, and looked at from a wall. Let’s begin
+        from the promise in Lesson 1. Zeus told Thetis the Trojans would
+        have the victory until Achilles was honoured. Book 2 is the first step. The
+        army sleeps. Zeus does not. He sends a dream in the shape of Nestor, the
+        old man Agamemnon trusts. The dream says the gods are no longer divided,
+        and that Agamemnon shall take Troy if he arms at once. Agamemnon believes
+        it. The poem tells you he is wrong. Zeus still has many hard fights in
+        store. The dream is a way to start a battle without Achilles, so the Greeks
+        will feel that he is gone.
+      </p>
+      <p>
+        Butler’s names again: Jove is Zeus, Juno is Hera, Ulysses is Odysseus,
+        Minerva is Athena, Venus is Aphrodite. Alexandrus is Paris.
+      </p>
+
+      <h3>A test the army takes seriously</h3>
+      <p>
+        Agamemnon tells the elders the dream, and then he tests the army with the
+        opposite speech: Zeus has played him false, and they should sail home to
+        Argos without glory. The elders are supposed to hold the men if they bolt.
+        They do bolt. The host runs for the ships. The poem says they would have
+        gone home after a fashion that was not fated, had Hera not sent Athena to Odysseus. He has not
+        put a hand to his own ship. He takes the sceptre and talks the army back
+        into the assembly, kings in one voice and common men in another.
+      </p>
+      <p>
+        Learn the shape of it. The dream was false. The test was a pretence. The
+        soldiers’ answer was real. They are tired of the war. It takes a goddess
+        and Odysseus to put them back.
+      </p>
+
+      <h3>The same charge, from a man with no rank</h3>
+      <p>
+        One man keeps talking. Thersites is a common soldier. Homer describes him
+        as ugly, bandy-legged, and a railer at anyone in authority, before he lets
+        you hear the speech. The speech is Achilles’ charge from Book 1, said in
+        public: the king’s tents are full, the army gives him the pick of every
+        town, Achilles was robbed of his prize, and the men should sail home and
+        leave Agamemnon to sit on his rewards. “Meeds,” in Butler, means rewards.
+      </p>
+      <p>
+        Odysseus forbids him to chide princes when he has no following, then beats
+        him with the golden sceptre until a weal rises on his back. Thersites sits
+        down in tears. The people are sorry for him, and they laugh, and they say
+        Odysseus never did them a better turn than stopping this man’s mouth. The
+        host marches. After that comes the Catalogue of Ships, a list of the
+        contingents. You may skim it. What it shows is the kind of army this is:
+        many kings, named one by one, under Agamemnon.
+      </p>
+      <p>
+        Hold both halves. The poem lets a common soldier say that the king’s greed
+        is the army’s misery. It then refuses to let that soldier lead. The laugh
+        puts the assembly back under the princes.
+      </p>
+
+      <h3>Helen looks at the war</h3>
+      <p>
+        Book 3 opens on Paris. He sees Menelaus and shrinks back. Hector shames him.
+        Paris offers a duel: the winner takes Helen and the goods that came with
+        her, and the war ends. Menelaus accepts. Both armies are glad. They think
+        they will have rest.
+      </p>
+      <p>
+        Iris finds Helen weaving a purple web of the battles fought for her sake,
+        and tells her to come and see. Helen goes to the wall in tears. The old men
+        at the gate say it is small wonder the armies have endured so much for a
+        woman so lovely, and that, fair though she is, the Greeks should take her
+        and go, or she will breed sorrow for them and their children. Priam will
+        not have that said to her. He seats her beside him and says he lays no
+        blame on her. The gods brought the war. She wishes she had chosen death
+        rather than leave her home, her daughter, and the companions of her
+        girlhood. Then she names Agamemnon. She looks for her brothers, Castor and
+        Pollux, and does not see them. She does not know they are already buried in
+        their own land.
+      </p>
+      <p>
+        This is the war from inside Troy, before the duel. The cause, as Priam
+        states it, is the gods. The cost, as Helen states it, is the life she left.
+      </p>
+
+      <h3>A goddess takes the loser away</h3>
+      <p>
+        They swear. If Paris kills Menelaus, he keeps Helen and the Greeks sail. If
+        Menelaus kills Paris, the Trojans give Helen back and pay a fine. Zeus does
+        not grant the prayer. Priam will not watch his son fight, and goes into the
+        city.
+      </p>
+      <p>
+        Menelaus prays to punish a man who wronged his host. His spear tears Paris’s
+        tunic; Paris swerves and lives. The sword breaks on the helmet. Menelaus
+        drags him by the horsehair plume toward the Greek lines. Aphrodite breaks
+        the chin-strap. The helmet comes away empty. She hides Paris in a cloud and
+        puts him in his own bedroom, then fetches Helen from the wall. Helen knows
+        the goddess, answers in anger, is afraid, and goes. She rebukes Paris.
+        He says Athena helped Menelaus this time, and asks her to bed.
+      </p>
+      <p>
+        On the field, Menelaus searches for a man who is no longer there. Agamemnon
+        declares the victory Menelaus’s and demands Helen and the fine. The Greeks
+        shout approval. A human settlement was in reach. A god removed the man who
+        had to be handed over. That is why the war does not stop in Book 3.
+      </p>
+    </div>
+
+    <Reader
+      heading="The text: Iliad, Book 2"
+      note="Samuel Butler, 1898. The catalogue of ships is long; you may skim the names. Dotted words have a note."
+      sourceHref={book2.source}
+      paragraphs={book2.paragraphs}
+      glossary={glossary}
+    />
+
+    <Reader
+      heading="The text: Iliad, Book 3"
+      note="Samuel Butler, 1898, in full. Alexandrus is Paris. Venus is Aphrodite."
+      sourceHref={book3.source}
+      paragraphs={book3.paragraphs}
+      glossary={glossary}
+    />
+
+    <section class="word-day" aria-labelledby="word-day">
+      <h2 id="word-day">Word of the day</h2>
+      <p class="word-greek" lang="grc">ξένος</p>
+      <p>
+        <em>xenos</em>, the guest, and also the host. Menelaus asks Zeus to punish
+        Paris so that later men will shrink from doing ill deeds in the house of a
+        host. That is the wrong he thinks the duel is for. Say <em>xenos</em> once.
+        You do not need a textbook to keep it.
+      </p>
+    </section>
+
+    <Reveal
+      items={[
+        {
+          prompt: "What does the dream tell Agamemnon, and is it true?",
+          answer:
+            "It says the gods are no longer divided and that he shall take Troy that day. It is a lying dream. Zeus sends it so the Greeks will fight without Achilles.",
+        },
+        {
+          prompt: "What does Thersites tell the assembly, and what happens to him?",
+          answer:
+            "He says the king’s tents are full, Achilles was robbed, and the army should sail home. Odysseus beats him with the sceptre. The men pity him, laugh, and approve.",
+        },
+        {
+          prompt: "What does Priam say to Helen on the wall?",
+          answer:
+            "He lays no blame on her. The gods brought the war. She wishes she had died rather than come, and then she names Agamemnon.",
+        },
+        {
+          prompt: "Why does the duel fail to end the war?",
+          answer:
+            "Menelaus has Paris by the helmet. Aphrodite breaks the strap, hides Paris in a cloud, and takes him to his bedroom. The man the oath required is gone.",
+        },
+      ]}
+    />
+
+    <section class="reflection" aria-labelledby="reflect-title">
+      <h2 id="reflect-title">A short reflection</h2>
+      <p>
+        One optional sentence, if you want it: Thersites says in public what
+        Achilles said in the quarrel, and the assembly laughs him down. Where have
+        you seen a true complaint lose because of who said it? The poem’s scene is
+        already told. The sentence is yours, and it stays in this browser.
+      </p>
+      <label class="reflection-label" for="note-kings">Your note</label>
+      <textarea id="note-kings" data-note="kings-and-spectators" rows="4"></textarea>
+    </section>
+
+    <section class="takeaways" aria-labelledby="takeaways-title">
+      <h2 id="takeaways-title">Key takeaways</h2>
+      <ul>
+        <li>
+          The layer is still honor. What this week adds is the society that honor
+          lives in: kings, followers, and an assembly.
+        </li>
+        <li>
+          The prize from Lesson 2 is now a speech in public. Thersites says what
+          Achilles said. Odysseus beats him with the sceptre, and the army both
+          pities him and laughs.
+        </li>
+        <li>
+          Helen on the wall, and Priam’s refusal to blame her, show the same war
+          from the other side. The cause Priam names is the gods. The cost Helen
+          names is the life she left.
+        </li>
+        <li>
+          The failure of Lesson 1 is still here. A human oath could have ended the
+          war. Aphrodite removes Paris. Nothing in these books stands above honor
+          and the gods who handle it.
+        </li>
+      </ul>
+      <p class="summary">
+        Honor was a quarrel between two men. It is now a quarrel an army can hear
+        and a city can watch, and it still has no judge both sides will obey.
+      </p>
+    </section>
+
+    <aside class="go-deeper">
+      <h2>Go deeper, if you want</h2>
+      <p>
+        The object the syllabus names this week is the gold mask Schliemann called
+        the Mask of Agamemnon, in the National Archaeological Museum, Athens. It
+        comes from Grave Circle A at Mycenae, about 1550–1500 BC, centuries older
+        than the Trojan War as later Greeks told it. The name is Schliemann’s. The
+        gold is Mycenaean. You do not need a book, or the mask, to finish the lesson.
+      </p>
+    </aside>
+
+    <References slug="kings-and-spectators" />
+
+  </LessonChrome>
+</Base>
+
+<script>
+  const key = "sophandros.note.kings-and-spectators";
+  const box = document.querySelector("[data-note='kings-and-spectators']");
+  if (box instanceof HTMLTextAreaElement) {
+    box.value = localStorage.getItem(key) || "";
+    box.addEventListener("input", () => localStorage.setItem(key, box.value));
+  }
+</script>

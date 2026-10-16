@@ -1,0 +1,146 @@
+---
+import { lessonNeighbors, lessonPlace, sidebarFor, type BookLesson } from "../data/book";
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const place = lessonPlace(slug);
+const { prev, next } = lessonNeighbors(slug);
+const side = sidebarFor(slug);
+const chapterCrumb = crumbChapter(place);
+
+function crumbChapter(lesson: BookLesson) {
+  if (!lesson.chapterId || !lesson.chapterTitle) return null;
+  const label = lesson.chapterNo ? `Chapter ${lesson.chapterNo}` : "Bridge";
+  return { href: `/curriculum#${lesson.chapterId}`, label: `${label} · ${lesson.chapterTitle}` };
+}
+---
+
+<div class="reading-layout">
+  <details class="part-toc" data-part-toc>
+    <summary>
+      <span class="part-toc-label">{side.part.label}</span>
+      <span class="part-toc-title">{side.part.title}</span>
+    </summary>
+    <nav aria-label={`${side.part.label} ${side.part.title}`}>
+      {
+        side.before.map((lesson) => (
+          <p class="part-toc-preface">
+            <a href={lesson.href} aria-current={lesson.slug === slug ? "page" : undefined}>
+              {lesson.kicker}
+            </a>
+          </p>
+        ))
+      }
+      {
+        side.part.chapters.map((chapter) => (
+          <div class="part-toc-chapter">
+            <p class="part-toc-chapter-label">{chapter.heading}</p>
+            <ol>
+              {chapter.lessons.map((lesson) => (
+                <li>
+                  {lesson.href ? (
+                    <a href={lesson.href} aria-current={lesson.slug === slug ? "page" : undefined}>
+                      <span>{lesson.lessonNo}</span>
+                      {lesson.title}
+                    </a>
+                  ) : (
+                    <span class="is-soon">
+                      <span>{lesson.lessonNo}</span>
+                      {lesson.title}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))
+      }
+      {
+        side.after.map((lesson) => (
+          <p class="part-toc-preface">
+            {lesson.href ? (
+              <a href={lesson.href} aria-current={lesson.slug === slug ? "page" : undefined}>
+                {lesson.kicker}
+              </a>
+            ) : (
+              <span class="is-soon">{lesson.kicker}</span>
+            )}
+          </p>
+        ))
+      }
+    </nav>
+  </details>
+
+  <div class="reading-main">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/curriculum">Curriculum</a></li>
+        {
+          place.partId && place.partLabel && place.partTitle && (
+            <li>
+              <a href={`/curriculum#${place.partId}`}>
+                {place.partLabel} · {place.partTitle}
+              </a>
+            </li>
+          )
+        }
+        {
+          chapterCrumb && (
+            <li>
+              <a href={chapterCrumb.href}>{chapterCrumb.label}</a>
+            </li>
+          )
+        }
+        <li aria-current="page">{place.title.replace(/^History: /, "").replace(/^Prologue: /, "")}</li>
+      </ol>
+    </nav>
+    <p class="kicker lesson-kicker">{place.kicker}</p>
+    <slot />
+    <nav class="pager" aria-label="Lessons">
+      {
+        prev ? (
+          prev.href ? (
+            <a href={prev.href}>
+              <span class="pager-label">Previous · {prev.kicker}</span>
+              {prev.title}
+            </a>
+          ) : (
+            <span class="pager-muted">
+              <span class="pager-label">Previous · {prev.kicker}</span>
+              {prev.title}
+            </span>
+          )
+        ) : (
+          <a href="/curriculum">
+            <span class="pager-label">Curriculum</span>
+            Back to the curriculum
+          </a>
+        )
+      }
+      {
+        next &&
+          (next.href ? (
+            <a class="pager-next" href={next.href}>
+              <span class="pager-label">Next · {next.kicker}</span>
+              {next.title}
+            </a>
+          ) : (
+            <span class="pager-next pager-muted">
+              <span class="pager-label">Next · {next.kicker}</span>
+              {next.title}
+            </span>
+          ))
+      }
+    </nav>
+  </div>
+</div>
+
+<script>
+  const toc = document.querySelector("[data-part-toc]");
+  if (toc instanceof HTMLDetailsElement && window.matchMedia("(min-width: 980px)").matches) {
+    toc.open = true;
+  }
+</script>

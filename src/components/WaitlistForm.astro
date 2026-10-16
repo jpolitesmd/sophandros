@@ -1,0 +1,83 @@
+---
+import { site } from "../data/site";
+
+interface Props {
+  id?: string;
+  compact?: boolean;
+}
+
+const { id = "waitlist", compact = false } = Astro.props;
+const noteId = `${id}-note`;
+---
+
+<form
+  class="form"
+  id={id}
+  action={`mailto:${site.email}`}
+  method="post"
+  enctype="text/plain"
+  data-waitlist
+  data-email={site.email}
+  data-subject="Sophandros waitlist"
+  aria-describedby={noteId}
+>
+  <p class="todo" id={noteId}>
+    <strong>TODO</strong>
+    Connect this preview form to a real waitlist provider before launch. Until then,
+    submitting opens an email to
+    <a href={`mailto:${site.email}`}>{site.email}</a>. This site does not store what you type.
+  </p>
+
+  <label>
+    Name <span class="optional">(optional)</span>
+    <input type="text" name="name" autocomplete="name" />
+  </label>
+
+  <label>
+    Email
+    <input
+      type="email"
+      name="email"
+      autocomplete="email"
+      required
+      aria-required="true"
+    />
+  </label>
+
+  {
+    !compact && (
+      <label>
+        What draws you <span class="optional">(optional)</span>
+        <select name="interest">
+          <option value="">Choose one</option>
+          <option>The main course</option>
+          <option>The Founders Edition</option>
+          <option>A tutor</option>
+          <option>The travel capstone</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+    )
+  }
+
+  {
+    !compact && (
+      <label>
+        A note <span class="optional">(optional)</span>
+        <textarea name="note" rows="5" />
+      </label>
+    )
+  }
+
+  <div>
+    <button class="button" type="submit">Join the waitlist</button>
+  </div>
+  <p class="form-status" role="status" data-status></p>
+  {
+    compact && (
+      <p>
+        <a href="/waitlist">Add a note on the full form</a>
+      </p>
+    )
+  }
+</form>

@@ -1,0 +1,65 @@
+---
+import type { Excerpt } from "../data/excerpts";
+
+interface Props {
+  excerpt: Excerpt;
+}
+
+const { excerpt } = Astro.props;
+
+function paragraphs(text: string): string[] {
+  return text.split(/\n\n/).map((part) => part.trim()).filter(Boolean);
+}
+---
+
+<figure class="excerpt">
+  {
+    excerpt.pairs ? (
+      <div class="excerpt-pairs">
+        {excerpt.pairs.map((pair) => (
+          <div class="excerpt-pair">
+            <p class="excerpt-greek" lang="grc">
+              {pair.greek}
+            </p>
+            <blockquote>
+              {paragraphs(pair.english).map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </blockquote>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <>
+        {excerpt.greek && (
+          <p class="excerpt-greek" lang="grc">
+            {excerpt.greek}
+          </p>
+        )}
+        {excerpt.english && (
+          <blockquote>
+            {paragraphs(excerpt.english).map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </blockquote>
+        )}
+      </>
+    )
+  }
+  <figcaption>
+    <cite>{excerpt.citation}</cite>
+    <span class="excerpt-links">
+      {excerpt.links.map((link, index) => (
+        <span>
+          {index > 0 && (
+            <span class="excerpt-dot" aria-hidden="true">
+              {" "}
+              ·{" "}
+            </span>
+          )}
+          <a href={link.href}>{link.label}</a>
+        </span>
+      ))}
+    </span>
+  </figcaption>
+</figure>

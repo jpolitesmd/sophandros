@@ -1,0 +1,227 @@
+---
+/**
+ * Module I.1, Week 0, from the approved outline of 16 Oct 2026.
+ * FLAG: the outline dates the writing-down of the epics to the 8th–7th
+ * century BC and marks that date as debated. The prose says so.
+ * FLAG: “about 1600–1200 BC” and “around 1200 BC” are the outline’s dates,
+ * not a new chronology. No date is given for a historical Trojan War.
+ * The Lion Gate and the mask’s date are the drafted syllabus.
+ * Linear B is described only as the outline describes it: palace records
+ * of a palace economy. No tablet is quoted.
+ */
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import LessonChrome from "../../components/LessonChrome.astro";
+import Reader from "../../components/Reader.astro";
+import Reveal from "../../components/Reveal.astro";
+import References from "../../components/References.astro";
+import plate from "../../assets/lessons/flaxman-iliad-1.jpg";
+import book1 from "../../data/iliad-book1.json";
+import { moduleExcerpts } from "../../data/excerpts";
+const proem = moduleExcerpts["the-heroic-code"][0];
+---
+
+<Base
+  title="The World of Homer"
+  description="The history lesson that opens Module 1: Mycenaean palaces, the collapse, oral poetry, and why the Iliad is the first textbook of this course."
+>
+  <LessonChrome slug="the-world-of-homer">
+    <header class="page-head">
+      <h1>The World of Homer</h1>
+      <p class="lede">
+        Today we add the world this honor stands in. The prologue is the ground
+        under it: farming, Crete, and the palaces. The poem itself begins in the
+        next lesson.
+      </p>
+    </header>
+
+    <section class="learn" aria-labelledby="will-learn">
+      <h2 id="will-learn">What you’ll learn</h2>
+      <ul>
+        <li>Mycenae and Pylos were palace kingdoms. Linear B is the writing of a palace economy, and that writing was lost.</li>
+        <li>Around 1200 BC those kingdoms collapsed. The centuries after were poorer, with fewer settlements. The outline calls this the Dark Age.</li>
+        <li>The epics came out of oral poetry: bards composing in performance, with formulas and epithets. When they were written down is debated.</li>
+        <li>The world the poems describe is not the same as the world of the poet’s audience. Greeks treated Homer as a shared textbook for centuries. This course begins there.</li>
+      </ul>
+    </section>
+
+    <div class="lesson-body">
+      <p class="scene-today">Today we add the world this honor stands in to the foundation.</p>
+      <h3>Let’s begin before the quarrel</h3>
+      <p>
+        The next lesson will open the <em>Iliad</em> on a quarrel in a camp. Before
+        you hear that quarrel, you need the ground it stands on. This course builds
+        one man, layer by layer, as Greek society grows more complex. The first
+        society is the simplest in the sequence: chieftains, war bands, and
+        personal loyalty. Honor, the virtue of that society, is the first layer.
+        It has nothing under it but the prologue’s ground and this history.
+      </p>
+
+      <h3>Palace kingdoms, then a collapse</h3>
+      <p>
+        The outline places this layer in the Bronze Age and at Mycenae, about
+        1600–1200 BC. Mycenae and Pylos are the palace kingdoms you should be able
+        to name. Their records are in Linear B, a script that kept the accounts of
+        a palace economy. The syllabus points you to the Lion Gate at Mycenae, in
+        the UNESCO listing “Archaeological Sites of Mycenae and Tiryns,” and to
+        the gold mask Schliemann called Agamemnon’s, from Grave Circle A, about
+        1550–1500 BC. The name is Schliemann’s. The mask is centuries older than
+        the Trojan War as later Greeks told it. The poem is not a report of that
+        mask.
+      </p>
+      <p>
+        Around 1200 BC the palace kingdoms collapsed. What followed, on the
+        outline’s account, was centuries of fewer and poorer settlements. That
+        stretch is the Dark Age of this course. Linear B, the palace writing, was
+        lost with the palaces. A technology of memory had to be found again, and
+        it was not the same writing.
+      </p>
+
+      <h3>A poem kept by the voice</h3>
+      <p>
+        The epics came out of oral poetry. Bards composed in performance. They had
+        formulas and epithets, set phrases a singer can reuse, so a long story can
+        be held without a book. The Homeric question, in plain terms, is how that
+        singing became the poems we have: one poet, or many, and how performance
+        relates to a written text. The outline says the epics were probably
+        written down in the 8th–7th century BC, and it marks that date as debated.
+        Treat the century as unsettled. Treat the fact of oral composition as the
+        point.
+      </p>
+      <p>
+        Hold the gap. The poems describe an older world, of palaces and
+        chieftains, than the world of the poet’s later audience. When you read
+        Agamemnon’s camp, you are not looking at a day in the audience’s own
+        city. You are looking at a world the song remembered. That is why a prize,
+        a guest-gift, and a name in the song matter so much in the lessons that
+        follow. They are how worth was stored when the palace writing was gone.
+      </p>
+
+      <h3>Why this is the first textbook</h3>
+      <p>
+        Later Greeks treated Homer as their shared textbook for centuries. This
+        course takes that use as its reason for beginning here. A professional
+        today inherits practices, laws, and buildings whose reasons are older than
+        the office. The first reason in this sequence is a public name: what a man
+        is worth in other men’s eyes, and what a song can keep after he is dead.
+        The next lesson gives that idea its Greek names, <em>timē</em> and
+        <em>kleos</em>, inside Book 1. Today you only need the ground. The
+        invention this module is here to teach is the hexameter line and the
+        formula, a technology of memory after writing had been lost.
+      </p>
+      <p>
+        The passage below is the opening of the poem, in Samuel Butler’s English
+        of 1898, with the Greek of the same lines. It is the door, not yet the
+        quarrel.
+      </p>
+    </div>
+
+    <Reader
+      heading="The text: the opening of the Iliad"
+      note="Samuel Butler, 1898, the first paragraph of Book 1. The Greek is Iliad 1.1–7 from the Perseus Digital Library. The rest of Book 1 is the next lesson."
+      sourceHref={book1.source}
+      paragraphs={[book1.paragraphs[0]]}
+      greek={proem.greek}
+      greekCaption="Iliad 1.1–7. Greek text, Perseus Digital Library. Butler’s English follows."
+    />
+
+    <figure class="figure lesson-figure">
+      <Image
+        src={plate}
+        alt="Line engraving: Achilles seated by the sea with Thetis before him, while a woman is led away along the shore."
+        width={1600}
+        height={953}
+      />
+      <figcaption>
+        The camp the poem will teach, not a view of the Lion Gate. Achilles at the
+        shore, and Thetis before him. Engraving by Tommaso Piroli, 1795, after
+        John Flaxman’s drawing of 1793. Wikimedia Commons identifies the plate as
+        an illustration to <em>Iliad</em> Book 1, lines 354–358. Public domain.
+      </figcaption>
+    </figure>
+
+    <section class="word-day" aria-labelledby="word-day">
+      <h2 id="word-day">Word of the day</h2>
+      <p class="word-greek" lang="grc">κλέος</p>
+      <p>
+        <em>kleos</em>, glory that outlives you. That is this course’s definition
+        for the layer, not a line quoted from a lexicon. The song is the thing
+        that stores it. The first word of the poem, in the Greek above, is
+        μῆνιν, the anger. You will learn that word properly in the next lesson.
+        For today, say <em>kleos</em> once, and remember what the voice was for.
+      </p>
+    </section>
+
+    <Reveal
+      items={[
+        {
+          prompt: "What are Mycenae and Pylos in this lesson, and what is Linear B?",
+          answer:
+            "Palace kingdoms of the Bronze Age. Linear B is the script of a palace economy. It was lost when the palaces collapsed.",
+        },
+        {
+          prompt: "What does the outline say happened around 1200 BC?",
+          answer:
+            "The palace kingdoms collapsed. The centuries after had fewer and poorer settlements. The course calls that stretch the Dark Age.",
+        },
+        {
+          prompt: "What is the Homeric question, in the plain terms of this lesson?",
+          answer:
+            "How poems composed in performance, with formulas and epithets, became the written epics. The 8th–7th century date for the writing-down is debated.",
+        },
+        {
+          prompt: "Why does the course begin with Homer?",
+          answer:
+            "Later Greeks treated Homer as a shared textbook for centuries. The poem keeps a picture of worth from a world older than the poet’s audience.",
+        },
+      ]}
+    />
+
+    <section class="reflection" aria-labelledby="reflect-title">
+      <h2 id="reflect-title">A short reflection</h2>
+      <p>
+        In a few sentences, if you want them: what does your own work still keep
+        by memory and reputation, once the official record is gone? The history
+        above is the course’s account. The sentence is yours, and it stays in
+        this browser.
+      </p>
+      <label class="reflection-label" for="note-world">Your note</label>
+      <textarea id="note-world" data-note="the-world-of-homer" rows="5"></textarea>
+    </section>
+
+    <section class="takeaways" aria-labelledby="takeaways-title">
+      <h2 id="takeaways-title">Key takeaways</h2>
+      <ul>
+        <li>There is no layer of the man under this one. The prologue is the ground: palaces that rose and fell. This lesson is the world of chieftains and war bands, remembered after that fall.</li>
+        <li>Linear B stored a palace economy and was lost. Formula and hexameter stored a song. That is the invention this module is carrying.</li>
+        <li>The poems describe an older world than the world of their audience. Read the camp as memory, not as a diary of the poet’s city.</li>
+        <li>Homer is the first textbook of the course because later Greeks used him as one. The next lesson opens the book on honor itself.</li>
+      </ul>
+      <p class="summary">
+        You now have the ground: palaces, a collapse, a Dark Age, and a poem kept
+        by the voice. Honor, in the next lesson, is what that poem thinks a man
+        is worth.
+      </p>
+    </section>
+
+    <aside class="go-deeper">
+      <h2>Go deeper, if you want</h2>
+      <p>
+        Nothing here is required. The syllabus names the Lion Gate and, for the
+        next lesson, the mask from Grave Circle A. A grammar book can wait. The
+        next lesson has Book 1 in full.
+      </p>
+    </aside>
+
+    <References slug="the-world-of-homer" />
+  </LessonChrome>
+</Base>
+
+<script>
+  const key = "sophandros.note.the-world-of-homer";
+  const box = document.querySelector("[data-note='the-world-of-homer']");
+  if (box instanceof HTMLTextAreaElement) {
+    box.value = localStorage.getItem(key) || "";
+    box.addEventListener("input", () => localStorage.setItem(key, box.value));
+  }
+</script>

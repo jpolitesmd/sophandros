@@ -1,0 +1,43 @@
+---
+import Rich from "./Rich.astro";
+import { entriesForLesson, lessonBySlug } from "../data/references";
+
+interface Props {
+  slug: string;
+  /** Use a lower heading level inside an expanded list. */
+  level?: 2 | 3;
+  /** List only, for the references page where the lesson title is already the summary. */
+  compact?: boolean;
+}
+
+const { slug, level = 2, compact = false } = Astro.props;
+const lesson = lessonBySlug(slug);
+const entries = entriesForLesson(slug);
+const Heading = level === 2 ? "h2" : "h3";
+---
+
+<section class="references" aria-labelledby={compact ? undefined : `references-${slug}`}>
+  {
+    !compact && (
+      <>
+        <Heading id={`references-${slug}`}>References</Heading>
+        <p class="references-note">
+          Chicago notes-bibliography style, bibliography form. “To verify” means the
+          edition, date, or publisher is still to be checked against the publisher or
+          a library catalogue.
+        </p>
+      </>
+    )
+  }
+  <ul>
+    {
+      entries.map((entry) => (
+        <li class:list={[{ "is-unverified": entry.unverified }]}>
+          <Rich text={entry.chicago} />
+          {entry.unverified && <span class="verify-mark">To verify</span>}
+        </li>
+      ))
+    }
+  </ul>
+  {lesson.note && <p class="references-note"><Rich text={lesson.note} /></p>}
+</section>

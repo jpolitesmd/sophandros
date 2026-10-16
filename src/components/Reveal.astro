@@ -1,0 +1,45 @@
+---
+interface Item {
+  prompt: string;
+  answer: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="check" aria-labelledby="check-title">
+  <h2 id="check-title">Check yourself</h2>
+  <p>Three to five questions on what you just read. Show the answer when you are ready.</p>
+  <ol class="check-questions">
+    {
+      items.map((item, index) => (
+        <li>
+          <p class="check-prompt">
+            {index + 1}. {item.prompt}
+          </p>
+          <button type="button" class="button ghost reveal-btn">Show the answer</button>
+          <p class="reveal-answer" hidden>
+            {item.answer}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<script>
+  document.querySelectorAll(".reveal-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!(button instanceof HTMLButtonElement)) return;
+      const answer = button.nextElementSibling;
+      if (!(answer instanceof HTMLElement)) return;
+      const open = answer.hidden;
+      answer.hidden = !open;
+      button.textContent = open ? "Hide the answer" : "Show the answer";
+    });
+  });
+</script>

@@ -1,0 +1,90 @@
+---
+/**
+ * Built-in reader. English paragraphs are Samuel Butler, 1898, from Wikisource
+ * (The Iliad of Homer (Butler)), fetched as the rendered page text.
+ *
+ * FLAG: Book 1’s last paragraph on Wikisource reads “the bed iu which”. That is
+ * a transcription error for “the bed in which”. It is left verbatim.
+ * FLAG: Book 2’s opening paragraph on Wikisource has “thinkiug” and “aud”
+ * (“thinking”, “and”). Left verbatim.
+ * Editorial “argument” lines at the head of Books 2 and 3 were contents
+ * summaries, not Butler’s prose, and were not included.
+ */
+interface Gloss {
+  word: string;
+  note: string;
+}
+
+interface Props {
+  heading: string;
+  note: string;
+  sourceHref: string;
+  paragraphs: string[];
+  greek?: string;
+  greekCaption?: string;
+  glossary?: Gloss[];
+}
+
+const { heading, note, sourceHref, paragraphs, greek, greekCaption, glossary = [] } = Astro.props;
+
+type Piece = { text: string; note?: string };
+
+function glossParagraph(text: string, seen: Set<string>): Piece[] {
+  const hits = glossary
+    .filter((item) => !seen.has(item.word) && text.includes(item.word))
+    .map((item) => ({ ...item, at: text.indexOf(item.word) }))
+    .sort((a, b) => a.at - b.at);
+  const pieces: Piece[] = [];
+  let cursor = 0;
+  for (const hit of hits) {
+    if (hit.at < cursor) continue;
+    if (hit.at > cursor) pieces.push({ text: text.slice(cursor, hit.at) });
+    pieces.push({ text: hit.word, note: hit.note });
+    seen.add(hit.word);
+    cursor = hit.at + hit.word.length;
+  }
+  if (cursor < text.length) pieces.push({ text: text.slice(cursor) });
+  return pieces;
+}
+
+const seen = new Set<string>();
+const rendered = paragraphs.map((paragraph) => glossParagraph(paragraph, seen));
+---
+
+<section class="reader" id="reader" aria-labelledby="reader-title">
+  <div class="reader-head">
+    <h2 id="reader-title">{heading}</h2>
+    <p>{note}</p>
+  </div>
+  <div class="reader-scroll" tabindex="0">
+    {
+      greek && (
+        <p class="excerpt-greek" lang="grc">
+          {greek}
+        </p>
+      )
+    }
+    {greekCaption && <p class="reader-caption">{greekCaption}</p>}
+    {
+      rendered.map((pieces) => (
+        <p>
+          {pieces.map((piece) =>
+            piece.note ? (
+              <span class="gloss">
+                {piece.text}
+                <span class="gloss-note" role="note">
+                  {piece.note}
+                </span>
+              </span>
+            ) : (
+              piece.text
+            ),
+          )}
+        </p>
+      ))
+    }
+  </div>
+  <p class="reader-source">
+    <a href={sourceHref}>Butler, 1898, on Wikisource</a>
+  </p>
+</section>

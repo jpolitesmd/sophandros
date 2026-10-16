@@ -1,0 +1,55 @@
+---
+import { afterGreece, layers } from "../data/layers";
+
+interface Props {
+  /** Syllabus slug of the layer to mark. Defaults to honor, the course to start. */
+  current?: string;
+}
+
+const { current = "the-heroic-code" } = Astro.props;
+---
+
+<figure class="foundation">
+  <figcaption>
+    <span class="kicker">The foundation</span>
+    Six layers, read from the bottom. Honor is the wide course. Each later layer stands on it.
+  </figcaption>
+  <div class="foundation-crown" aria-hidden="true">
+    <svg viewBox="0 0 160 78" width="160" height="78">
+      <circle cx="118" cy="18" r="11" fill="#B08D3E" />
+      <path d="M80 74 V34" stroke="#14213D" stroke-width="3" fill="none" />
+      <path
+        d="M80 42 C58 32 40 22 30 26 C46 28 62 36 80 42 C98 32 122 22 134 28 C116 30 96 38 80 42"
+        fill="#B08D3E"></path>
+      <path
+        d="M80 56 C56 46 38 40 28 46 C48 46 64 52 80 56 C98 46 122 40 136 46 C116 48 96 54 80 56"
+        fill="#14213D"></path>
+    </svg>
+  </div>
+  <ol class="foundation-stack">
+    {
+      layers.map((layer) => (
+        <li class:list={["foundation-course", { "is-current": layer.slug === current }]} style={`--i:${layer.n}`}>
+          <a href={layer.href}>
+            <span class="foundation-n">{layer.code}</span>
+            <span class="foundation-name">{layer.virtue}</span>
+            <span class="foundation-who">
+              {layer.who}
+              <span class="foundation-age"> · {layer.age}</span>
+            </span>
+            {layer.slug === current && <span class="foundation-start">Start here</span>}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+  <svg class="foundation-roots" viewBox="0 0 240 40" aria-hidden="true">
+    <path
+      d="M120 0 V12 M120 10 C84 18 48 20 18 32 M120 12 C156 20 192 20 222 32 M120 14 C96 26 72 28 52 38 M120 14 C144 26 168 28 190 38"
+      fill="none"
+      stroke="#14213D"
+      stroke-width="1.6"
+      stroke-linecap="round"></path>
+  </svg>
+  <p class="foundation-after">{afterGreece}</p>
+</figure>

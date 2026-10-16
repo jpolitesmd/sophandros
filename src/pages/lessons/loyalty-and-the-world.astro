@@ -1,0 +1,232 @@
+---
+/**
+ * Module I.1, Week 4. English is Samuel Butler, 1898, from Wikisource
+ * “The Iliad (Butler)” Books XVI and XVIII.
+ * FLAG: that file spells Achaeans, not the Achæans of Books 1–9. A Book 6
+ * comparison showed the same prose aside from the ligature and an editorial
+ * argument line. Misprints are left verbatim, including “they heard the of
+ * their king” in Book 16.
+ */
+import Base from "../../layouts/Base.astro";
+import LessonChrome from "../../components/LessonChrome.astro";
+import Reader from "../../components/Reader.astro";
+import Reveal from "../../components/Reveal.astro";
+import References from "../../components/References.astro";
+import book16 from "../../data/iliad-book16.json";
+import book18 from "../../data/iliad-book18.json";
+
+const note =
+  "Samuel Butler, 1898, from the Wikisource set The Iliad (Butler). This file spells Achaeans without the æ of Books 1–9. Broken words on the page are left as printed.";
+---
+
+<Base
+  title="Loyalty and the whole world of men"
+  description="Iliad Books 16 and 18: Patroclus dies in Achilles’ armour, Achilles returns, and the shield shows cities at peace and at war."
+>
+  <LessonChrome slug="loyalty-and-the-world">
+    <header class="page-head">
+      <h1>Loyalty and the whole world of men</h1>
+      <p class="lede">
+        Today we add loyalty to the foundation. Honor already has a house. It now
+        has a friend, and a picture of the world that is not only a battle.
+      </p>
+    </header>
+
+    <section class="learn" aria-labelledby="will-learn">
+      <h2 id="will-learn">What you’ll learn</h2>
+      <ul>
+        <li>Patroclus weeps for the Greeks and asks to wear Achilles’ armour. He does not know he is asking for his own death.</li>
+        <li>Zeus grants that he will drive the Trojans from the ships, and refuses to let him come safely out of the fight.</li>
+        <li>When Patroclus falls, Achilles’ grief ends the withdrawal. He says he will force his soul into subjection and go after Hector.</li>
+        <li>The shield Hephaestus makes shows two cities, a lawsuit, ploughing, harvest, and a dance. The warrior’s world is larger than the war.</li>
+      </ul>
+    </section>
+
+    <div class="lesson-body">
+      <p class="scene-today">Today we add loyalty to the foundation.</p>
+      <h3>The friend who asks to go</h3>
+      <p>
+        Let’s begin at the ships. Patroclus comes to Achilles in tears. Achilles
+        compares him to a child clinging to her mother. Patroclus says he weeps
+        for the Argives. Their champions are wounded. He asks whether Achilles is
+        still so inexorable, and what later story will say of him if he does not
+        save them. Then he asks for the armour, and for the Myrmidons. The poem
+        says he did not know what he was asking, nor that he was suing for his own
+        destruction.
+      </p>
+      <p>
+        Achilles is cut to the heart that a man of his own rank robbed him because
+        he was stronger. He still will not go himself. He tells Patroclus to gird
+        on the armour and lead the Myrmidons, to drive the Trojans from the ships,
+        and not to push the fight on toward the city. Patroclus arms. He does not
+        take the great Pelian spear. Only Achilles can wield it. Achilles prays to
+        Zeus. Zeus hears, and grants only half. Patroclus will thrust the war back
+        from the ships. He will not come safely out.
+      </p>
+      <p>
+        Learn the shape of the loyalty. It is not a mood beside the code. It is
+        part of the code. Patroclus goes because the men at the ships are dying,
+        and because Achilles will not. He wears the other man’s armour so that the
+        fight can be done in that man’s name. The glory he tells the Myrmidons to
+        win is “glory for the son of Peleus.” The friend spends himself for the
+        honor of the man who stayed behind.
+      </p>
+
+      <h3>Grief, and the return</h3>
+      <p>
+        Antilochus brings the news. Achilles takes dust in both hands and pours it
+        over his head. The women they had taken captive scream and beat their
+        breasts. Antilochus holds his hands, afraid he will cut his own throat.
+        Achilles tells his mother that Zeus has fulfilled the prayer, and that it
+        boots him nothing, because Patroclus has fallen, the man he valued more
+        than all others and loved as dearly as his own life. He will not live or
+        go about among mankind unless Hector falls by his spear.
+      </p>
+      <p>
+        Then he says the sentence that closes the withdrawal. Perish strife, and
+        anger, which rises in the soul like smoke and tastes sweeter than honey.
+        Even so Agamemnon angered him. And yet, so be it, for it is over. He will
+        force his soul into subjection as he needs must. He will go. He will
+        pursue Hector, and then abide his own doom. The honor of Lesson 2 kept him
+        out. Loyalty, and the death it cost, brings him back. The price of the
+        friend’s going is the thing Achilles loved most.
+      </p>
+
+      <h3>A world worked on the shield</h3>
+      <p>
+        Thetis goes to Hephaestus — Butler’s Vulcan — for new armour. The shield
+        is made in five thicknesses. On it are two cities. In one there are
+        weddings, torchlight, the cry of Hymen, and dancing. In the same city the
+        people gather in assembly over a quarrel: blood-money for a man who has
+        been killed. One man says he has paid in full. The other says he has not.
+        The elders sit on seats of stone, staves in their hands, and each gives
+        judgment. Two talents lie there for the judge whose judgment is deemed
+        fairest.
+      </p>
+      <p>
+        Around the other city two armies are camped, divided whether to sack it or
+        to take half and spare it. Then a ploughed field, a harvest with reapers
+        and binders, and a dancing-floor like the one Daedalus made at Cnossus for
+        Ariadne. The rim is the river Oceanus. Read that list against the war you
+        have been in since Book 1. The poem stops, in the middle of the making of
+        a weapon, and shows peace, law, farming, and a feast of movement. The
+        warrior’s world is bigger than the killing. The shield says so while the
+        man who will wear it is getting ready to kill Hector.
+      </p>
+      <p>
+        For a professional, the useful point is the order of these facts. Loyalty
+        can cost the person one loves most, and it can also be the thing that ends
+        a proud withdrawal. And the work of a life, even a warrior’s, contains a
+        lawsuit, a field, and a wedding. If your own work has narrowed to the
+        quarrel, the shield is the reminder the poem itself inserts.
+      </p>
+    </div>
+
+    <Reader
+      heading="The text: Iliad, Book 16"
+      note={note}
+      sourceHref={book16.source}
+      paragraphs={book16.paragraphs}
+      glossary={[
+        { word: "Patroclus", note: "Achilles’ companion. He will wear Achilles’ armour and die in it." },
+        { word: "Myrmidons", note: "Achilles’ own men." },
+        { word: "Jove", note: "Butler’s name for Zeus." },
+      ]}
+    />
+
+    <Reader
+      heading="The text: Iliad, Book 18"
+      note={`${note} The shield begins where Hephaestus shapes it and sets two cities on it.`}
+      sourceHref={book18.source}
+      paragraphs={book18.paragraphs}
+      glossary={[
+        { word: "Vulcan", note: "Butler’s name for Hephaestus, who makes the shield." },
+        { word: "Hector", note: "He has killed Patroclus and taken the armour." },
+      ]}
+    />
+
+    <section class="word-day" aria-labelledby="word-day">
+      <h2 id="word-day">Word of the day</h2>
+      <p class="word-greek">comrade</p>
+      <p>
+        Butler’s word, in Book 18, is “comrade,” and Achilles says he loved
+        Patroclus as dearly as his own life. This lesson does not add a Greek
+        line for that sentence. The course’s name for the step is loyalty: the
+        bond that sends Patroclus out, and that brings Achilles back. Find
+        “comrade” and “my own life” in the second reader.
+      </p>
+    </section>
+
+    <Reveal
+      items={[
+        {
+          prompt: "What does Patroclus ask, and what does he not know?",
+          answer:
+            "He asks to wear Achilles’ armour and lead the Myrmidons. The poem says he does not know he is asking for his own destruction.",
+        },
+        {
+          prompt: "What does Zeus grant, and what does he refuse?",
+          answer:
+            "He grants that Patroclus will drive the war back from the ships. He refuses to let him come safely out of the fight.",
+        },
+        {
+          prompt: "What does Achilles say about anger once he has heard of the death?",
+          answer:
+            "He says anger tastes sweeter than honey, that Agamemnon angered him, and that it is over. He will force his soul into subjection, pursue Hector, and then meet his own doom.",
+        },
+        {
+          prompt: "Name three things on the shield that are not the battle at Troy.",
+          answer:
+            "A city with weddings; a lawsuit over blood-money, with elders giving judgment; a ploughed field, or the harvest, or the dancing-floor.",
+        },
+      ]}
+    />
+
+    <section class="reflection" aria-labelledby="reflect-title">
+      <h2 id="reflect-title">A short reflection</h2>
+      <p>
+        If you want a sentence: whose work have you carried when they would not
+        go themselves, and what did it cost? The poem has already told Patroclus’s
+        story. Yours stays in this browser.
+      </p>
+      <label class="reflection-label" for="note-loyalty">Your note</label>
+      <textarea id="note-loyalty" data-note="loyalty-and-the-world" rows="4"></textarea>
+    </section>
+
+    <section class="takeaways" aria-labelledby="takeaways-title">
+      <h2 id="takeaways-title">Key takeaways</h2>
+      <ul>
+        <li>Honor, duty, and now loyalty. Patroclus goes in another man’s armour because the ships are burning and Achilles will not.</li>
+        <li>Zeus’s half-grant is the poem’s way of saying the errand succeeds and the man does not survive it.</li>
+        <li>The withdrawal in Lesson 2 ends here, not because the gifts in Lesson 4 were enough, but because the friend is dead.</li>
+        <li>The shield puts a lawsuit, a field, and a wedding on the same object as a city under siege. The code was never only the fight.</li>
+      </ul>
+      <p class="summary">
+        Loyalty completes the warrior’s bond with one other person, and it can
+        cost that person. The shield, made for the man who is about to return,
+        insists that the world he belongs to is wider than his revenge.
+      </p>
+    </section>
+
+    <aside class="go-deeper">
+      <h2>Go deeper, if you want</h2>
+      <p>
+        The syllabus names the Euphronios Krater, about 515 BC, Sleep and Death
+        carrying Sarpedon, and a sketch of the shield’s scenes. Neither is
+        required to finish. Another translation is optional.
+      </p>
+    </aside>
+
+    <References slug="loyalty-and-the-world" />
+
+  </LessonChrome>
+</Base>
+
+<script>
+  const key = "sophandros.note.loyalty-and-the-world";
+  const box = document.querySelector("[data-note='loyalty-and-the-world']");
+  if (box instanceof HTMLTextAreaElement) {
+    box.value = localStorage.getItem(key) || "";
+    box.addEventListener("input", () => localStorage.setItem(key, box.value));
+  }
+</script>

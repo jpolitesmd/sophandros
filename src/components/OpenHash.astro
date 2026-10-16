@@ -1,0 +1,16 @@
+<script>
+  function openFromHash() {
+    const id = location.hash.replace(/^#/, "");
+    if (!id) return;
+    const target = document.getElementById(decodeURIComponent(id));
+    if (!target) return;
+    let node: HTMLElement | null = target;
+    while (node) {
+      if (node instanceof HTMLDetailsElement) node.open = true;
+      node = node.parentElement;
+    }
+  }
+
+  openFromHash();
+  window.addEventListener("hashchange", openFromHash);
+</script>

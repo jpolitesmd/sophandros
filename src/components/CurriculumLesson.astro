@@ -1,0 +1,27 @@
+---
+import { plainLessonTitle, type BookLesson } from "../data/book";
+
+interface Props {
+  lesson: BookLesson;
+}
+
+const { lesson } = Astro.props;
+const title = plainLessonTitle(lesson.title);
+const mark = lesson.lessonNo ?? lesson.kicker;
+---
+
+<li>
+  {
+    lesson.href ? (
+      <a href={lesson.href}>
+        <span class="toc-num">{mark}</span>
+        {title}
+      </a>
+    ) : (
+      <span class="is-soon">
+        <span class="toc-num">{mark}</span>
+        {title}
+      </span>
+    )
+  }
+</li>

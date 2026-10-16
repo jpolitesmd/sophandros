@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import WaitlistForm from "../components/WaitlistForm.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title="Waitlist"
+  description="Ask to be told when Sophandros opens. The preview form sends an email to hello@sophandros.com and does not store your address."
+>
+  <header class="page-head wrap-narrow">
+    <p class="kicker">Not yet open</p>
+    <h1>Join the waitlist</h1>
+    <p class="lede">
+      Leave a way to reach you. When the first places are offered, we will write.
+      Pricing has not been set, and a place on this list is not an application.
+    </p>
+  </header>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <WaitlistForm id="waitlist-form" />
+      <p style="margin-top:1.5rem">
+        Or write directly:
+        <a href={`mailto:${site.email}?subject=${encodeURIComponent("Sophandros waitlist")}`}>
+          {site.email}
+        </a>
+      </p>
+    </div>
+  </section>
+</Base>

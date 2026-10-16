@@ -1,0 +1,105 @@
+---
+import Base from "../layouts/Base.astro";
+import OpenHash from "../components/OpenHash.astro";
+import RefLesson from "../components/RefLesson.astro";
+import Rich from "../components/Rich.astro";
+import {
+  chapterLabel,
+  curriculumSections,
+  lessonCountLabel,
+  sectionLessonCount,
+} from "../data/book";
+import { bibEntry, courseLessons, generalBibliography } from "../data/references";
+
+const bibliographyCount = generalBibliography.reduce((sum, section) => sum + section.ids.length, 0);
+---
+
+<Base
+  title="References"
+  description="Chicago-style references for all 140 lessons of Sophandros, and the general bibliography, from the course bibliography."
+>
+  <header class="page-head wrap-narrow">
+    <p class="kicker">Bibliography</p>
+    <h1>References</h1>
+    <p class="lede">
+      {courseLessons.length} lessons. Open a part, then a chapter, then a lesson.
+      A lesson already taught on this site is linked. “To verify” means that
+      entry’s edition, date, or publisher is still to be checked.
+    </p>
+  </header>
+
+  <div class="wrap-narrow folds">
+    {
+      curriculumSections.map((section) => (
+        <details class="fold" id={section.id}>
+          <summary>
+            <span class="fold-title">{section.title}</span>
+            <span class="fold-meta">
+              <span class="fold-ring">{section.ring}</span>
+              <span class="fold-count">{lessonCountLabel(sectionLessonCount(section))}</span>
+            </span>
+          </summary>
+          <div class="fold-body">
+            {section.lessons?.map((lesson) => (
+              <RefLesson lesson={lesson} />
+            ))}
+            {section.chapters?.map((chapter) => (
+              <details class="fold fold-chapter" id={chapter.id}>
+                <summary>
+                  <span class="fold-title">{chapterLabel(chapter)}</span>
+                  <span class="fold-meta">
+                    <span class="fold-ring">{chapter.ring}</span>
+                    <span class="fold-count">{lessonCountLabel(chapter.lessons.length)}</span>
+                  </span>
+                </summary>
+                <div class="fold-lessons">
+                  {chapter.lessons.map((lesson) => (
+                    <RefLesson lesson={lesson} />
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+        </details>
+      ))
+    }
+
+    <details class="fold" id="general-bibliography">
+      <summary>
+        <span class="fold-title">General bibliography</span>
+        <span class="fold-meta">
+          <span class="fold-ring">The same works, gathered by phase</span>
+          <span class="fold-count">{bibliographyCount} works</span>
+        </span>
+      </summary>
+      <div class="fold-body">
+        {
+          generalBibliography.map((section) => (
+            <details class="fold fold-chapter">
+              <summary>
+                <span class="fold-title">{section.heading}</span>
+                <span class="fold-meta">
+                  <span class="fold-count">
+                    {section.ids.length} {section.ids.length === 1 ? "work" : "works"}
+                  </span>
+                </span>
+              </summary>
+              <ul class="references-list">
+                {section.ids.map((id) => {
+                  const entry = bibEntry(id);
+                  return (
+                    <li class:list={[{ "is-unverified": entry.unverified }]}>
+                      <Rich text={entry.chicago} />
+                      {entry.unverified && <span class="verify-mark">To verify</span>}
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+          ))
+        }
+      </div>
+    </details>
+  </div>
+  <OpenHash />
+</Base>
