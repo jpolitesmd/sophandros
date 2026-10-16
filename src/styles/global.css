@@ -2117,3 +2117,11 @@ th {
     text-decoration: none;
   }
 }
+
+/* Lesson figures */
+.lesson-fig { margin: 2.2rem auto; max-width: 560px; text-align: center; }
+.lesson-fig img { display: block; width: 100%; height: auto; margin: 0 auto; max-height: 520px; object-fit: contain; border: 1px solid rgba(176,141,62,.45); padding: 6px; background: #F3EEE3; }
+.lesson-fig figcaption { margin-top: .6rem; font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: .92rem; line-height: 1.4; color: #141414; }
+.lesson-fig .credit { display: block; font-size: .78rem; color: #6b6355; margin-top: .2rem; }
+.lesson-fig .credit a { color: #B08D3E; text-decoration: none; }
+.lesson-fig .credit a:hover { text-decoration: underline; }
