@@ -2273,3 +2273,35 @@ main .excerpt { margin-top: var(--block); }
 .section .prose { margin-left: auto; margin-right: auto; }
 .section .section-head { text-align: center; max-width: var(--measure); margin-left: auto; margin-right: auto; }
 .section .section-head .kicker { padding-left: 0.22em; }
+
+/* Foundation: a temple of six courses, centered text, no sprout or roots */
+.foundation-pediment { display: block; width: min(22rem, 66%); margin: 1.2rem auto 0.35rem; }
+.foundation-stack { gap: 0.35rem; max-width: 32rem; margin-top: 0; }
+.foundation-course { width: calc(100% - (var(--i) - 1) * 6%); }
+.foundation-course a {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  background: #F3EEE3; border: 1px solid rgba(20,33,61,0.14);
+  padding: 0.6rem 1rem 0.65rem; gap: 0.15rem;
+}
+.foundation-course a:hover { border-color: #B08D3E; }
+.foundation-course a > .foundation-n,
+.foundation-course a > .foundation-name { display: inline; }
+.foundation-head { display: block; }
+.foundation-n { font-size: 0.8rem; color: #B08D3E; letter-spacing: 0.14em; }
+.foundation-name { font-size: 1.3rem; color: #14213D; }
+.foundation-who { font-size: 0.92rem; color: rgba(20,20,20,0.66); }
+.foundation-course.is-current a { background: #14213D; border-color: #14213D; }
+.foundation-course.is-current .foundation-name { color: #FAF7F0; }
+.foundation-course.is-current .foundation-who { color: rgba(250,247,240,0.78); }
+.foundation-course.is-current .foundation-n,
+.foundation-course.is-current .foundation-start { color: #B08D3E; }
+.foundation-course.is-current .foundation-age { color: inherit; }
+.foundation-start { font-size: 0.72rem; margin-top: 0.2rem; padding-left: 0.12em; }
+.foundation-base { width: 100%; max-width: 34rem; margin: 0.35rem auto 0; }
+.foundation-base span { display: block; height: 0; border-top: 1.4px solid #14213D; margin: 0 auto; }
+.foundation-base span + span { margin-top: 4px; width: 104%; margin-left: -2%; border-top-width: 1px; }
+.foundation-after { margin-top: 1.4rem; }
+@media (max-width: 560px) {
+  .foundation-course { width: calc(100% - (var(--i) - 1) * 3%); }
+  .foundation-name { font-size: 1.15rem; }
+}
