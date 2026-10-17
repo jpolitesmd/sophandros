@@ -357,7 +357,7 @@ export const lessonPhases: LessonPhase[] = [
         id: "ii1",
         heading: "II.1 · Duty — pietas",
         lessons: [
-          lesson(47, "rome-from-village", "History: Rome from Village to Republic", ["beard", "livy"]),
+          lesson(47, "rome-from-village", "History: Rome from Village to Republic", ["beard", "livy"], "/lessons/rome-from-village"),
           lesson(48, "aeneas-and-pietas", "Aeneas carries his father: the Aeneid and pietas", ["virgil"]),
           lesson(49, "aeneas-and-dido", "Aeneas and Dido: duty against love", ["virgil"]),
           lesson(50, "livys-romans", "Livy’s exemplary Romans", ["livy"]),
@@ -374,7 +374,7 @@ export const lessonPhases: LessonPhase[] = [
           lesson(55, "the-twelve-tables", "The Twelve Tables", ["warmington"]),
           lesson(56, "struggle-of-the-orders", "The Struggle of the Orders", ["livy"]),
           lesson(57, "polybius-mixed", "Polybius and the mixed constitution", ["polybius"]),
-          lesson(58, "citizenship-that-grows", "Citizenship that grows", ["beard", "livy"]),
+          lesson(58, "citizenship-that-grows", "Citizenship that grows", ["beard", "livy"], "/lessons/rome-from-village"),
           lesson(59, "law-as-a-profession", "Law as a profession", ["justinian"]),
           lesson(60, "law-steadies-duty", "Review: law steadies duty", ["polybius"]),
         ],
