@@ -2353,3 +2353,80 @@ main .introspection-notes .introspection-status {
 .introspection .introspection-kicker { text-align: center; padding-left: 0.22em; }
 main .introspection .introspection-intro { text-align: center; }
 .page-head { padding-bottom: 2.75rem; } .page-head + .section { padding-top: 3rem; }
+
+/* ==========================================================================
+   Layout cleanup, 16 Oct 2026
+   One centered reading column, quiet section breaks, and tidier components.
+   Kept last so it settles the earlier overrides above.
+   ========================================================================== */
+
+/* One reading column. The narrow wrapper is exactly the text measure, so
+   boxes, quotes and paragraphs inside it share one left edge and sit centered. */
+.wrap-narrow {
+  width: min(calc(var(--measure) + 2.5rem), 100%);
+}
+main .wrap-narrow > * { margin-left: auto; margin-right: auto; }
+.section .prose,
+.section .section-head,
+.page-head .lede,
+.form { max-width: var(--measure); margin-left: auto; margin-right: auto; }
+
+/* Wide sections line up with the reading column's centre and stop at a sensible width. */
+.wrap { width: min(1080px, 100%); }
+.section .wrap > .prose { text-align: left; }
+
+/* Quiet section breaks: a short gold rule instead of the Greek-key ornament. */
+:is(.hero, .page-head, .section) + .section::before {
+  top: 0;
+  width: 56px;
+  height: 1px;
+  margin-left: -28px;
+  background: var(--gold);
+  opacity: 0.7;
+}
+hr.ornament,
+.lesson-body hr.ornament {
+  width: 56px;
+  height: 1px;
+  margin: var(--break) auto;
+  background: var(--gold);
+  opacity: 0.7;
+}
+
+/* Even vertical rhythm between home-page sections. */
+.section { padding: 4.5rem 0; }
+.section-head { margin-bottom: 1.5rem; }
+.section-head h2 { margin-top: 0.4rem; }
+
+/* Titles: large but never four lines tall. */
+h1 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.1; }
+.reading-main h1 { font-size: clamp(2rem, 3.6vw, 3rem); }
+
+/* Phase cards: same height, link pinned to the bottom, titles that fit. */
+.phase h3 { font-size: clamp(1.3rem, 1.8vw, 1.55rem); }
+.phase .more {
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  align-self: flex-start;
+}
+
+/* How-it-works steps: same rhythm as the cards. */
+.how-steps li { padding: 1.35rem 1.25rem 1.4rem; }
+
+/* Buttons centred under centred headings. */
+.section .actions,
+.section .wrap > .button { display: flex; justify-content: center; width: fit-content; margin: 1.75rem auto 0; }
+
+/* Forms: label and "(optional)" on one line, fields full width of the column. */
+.form label { display: block; }
+.form label > :is(input, select, textarea) { display: block; margin-top: 0.4rem; }
+.form .optional { margin-left: 0.3rem; font-size: 0.9rem; text-transform: none; letter-spacing: 0; }
+.form-status:empty { display: none; }
+.form > p:last-child { margin-top: 0.5rem; }
+
+/* Footer: columns aligned at the top. */
+.footer-grid { align-items: start; }
+
+/* No cream strip between the last section and the footer. */
+.site-footer { margin-top: 0; }

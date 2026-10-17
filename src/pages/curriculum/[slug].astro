@@ -46,7 +46,7 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
         {layer && ` · Layer ${layer.n}`}
       </p>
       <h1>{module.title}</h1>
-      <p class="lede">{module.card}</p>
+      <p class="lede"><Rich text={module.card} /></p>
     </header>
 
     {
@@ -67,7 +67,7 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
       )
     }
 
-    <p>{module.theme}</p>
+    <p><Rich text={module.theme} /></p>
 
     {
       passages.length > 0 && (
