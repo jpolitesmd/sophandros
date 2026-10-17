@@ -7,7 +7,7 @@
   --paper: #f3eee3;
   --ink: #141414;
   --terracotta: var(--gold);
-  --terracotta-ink: var(--gold);
+  --terracotta-ink: #806221; /* gold darkened for small text on cream (WCAG AA) */
   --brown: #3e3a34;
   --olive: var(--gold);
   --olive-deep: var(--navy);
@@ -419,6 +419,14 @@ a:hover {
   font-weight: 500;
   line-height: 1.15;
   color: var(--ink);
+}
+
+.hero-sub {
+  margin: 1rem auto 0;
+  max-width: 34em;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--brown);
 }
 
 .actions {
@@ -1004,6 +1012,13 @@ th {
   color: var(--brown);
   font-family: var(--serif);
   font-size: 0.95rem;
+}
+
+.form-note {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.98rem;
+  color: var(--brown);
 }
 
 .todo {

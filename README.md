@@ -26,7 +26,7 @@ This repository is a static [Astro](https://astro.build) site. Phase I (Greece) 
 | `/curriculum/the-examined-life` | Phase I, Module 5 |
 | `/curriculum/virtue-and-polity` | Phase I, Module 6, with the phase capstone |
 | `/founders` | Founders Edition (outline) |
-| `/about` | The name |
+| `/about` | About (the name) |
 | `/waitlist` | Waitlist form |
 
 ## Run locally
@@ -49,7 +49,7 @@ npm run preview
 
 ## Waitlist
 
-The form is a placeholder. It is marked **TODO** on the page. Submitting it opens the visitor’s email client to `hello@sophandros.com` and does not store the message. Before a public launch, replace it with a real provider (for example Buttondown or Resend) and remove the TODO note.
+The form is a placeholder. It is marked **TODO** in a code comment in `src/components/WaitlistForm.astro`, not on the page. Submitting it opens the visitor’s email client to `hello@sophandros.com` and does not store the message. Before a public launch, replace it with a real provider (for example Buttondown or Resend) and remove the TODO comment.
 
 ## Content
 

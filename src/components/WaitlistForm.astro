@@ -21,11 +21,11 @@ const noteId = `${id}-note`;
   data-subject="Sophandros waitlist"
   aria-describedby={noteId}
 >
-  <p class="todo" id={noteId}>
-    <strong>TODO</strong>
-    Connect this preview form to a real waitlist provider before launch. Until then,
-    submitting opens an email to
-    <a href={`mailto:${site.email}`}>{site.email}</a>. What you type here is not stored.
+  {/* TODO before launch: connect a waitlist provider (Buttondown, Formspree, Resend). */}
+  <p class="form-note" id={noteId}>
+    Joining opens a short email to
+    <a href={`mailto:${site.email}`}>{site.email}</a> in your own mail app.
+    Nothing you type is stored on this site.
   </p>
 
   <label>

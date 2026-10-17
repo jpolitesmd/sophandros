@@ -29,7 +29,7 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
 
 <Base
   title={module.title}
-  description={`${module.code} ${module.title}. ${module.card} A summary of the drafted Greece syllabus.`}
+  description={`${module.code} ${module.title}. ${module.card}`}
 >
   <div class="wrap-narrow">
     <nav class="crumbs" aria-label="Breadcrumb">
@@ -68,9 +68,6 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
     }
 
     <p>{module.theme}</p>
-    <p style="color:var(--brown)">
-      Summary of the drafted syllabus. The readings below are the ones named there.
-    </p>
 
     {
       passages.length > 0 && (
@@ -113,9 +110,9 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
 
     <h2>The readings</h2>
     <p style="max-width:var(--measure)">
-      The taught lesson, when it is written, is about half an hour.
-      The longer syllabus beside it — a language chapter, a double translation —
-      is optional. You do not need it to read the lesson.
+      Each lesson is about half an hour, plus the reading. The extra work listed
+      with a week, such as a language chapter or a double translation, is
+      optional. You do not need it to read the lesson.
     </p>
     <ol class="weeks">
       {

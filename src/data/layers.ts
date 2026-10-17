@@ -81,7 +81,7 @@ export const layers: Layer[] = [
     age: "Tragedy and the courts",
     href: "/curriculum/tragedy-and-the-city",
     scene:
-      "The fourth layer is conscience, and a law that can answer it. The syllabus week on the Eumenides is titled “the birth of the court.” Antigone sets a burial against a ruler’s order. Oedipus the King and Medea are in the same module. Honor told a warrior what his prize was worth. A court asks what he owes when the prize and the house and the city disagree.",
+      "The fourth layer is conscience, and a law that can answer it. In the Eumenides, Athens founds a court to end a blood feud. Antigone sets a burial against a ruler’s order. Oedipus the King and Medea are in the same module. Honor told a warrior what his prize was worth. A court asks what he owes when the prize and the house and the city disagree.",
   },
   {
     n: 5,
@@ -94,7 +94,7 @@ export const layers: Layer[] = [
     age: "Socrates, Plato, Euclid",
     href: "/curriculum/the-examined-life",
     scene:
-      "The fifth layer is a mind that examines itself. The syllabus puts the line from the Apology here: the unexamined life is not worth living. The readings are Euthyphro, Apology, Crito, Phaedo, Meno, and the Republic, with Euclid’s Elements, Book I, as the discipline of proof. The earlier layers gave the man a prize, a house, a city, and a court. This one asks him to say what he knows.",
+      "The fifth layer is a mind that examines itself. Its motto is the line from the Apology: the unexamined life is not worth living. The readings are Euthyphro, Apology, Crito, Phaedo, Meno, and the Republic, with Euclid’s Elements, Book I, as the discipline of proof. The earlier layers gave the man a prize, a house, a city, and a court. This one asks him to say what he knows.",
   },
   {
     n: 6,
@@ -107,7 +107,7 @@ export const layers: Layer[] = [
     age: "Aristotle and the Parthenon",
     href: "/curriculum/virtue-and-polity",
     scene:
-      "The sixth layer is practical wisdom, and it is meant to finish the Greek figure. Aristotle’s Ethics treats happiness as an activity of the soul in accordance with virtue, and virtue as a mean formed by habit. The Politics calls the human being a political animal. The same module looks at the Parthenon, which the syllabus dates 447–432 BC, as a civic statement in stone. Honor, home, the citizen, the court, and the examined mind are supposed to be in him already.",
+      "The sixth layer is practical wisdom, and it is meant to finish the Greek figure. Aristotle’s Ethics treats happiness as an activity of the soul in accordance with virtue, and virtue as a mean formed by habit. The Politics calls the human being a political animal. The same module looks at the Parthenon, built 447–432 BC, as a civic statement in stone. Honor, home, the citizen, the court, and the examined mind are supposed to be in him already.",
   },
 ];
 
