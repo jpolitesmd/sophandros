@@ -359,3 +359,8 @@ em, i { font-style: italic; }
   .site-header, .site-footer, .pager, .actions { display: none; }
   body { background: #fff; font-size: 11pt; }
 }
+
+/* Chapter text: section headings and their source line sit centered. */
+.reading .prose > h2,
+.reading .prose > h3,
+.reading .prose > h2 + p.muted { text-align: center; }
