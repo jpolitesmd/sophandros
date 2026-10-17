@@ -63,14 +63,14 @@ const chapterMeta: Record<string, ChapterMeta> = {
   iii4: { title: "The new science", ring: "Ring 6 · A print-connected world", kind: "chapter" },
   iii5: { title: "The prince and political realism", ring: "Ring 4 · Nation-states", kind: "chapter" },
   iii6: { title: "The courtier and statesman", ring: "Rings 4–6 · Court and a wider world", kind: "chapter" },
-  iv: { title: "The Founding — the culmination", ring: "Rings 4–6 · The nation, looking to the world", kind: "chapter" },
+  iv: { title: "The Birth of an American Nation — the culmination", ring: "Rings 4–6 · The nation, looking to the world", kind: "chapter" },
 };
 
 const partPlan: { id: string; label: string; title: string; ring: string; phaseId: string }[] = [
   { id: "greece", label: "Part I", title: "Greece", ring: "Rings 1–3 · Self, household, city", phaseId: "greece" },
   { id: "rome", label: "Part II", title: "Rome", ring: "Rings 4–5 · Country to empire", phaseId: "rome" },
   { id: "renaissance", label: "Part III", title: "Renaissance", ring: "Rings 3–6 · City-republics to a wider world", phaseId: "renaissance" },
-  { id: "founding", label: "Part IV", title: "The Founding", ring: "Rings 4–6 · The nation, looking to the world", phaseId: "founding" },
+  { id: "founding", label: "Part IV", title: "The Birth of an American Nation", ring: "Rings 4–6 · The nation, looking to the world", phaseId: "founding" },
 ];
 
 function phaseById(id: string) {

@@ -526,11 +526,11 @@ export const lessonPhases: LessonPhase[] = [
   },
   {
     id: "founding",
-    heading: "Part IV · The Founding",
+    heading: "Part IV · The Birth of an American Nation",
     modules: [
       {
         id: "iv",
-        heading: "IV · The Founding — the culmination",
+        heading: "IV · The Birth of an American Nation — the culmination",
         lessons: [
           lesson(132, "world-of-the-founders", "History: The World of the Founders", ["bailyn", "richard-gifts", "richard"]),
           lesson(133, "founders-classical-education", "The Founders' classical education", ["richard-gifts", "richard"]),
@@ -621,7 +621,7 @@ export const generalBibliography: { heading: string; ids: string[] }[] = [
     ],
   },
   {
-    heading: "Part IV: The Founding",
+    heading: "Part IV: The Birth of an American Nation",
     ids: [
       "adams", "addison", "aristotle-politics-rackham", "bailyn", "cicero-republic", "federalist", "jefferson-lee",
       "livy", "locke", "montesquieu", "plutarch-publicola", "polybius", "richard-gifts", "richard", "trenchard",
