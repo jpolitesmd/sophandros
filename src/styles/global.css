@@ -2268,3 +2268,8 @@ main .excerpt { margin-top: var(--block); }
   line-height: 1;
   color: var(--gold);
 }
+
+/* Center section content and headings on banded pages (home, about, founders) */
+.section .prose { margin-left: auto; margin-right: auto; }
+.section .section-head { text-align: center; max-width: var(--measure); margin-left: auto; margin-right: auto; }
+.section .section-head .kicker { padding-left: 0.22em; }
