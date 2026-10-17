@@ -2309,3 +2309,13 @@ main .excerpt { margin-top: var(--block); }
   font-family: var(--display); font-size: 0.66rem; letter-spacing: 0.22em;
   padding-left: 0.22em; text-transform: uppercase; color: #B08D3E; line-height: 1.2;
 }
+
+/* Site-wide centering: page heads and section headings (Safari-verified) */
+.page-head { text-align: center; }
+.page-head .lede { margin-left: auto; margin-right: auto; }
+.page-head .kicker { padding-left: 0.22em; }
+main h1, main h2 { text-align: center; }
+.form { margin-left: auto; margin-right: auto; }
+.crumbs ol { justify-content: center; }
+.lesson-body > h3, .lesson-body > section > h3, .lesson-body section > h3:first-child { text-align: center; }
+.scene-today { text-align: center; }
