@@ -364,3 +364,9 @@ em, i { font-style: italic; }
 .reading .prose > h2,
 .reading .prose > h3,
 .reading .prose > h2 + p.muted { text-align: center; }
+
+/* Editions with prices */
+.editions { max-width: 52rem; margin: 0 auto; }
+.edition .price { font-family: var(--display); font-size: 2rem; color: var(--navy); margin: var(--s2) 0 var(--s2); line-height: 1; }
+.edition .note { font-size: 0.95rem; color: var(--gold-ink); font-style: italic; margin-top: var(--s2); }
+.edition .price + p { margin-top: 0; }

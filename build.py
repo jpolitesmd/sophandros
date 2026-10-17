@@ -225,8 +225,11 @@ def home():
         for g in C.TOOLS
     )
     editions = "".join(
-        f'<div class="card"><span class="meta">{length}</span><h3>{name}</h3><p>{desc}</p></div>'
-        for name, length, desc in C.EDITIONS
+        f'<div class="card edition"><span class="meta">{length}</span><h3>{name}</h3>'
+        f'<p class="price">{price}</p><p>{desc}</p>'
+        + (f'<p class="note">{note}</p>' if note else "")
+        + "</div>"
+        for name, length, price, desc, note in C.EDITIONS
     )
     body = f"""
 <section class="hero">
@@ -304,9 +307,9 @@ def home():
     <div class="head">
       <span class="kicker">Two editions and a book</span>
       <h2>Choose your pace</h2>
-      <p class="lede">Pricing will be announced when enrollment opens.</p>
+      <p class="lede">Enrollment opens soon. Join the waitlist to hear first.</p>
     </div>
-    <div class="grid grid-3">{editions}</div>
+    <div class="grid grid-2 editions">{editions}</div>
   </div>
 </section>
 
@@ -511,7 +514,7 @@ def waitlist():
   <div class="container">
     <span class="kicker">Not yet open</span>
     <h1>Join the waitlist</h1>
-    <p class="lede">Leave a way to reach you. When the first places are offered, we will write. Pricing has not been set, and a place on this list is not an application.</p>
+    <p class="lede">Leave a way to reach you. When the first places are offered, we will write. A place on this list is not a purchase or an application.</p>
   </div>
 </header>
 <section class="section" style="padding-top:var(--s3)">

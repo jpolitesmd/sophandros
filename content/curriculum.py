@@ -600,9 +600,19 @@ LATIN = [
 
 # The two editions and the book. Prices are announced at launch.
 EDITIONS = [
-    ("The core course", "12 weeks", "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone."),
-    ("The extended edition", "26 weeks", "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace."),
-    ("The book", "26 chapters", "Every chapter of the extended edition in print, with readings, exercises and references."),
+    # (name, length, price, description, note)
+    ("The core course", "12 weeks", "$99",
+     "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone.",
+     "Move up to the extended edition later for $100."),
+    ("The extended edition", "26 weeks", "$199",
+     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace.",
+     ""),
+    ("The book", "26 chapters", "$50",
+     "Every chapter of the extended edition, with readings, exercises and references, as a digital edition (PDF and e-book).",
+     "A printed edition will follow on Amazon."),
+    ("The course and the book", "26 weeks + book", "$229",
+     "The extended edition with the digital book included.",
+     "Saves $20."),
 ]
 
 
