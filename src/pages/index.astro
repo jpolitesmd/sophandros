@@ -1,11 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
-import Excerpt from "../components/Excerpt.astro";
 import Foundation from "../components/Foundation.astro";
 import WaitlistForm from "../components/WaitlistForm.astro";
 import logo from "../assets/brand/logo-lockup.png";
-import { homeExcerpt } from "../data/excerpts";
 import { site } from "../data/site";
 ---
 
@@ -33,36 +31,33 @@ import { site } from "../data/site";
     <div class="wrap-narrow">
       <div class="section-head">
         <span class="kicker">What it is</span>
-        <h2>The progression</h2>
+        <h2>The education of the complete man</h2>
       </div>
       <div class="prose">
         <p>
-          A classical education was a way of watching human ideals change, and of
-          watching the inventions and paradigm shifts that followed them. You see
-          why a form prospered and why it failed, and you come to understand why
-          we do what we do today. The American Founders used these books that way
-          when they argued about a republic: what to take from the old
-          constitutions, and what to change. Sophandros revives that education for a
-          working life now.
+          For centuries the educated elite of Europe and colonial America were
+          formed the same way: Latin and Greek, Homer and Plato, Cicero and Virgil,
+          and the history of every republic that rose and fell. Harvard’s rules of
+          1642 asked a student to read Cicero at sight and decline Greek nouns and
+          verbs before he could be admitted.
         </p>
         <p>
-          The reading keeps the old order. Greece builds one figure, layer by
-          layer, as that society grows more complex. You start with honor: the
-          warrior, in the Bronze Age world of the <em>Iliad</em>. Then a mind and
-          a home. Then a citizen who also fights. Then a conscience and a law.
-          Then a mind that examines itself. Then practical wisdom, with Aristotle
-          and the Parthenon.
+          The Founders were products of that education, and they leaned on it when
+          they designed a nation. Before the Constitutional Convention, Madison wrote
+          notes on the ancient and modern confederacies. Hamilton, Madison, and Jay
+          signed the <em>Federalist</em> “Publius,” after a founder of the Roman
+          republic.
         </p>
         <p>
-          Rome carries that person into duty and law. The Renaissance carries him
-          into the courtier, and into the professional you already are. Each
-          lesson is on this page, and the primary text is in the reader beside it.
-          The shorter path through the founding is the
-          <a href="/founders">Founders Edition</a>.
+          Sophandros revives that education for a working life today. It builds one
+          figure layer by layer, the way the ancient world did. First comes a man who
+          masters himself, then his household, his city, its law, his own mind, and
+          finally the practical wisdom to govern all of them. Each layer widens the
+          circle. Rome, the Renaissance, and the American founding carry him out to
+          the nation and the world.
         </p>
       </div>
       <Foundation />
-      <Excerpt excerpt={homeExcerpt} />
     </div>
   </section>
 
