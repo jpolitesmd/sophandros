@@ -142,11 +142,10 @@ def rings_svg():
     """The widening circle: one half-ring per part, the self at the center."""
     cx, base = 380, 392
     rings = [  # outer to inner: (radius, label, part label, link)
-        (350, "A new republic", "Part IV · Ch. 19–21", "/curriculum/#founding"),
-        (292, "The wider world", "Part III · Ch. 15–18", "/curriculum/#world"),
-        (234, "Republic and empire", "Part II · Ch. 9–14", "/curriculum/#rome"),
-        (176, "The city", "Part I · Ch. 3–8", "/curriculum/#greece"),
-        (122, "The household", "Ch. 2", "/chapters/02-the-household/"),
+        (350, "The wider world", "Part III · Ch. 15–18", "/curriculum/#world"),
+        (280, "Republic and empire", "Part II · Ch. 9–14", "/curriculum/#rome"),
+        (210, "The city", "Part I · Ch. 3–8", "/curriculum/#greece"),
+        (140, "The household", "Ch. 2", "/chapters/02-the-household/"),
     ]
     parts = []
     inner = [122 - 0] + [r for r, *_ in rings]
@@ -169,8 +168,7 @@ def rings_svg():
     return (
         '<svg class="rings" viewBox="0 0 760 400" role="img" '
         'aria-labelledby="rings-title"><title id="rings-title">The widening circle: '
-        "the self, the household, the city, republic and empire, the wider world, "
-        "and a new republic</title>"
+        "the self, the household, the city, republic and empire, and the wider world</title>"
         + "".join(parts)
         + f'<line class="base" x1="20" x2="740" y1="{base}" y2="{base}"/></svg>'
     )
@@ -252,7 +250,7 @@ def home():
       <p class="lede">{C.THESIS}</p>
     </div>
     <figure class="rings-figure">{rings_svg()}
-      <figcaption class="rings-caption">The prologue sets the stage before the first ring. Part V carries everything back to the center: your own work.</figcaption>
+      <figcaption class="rings-caption">The prologue sets the stage before the first ring. Part IV shows the Founders putting the whole education to work, and Part V carries it back to the center: your own work.</figcaption>
     </figure>
   </div>
 </section>
