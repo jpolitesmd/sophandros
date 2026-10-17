@@ -21,6 +21,8 @@ export interface Layer {
   virtue: string;
   /** Who the layer is forming, in the owner’s words. */
   who: string;
+  /** Owner’s widening circle: the sphere this layer teaches him to order. */
+  circle: string;
   /** Owner’s period label. */
   age: string;
   href: string;
@@ -32,6 +34,7 @@ export const layers: Layer[] = [
   {
     n: 1,
     slug: "the-heroic-code",
+    circle: "The self",
     code: "I.1",
     moduleTitle: "The Heroic Code",
     virtue: "Honor",
@@ -44,6 +47,7 @@ export const layers: Layer[] = [
   {
     n: 2,
     slug: "homecoming",
+    circle: "The household",
     code: "I.2",
     moduleTitle: "Homecoming",
     virtue: "Mind and home",
@@ -56,6 +60,7 @@ export const layers: Layer[] = [
   {
     n: 3,
     slug: "inquiry-and-war",
+    circle: "The tribe and city",
     code: "I.3",
     moduleTitle: "Inquiry and War",
     virtue: "Citizen and soldier",
@@ -68,6 +73,7 @@ export const layers: Layer[] = [
   {
     n: 4,
     slug: "tragedy-and-the-city",
+    circle: "The city-state",
     code: "I.4",
     moduleTitle: "Tragedy and the City",
     virtue: "Conscience and law",
@@ -80,6 +86,7 @@ export const layers: Layer[] = [
   {
     n: 5,
     slug: "the-examined-life",
+    circle: "Mankind",
     code: "I.5",
     moduleTitle: "The Examined Life",
     virtue: "The examined mind",
@@ -92,6 +99,7 @@ export const layers: Layer[] = [
   {
     n: 6,
     slug: "virtue-and-polity",
+    circle: "The whole",
     code: "I.6",
     moduleTitle: "Virtue and Polity",
     virtue: "Practical wisdom",
@@ -109,4 +117,4 @@ export function layerFor(slug: string): Layer | undefined {
 
 /** After the six Greek layers. Not drawn as extra courses. */
 export const afterGreece =
-  "Rome continues the same person into duty and law. The Renaissance continues him into the courtier, and into the modern professional.";
+  "Each layer widens his circle: himself, his household, his tribe and city, the city-state, mankind. Rome widens it to the nation and empire. The Renaissance widens it to Christendom and the world. The American founding asks him to govern a republic of his own.";
