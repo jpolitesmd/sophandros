@@ -2142,8 +2142,8 @@ hr.ornament + :is(h2, h3, h4) { margin-top: 0; }
 :is(p, ul, ol, figure, blockquote) + hr.ornament { margin-top: var(--break); }
 
 /* Home and long pages: the ornament replaces the plain rule between major sections */
-.section + .section { border-top: 0; position: relative; }
-.section + .section::before {
+.section { border-top: 0; position: relative; }
+:is(.hero, .page-head, .section) + .section::before {
   content: "";
   position: absolute;
   top: -8px;
@@ -2337,3 +2337,4 @@ main .introspection-notes .introspection-status {
 /* Introspection heading follows the site-wide centered headings; prompts stay left */
 .introspection .introspection-kicker { text-align: center; padding-left: 0.22em; }
 main .introspection .introspection-intro { text-align: center; }
+.page-head { padding-bottom: 2.75rem; } .page-head + .section { padding-top: 3rem; }
