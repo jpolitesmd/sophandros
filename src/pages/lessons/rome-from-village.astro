@@ -5,7 +5,7 @@
  */
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 ---
 
@@ -266,22 +266,15 @@ import References from "../../components/References.astro";
       <p>Latin for “the public thing,” the common business of the people. It is the root of our word <em>republic</em>. Romans used it for their state as a whole, whatever its form. For this course it names the fourth ring: the country, shared by everyone in it and owned by no one.</p>
     </section>
 
-    <Reveal
-      items={[
-        { prompt: "Why does this lesson keep “two columns”?", answer: "Because our main written sources, such as Livy, were written centuries after the events. We set what Romans said beside what the evidence lets us say, and mark where they differ." },
-        { prompt: "What three advantages did the site of Rome have?", answer: "A river crossing on the Tiber with a low island, hills that could be defended, and access to the salt beds near the river’s mouth, on a frontier between Latins and Etruscans." },
-        { prompt: "What does archaeology show about Rome in the 8th century BC?", answer: "Villages of oval huts on the hilltops, such as the Palatine, with cemeteries nearby; the valley between, later the Forum, was drained and given a public surface later, probably in the 7th century." },
-        { prompt: "According to Livy, what was new about the consuls?", answer: "Not that their power was smaller than the kings’, but that it lasted only one year. There were also two of them, each able to check the other." },
-        { prompt: "How do the stories of the asylum and the Sabine women point ahead to later Roman history?", answer: "Both describe a Rome born by taking in outsiders. Later Rome kept extending citizenship to allies, conquered peoples and freed slaves, which was unlike the closed Greek polis." },
+    <Introspection
+      slug="rome-from-village"
+      prompts={[
+        "The lesson keeps two columns: what Romans said about their origins, and what the evidence shows. What story does your family, firm or country tell about its own founding? Which parts are history, which are legend, and what does the legend teach you to be?",
+        "Rome grew where it had a river crossing, defensible hills and access to salt. What advantages of place or circumstance has your life been built on, and are you using them well?",
+        "Livy says the new thing about the consuls was not that they had less power than the kings, but that their power lasted only one year, and there were two of them. Where in your own life, at work or at home, would a limit of time or a partner’s check make your authority safer?",
+        "Rome was born, in its own stories, by taking in outsiders: the asylum, the Sabine women. Who are the outsiders your household, team or town could take in? What would they bring?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>In a few sentences, if you want them: what story does your family, firm or country tell about its own founding? Which parts of it are history, which are legend, and what does the legend teach you to be? The sentence is yours, and it stays in this browser.</p>
-      <label class="reflection-label" for="note-rome-from-village">Your note</label>
-      <textarea id="note-rome-from-village" data-note="rome-from-village" rows="5"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -329,11 +322,3 @@ import References from "../../components/References.astro";
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.rome-from-village";
-  const box = document.querySelector("[data-note='rome-from-village']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

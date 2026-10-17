@@ -11,7 +11,7 @@
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import book6 from "../../data/iliad-book6.json";
 import book9 from "../../data/iliad-book9.json";
@@ -166,41 +166,15 @@ const glossary = [
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "Why do Glaucus and Diomedes stop their fight?",
-          answer:
-            "Their houses are already guest-friends. Diomedes’ grandfather entertained Bellerophon. They exchange armour and agree to avoid each other’s spears.",
-        },
-        {
-          prompt: "Why will Hector not stay on the wall, though Andromache asks him?",
-          answer:
-            "He asks with what face he could look at the Trojans if he shirked like a coward. He fights in the forefront for his father’s renown and his own, and he grieves most for what will happen to her.",
-        },
-        {
-          prompt: "What does Achilles tell Ulysses about the coward and the hero?",
-          answer:
-            "Coward and hero are held in equal honour, and death deals like measure to the man who works and the man who is idle. He will not take the gifts.",
-        },
-        {
-          prompt: "Which of the two honors does this lesson call the steadier?",
-          answer:
-            "Honor rooted in duty to other people, the kind Hector states at the gate. Achilles’ refusal is still honor about his own wounded standing.",
-        },
+    <Introspection
+      slug="honor-and-home"
+      prompts={[
+        "Glaucus and Diomedes stop fighting because their grandfathers were guest-friends. What old bond, a family friendship or a debt of kindness, still shapes how you treat someone today?",
+        "Hector will not stay on the wall because he could not face the Trojans if he shirked, and yet he grieves most for Andromache. Where do your duty to the public and your love for your family pull against each other, and how do you decide?",
+        "Achilles says coward and hero are held in equal honour. When have you felt that doing the work well went unnoticed? Did you keep doing it, and for whose sake?",
+        "The lesson calls honor rooted in duty to other people the steadier kind. Where has a duty to a particular person held you to a task that reputation alone would have let you leave?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        One short note, if you want it: where has a duty to a particular person
-        held you to a task that reputation alone would have let you leave? It
-        stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-home">Your note</label>
-      <textarea id="note-home" data-note="honor-and-home" rows="4"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -231,11 +205,3 @@ const glossary = [
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.honor-and-home";
-  const box = document.querySelector("[data-note='honor-and-home']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

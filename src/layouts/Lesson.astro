@@ -1,6 +1,6 @@
 ---
 import Base from "./Base.astro";
-import Quiz, { type QuizItem } from "../components/Quiz.astro";
+import Introspection from "../components/Introspection.astro";
 
 interface Props {
   number: number;
@@ -10,7 +10,9 @@ interface Props {
   objectives: string[];
   takeaways: string[];
   summary: string;
-  quiz: QuizItem[];
+  /** Introspection prompts: open, reflective questions (no answers). */
+  introspection: string[];
+  slug: string;
   optional?: string;
   prev?: { href: string; label: string };
   next?: { href: string; label: string };
@@ -24,7 +26,8 @@ const {
   objectives,
   takeaways,
   summary,
-  quiz,
+  introspection,
+  slug,
   optional,
   prev = { href: "/curriculum/the-heroic-code", label: "← The module" },
   next,
@@ -57,7 +60,7 @@ const {
       <slot />
     </div>
 
-    <Quiz items={quiz} />
+    <Introspection slug={slug} prompts={introspection} />
 
     {
       optional && (

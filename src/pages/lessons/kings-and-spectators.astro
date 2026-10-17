@@ -8,7 +8,7 @@
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import book2 from "../../data/iliad-book2.json";
 import book3 from "../../data/iliad-book3.json";
@@ -199,42 +199,15 @@ const glossary = [
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "What does the dream tell Agamemnon, and is it true?",
-          answer:
-            "It says the gods are no longer divided and that he shall take Troy that day. It is a lying dream. Zeus sends it so the Greeks will fight without Achilles.",
-        },
-        {
-          prompt: "What does Thersites tell the assembly, and what happens to him?",
-          answer:
-            "He says the king’s tents are full, Achilles was robbed, and the army should sail home. Odysseus beats him with the sceptre. The men pity him, laugh, and approve.",
-        },
-        {
-          prompt: "What does Priam say to Helen on the wall?",
-          answer:
-            "He lays no blame on her. The gods brought the war. She wishes she had died rather than come, and then she names Agamemnon.",
-        },
-        {
-          prompt: "Why does the duel fail to end the war?",
-          answer:
-            "Menelaus has Paris by the helmet. Aphrodite breaks the strap, hides Paris in a cloud, and takes him to his bedroom. The man the oath required is gone.",
-        },
+    <Introspection
+      slug="kings-and-spectators"
+      prompts={[
+        "Agamemnon acts on a dream that tells him what he wants to hear, and it is a lie. What plan of yours rests on a promise that flatters you? How would you test it before acting?",
+        "Thersites says in public much of what Achilles said in the quarrel, and the assembly laughs him down. Where have you seen a true complaint lose because of who said it? Have you ever dismissed one that way yourself?",
+        "On the wall, Priam lays no blame on Helen. Is there someone in your household or work whom you could release from blame, as Priam does, without pretending nothing happened?",
+        "The duel was meant to settle the war, and it fails when Paris is spirited away. What agreement in your life depends on someone who could simply leave? How would you make it hold if they did?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        One optional sentence, if you want it: Thersites says in public what
-        Achilles said in the quarrel, and the assembly laughs him down. Where have
-        you seen a true complaint lose because of who said it? The poem’s scene is
-        already told. The sentence is yours, and it stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-kings">Your note</label>
-      <textarea id="note-kings" data-note="kings-and-spectators" rows="4"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -281,11 +254,3 @@ const glossary = [
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.kings-and-spectators";
-  const box = document.querySelector("[data-note='kings-and-spectators']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

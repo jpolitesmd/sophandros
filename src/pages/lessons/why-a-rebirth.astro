@@ -5,7 +5,7 @@
  */
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 ---
 
@@ -236,22 +236,16 @@ import References from "../../components/References.astro";
       <p>Latin for “humanity,” in the sense of the qualities that make a person fully human: learning, kindness and refinement. Cicero used it, and the humanists took their name from it. For this course it names what the whole education aims at: not information, but a cultivated human being.</p>
     </section>
 
-    <Reveal
-      items={[
-        { prompt: "Who first used the word “rebirth” for the revival of the arts, and who made “the Renaissance” the name of an era?", answer: "Giorgio Vasari spoke of a <em>rinascita</em> in his <em>Lives of the Artists</em> (1550). Jules Michelet (1855) and above all Jacob Burckhardt (1860) made “the Renaissance” the name of a period." },
-        { prompt: "Give three reasons why the revival began in Italy.", answer: "Its many large, self-governing cities; its wealth from trade, cloth and banking; and its daily contact with Roman ruins and Roman law." },
-        { prompt: "How did Petrarch reverse the old image of light and darkness?", answer: "Earlier Christian writers saw pagan antiquity as dark. Petrarch treated antiquity as the age of light and the centuries after it as darkness, the origin of our idea of the “Middle Ages.”" },
-        { prompt: "Why is the idea of a “dark” age unfair?", answer: "Those centuries copied and preserved nearly all the Latin classics, built universities, taught law and logic, and recovered Aristotle through translations, including from Arabic." },
-        { prompt: "What do Grafton and Jardine argue about humanist education?", answer: "That it was often more drill than inspiration, and that it suited rulers because it produced polished, obedient servants; its own claims about forming free, virtuous men should be tested." },
+    <Introspection
+      slug="why-a-rebirth"
+      prompts={[
+        "Petrarch turned the old image around: antiquity became the light and the centuries after it the darkness. What in your own field has been lost and is worth recovering?",
+        "The lesson argues the so-called dark age copied the classics, built universities and recovered Aristotle. Is there a period of your own life you dismiss as wasted that in fact prepared you for what came after?",
+        "Italy was ready because of its self-governing cities, its trade and its daily contact with Roman ruins. What is around you every day that you have stopped seeing, and that could still teach you?",
+        "Grafton and Jardine argue humanist schooling often produced polished, obedient servants, not free men. As you take this course, how will you test whether it is making you freer and better, rather than only more polished?",
+        "Petrarch could not command an army, yet he changed what Europe taught its sons. What single idea would you most want to hand down to your own children or the people you lead?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>In a few sentences, if you want them: what in your own field has been “lost” and is worth recovering? And is the age you are tempted to call “dark” really dark, or only unfamiliar to you? The sentence is yours, and it stays in this browser.</p>
-      <label class="reflection-label" for="note-why-a-rebirth">Your note</label>
-      <textarea id="note-why-a-rebirth" data-note="why-a-rebirth" rows="5"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -297,11 +291,3 @@ import References from "../../components/References.astro";
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.why-a-rebirth";
-  const box = document.querySelector("[data-note='why-a-rebirth']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

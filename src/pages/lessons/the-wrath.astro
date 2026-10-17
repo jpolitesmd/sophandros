@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import plate from "../../assets/lessons/flaxman-iliad-1.jpg";
 import book1 from "../../data/iliad-book1.json";
@@ -249,47 +249,16 @@ const glossary = [
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "What does the opening ask the goddess to sing?",
-          answer:
-            "The anger of Achilles, son of Peleus. The same lines say it began the day he and Agamemnon fell out, and that it sent heroes to their deaths.",
-        },
-        {
-          prompt: "Why does Apollo send the plague?",
-          answer:
-            "Agamemnon refused to free Chryseis, the daughter of Apollo’s priest, though the army wanted the ransom accepted. The arrows last nine days.",
-        },
-        {
-          prompt: "What does Agamemnon take from Achilles, and what is it for?",
-          answer:
-            "Briseis, the prize the Achaeans had given Achilles. He takes her so Achilles will see that the king is stronger.",
-        },
-        {
-          prompt: "What does Zeus give Thetis?",
-          answer:
-            "A nod, which he says he does not take back. The Trojans will have the victory until the Greeks restore Achilles’ honour.",
-        },
-        {
-          prompt: "Where does honor, by itself, fail to settle the quarrel?",
-          answer:
-            "Nestor asks both men to yield, and neither does. There is no court above them. Athena stops the sword and does not return the prize. The nod that keeps Achilles’ honour lets the Trojans win until the Greeks pay it back.",
-        },
+    <Introspection
+      slug="the-wrath"
+      prompts={[
+        "Agamemnon takes Briseis so that Achilles will see the king is stronger. Think of a time someone with more rank took back credit, a role or a reward you had earned. What did you do next, and what would you do now?",
+        "Agamemnon refused to free Chryseis even when the army wanted the ransom accepted, and nine days of arrows followed. Is there something you are holding onto out of pride while the people around you pay for it?",
+        "Nestor asks both men to yield, and neither does. In a quarrel you are in now, at work or at home, what would yielding first actually cost you? What would it gain the people who depend on you?",
+        "There is no court above Agamemnon and Achilles. Who, if anyone, stands above your disputes: a partner, a mentor, a rule you have set yourself? If no one does, what could you put there?",
+        "The poem opens by naming anger as the thing that sent heroes to their deaths. Where has your own anger cost more than the injury that caused it?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        In a few sentences, if you want them: where have you seen a visible share
-        of credit taken back by someone with the rank to take it, and what did the
-        person who lost it do next? The poem has already given its account. This
-        is only yours. It stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-the-wrath">Your note</label>
-      <textarea id="note-the-wrath" data-note="the-wrath" rows="5"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -339,11 +308,3 @@ const glossary = [
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.the-wrath";
-  const box = document.querySelector("[data-note='the-wrath']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

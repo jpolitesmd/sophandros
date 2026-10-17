@@ -13,7 +13,7 @@ import { Image } from "astro:assets";
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import plate from "../../assets/lessons/flaxman-iliad-1.jpg";
 import book1 from "../../data/iliad-book1.json";
@@ -156,42 +156,15 @@ const proem = moduleExcerpts["the-heroic-code"][0];
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "What are Mycenae and Pylos in this lesson, and what is Linear B?",
-          answer:
-            "Palace kingdoms of the Bronze Age. Linear B is the script of a palace economy. It was lost when the palaces collapsed.",
-        },
-        {
-          prompt: "What does the outline say happened around 1200 BC?",
-          answer:
-            "The palace kingdoms collapsed. The centuries after had fewer and poorer settlements. The course calls that stretch the Dark Age.",
-        },
-        {
-          prompt: "What is the Homeric question, in the plain terms of this lesson?",
-          answer:
-            "How poems composed in performance, with formulas and epithets, became the written epics. The 8th–7th century date for the writing-down is debated.",
-        },
-        {
-          prompt: "Why does the course begin with Homer?",
-          answer:
-            "Later Greeks treated Homer as a shared textbook for centuries. The poem keeps a picture of worth from a world older than the poet’s audience.",
-        },
+    <Introspection
+      slug="the-world-of-homer"
+      prompts={[
+        "When the palaces fell, Linear B was lost, and what survived was carried by memory and song. What does your own work, family or field still keep by memory and reputation once the official record is gone?",
+        "Homer’s poems were composed in performance, with formulas passed from singer to singer. What do you know only because someone taught it to you aloud, and who will you hand it on to?",
+        "Later Greeks used Homer as a shared textbook for centuries. What stories does your household or workplace share that teach what is worth admiring? Are they the right ones?",
+        "The poem keeps a picture of worth from a world older than its audience. Which standards from an older generation in your life do you still measure yourself by, and which have you set aside?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        In a few sentences, if you want them: what does your own work still keep
-        by memory and reputation, once the official record is gone? The history
-        above is the course’s account. The sentence is yours, and it stays in
-        this browser.
-      </p>
-      <label class="reflection-label" for="note-world">Your note</label>
-      <textarea id="note-world" data-note="the-world-of-homer" rows="5"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -221,11 +194,3 @@ const proem = moduleExcerpts["the-heroic-code"][0];
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.the-world-of-homer";
-  const box = document.querySelector("[data-note='the-world-of-homer']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

@@ -1,0 +1,65 @@
+---
+/**
+ * Introspection: open, reflective prompts that ask the reader to turn the
+ * lesson on his own life, work and household. No answers, no marks.
+ * The private notes box is saved in this browser only (localStorage),
+ * one note per lesson, under "sophandros.note.<slug>".
+ */
+interface Props {
+  slug: string;
+  prompts: string[];
+  intro?: string;
+}
+
+const {
+  slug,
+  prompts,
+  intro = "There are no right answers here. Read each question slowly, turn it on your own life, and write as much or as little as you like.",
+} = Astro.props;
+const noteId = `note-${slug}`;
+---
+
+<section class="introspection" aria-labelledby="introspection-title" data-introspection={slug}>
+  <p class="kicker introspection-kicker">Introspection</p>
+  <h2 id="introspection-title">Look within</h2>
+  <p class="introspection-intro">{intro}</p>
+  <ol class="introspection-prompts">
+    {prompts.map((prompt) => <li set:html={prompt} />)}
+  </ol>
+  <div class="introspection-notes">
+    <label for={noteId}>Your private notes</label>
+    <textarea
+      id={noteId}
+      data-note={slug}
+      rows="6"
+      placeholder="Write here. Your notes stay in this browser and are never sent anywhere."
+    ></textarea>
+    <p class="introspection-status" aria-live="polite" data-note-status>Saved only on this device.</p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLTextAreaElement>("textarea[data-note]").forEach((box) => {
+    const key = `sophandros.note.${box.dataset.note}`;
+    const status = box.parentElement?.querySelector<HTMLElement>("[data-note-status]");
+    try {
+      box.value = localStorage.getItem(key) || "";
+    } catch {
+      if (status) status.textContent = "This browser is not saving notes (private mode?).";
+    }
+    let timer: number | undefined;
+    box.addEventListener("input", () => {
+      try {
+        if (box.value) localStorage.setItem(key, box.value);
+        else localStorage.removeItem(key);
+        if (status) {
+          status.textContent = "Saved on this device.";
+          window.clearTimeout(timer);
+          timer = window.setTimeout(() => (status.textContent = "Saved only on this device."), 1600);
+        }
+      } catch {
+        if (status) status.textContent = "Could not save in this browser.";
+      }
+    });
+  });
+</script>

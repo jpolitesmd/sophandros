@@ -9,7 +9,7 @@
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import book24 from "../../data/iliad-book24.json";
 
@@ -149,41 +149,16 @@ import book24 from "../../data/iliad-book24.json";
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "Why are the gods angry with Achilles at the start of Book 24?",
-          answer:
-            "He keeps dishonouring Hector’s body. Apollo says he has flung aside all pity. Zeus is angrier than the other gods and orders the body given back for a ransom.",
-        },
-        {
-          prompt: "What does Priam do when he reaches Achilles?",
-          answer:
-            "He clasps Achilles’ knees and kisses the hands that had slain so many of his sons. The two men weep, Priam for Hector and Achilles for his father and for Patroclus.",
-        },
-        {
-          prompt: "What stands on the floor of Zeus’s palace, in Achilles’ speech?",
-          answer:
-            "Two urns, one of evil gifts and one of good. Zeus mixes them for some men. Others receive only evil. Achilles sets Priam’s losses beside Peleus’s.",
-        },
-        {
-          prompt: "What does this layer now contain, and what does the outline say it still lacks?",
-          answer:
-            "Courage, loyalty, a name worth keeping, and pity for an enemy. It still lacks self-command and judgment, which the Odyssey adds.",
-        },
+    <Introspection
+      slug="honor-and-compassion"
+      prompts={[
+        "Apollo says Achilles has flung aside all pity. Is there someone you have beaten, in an argument, a negotiation or a family dispute, to whom you still owe some pity?",
+        "Priam kisses the hands that killed his sons. What would it take for you to approach someone who has wronged you deeply, for the sake of something you love more than your grievance?",
+        "Achilles sees his own father in Priam, and the two men weep together. Who is your opponent like, in ways you have not let yourself see? Does seeing it change what you owe them?",
+        "The two urns put Achilles and Priam under one mortality. How might remembering that everyone receives a mixed lot change the way you treat a rival or a struggling colleague this week?",
+        "The poem ends on a funeral. What would it take, in your own work, to sit with the person you have beaten and let the body of the quarrel be buried?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        The poem ends on a funeral. If you want a few sentences: what would it
-        take, in your own work, to sit with the person you have beaten and let
-        the body of the quarrel be buried? The note stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-pity">Your note</label>
-      <textarea id="note-pity" data-note="honor-and-compassion" rows="5"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -215,11 +190,3 @@ import book24 from "../../data/iliad-book24.json";
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.honor-and-compassion";
-  const box = document.querySelector("[data-note='honor-and-compassion']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

@@ -9,7 +9,7 @@
  */
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 ---
 
@@ -338,47 +338,16 @@ import References from "../../components/References.astro";
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "What could a moving band not support, that a farming village could?",
-          answer:
-            "Much stored food, a large permanent house, and people who did not themselves find food, such as full-time priests, craftsmen, or rulers.",
-        },
-        {
-          prompt: "What did Hodder’s team not find at Çatalhöyük?",
-          answer:
-            "No palaces, no temples standing apart from houses, and no ruling class. The houses were much alike. It was a town of households without a central government.",
-        },
-        {
-          prompt: "What is Linear A, and what is still unknown about it?",
-          answer:
-            "A Minoan script, used largely for accounts. It has not been deciphered, and we do not know what language it records. We have never read a Minoan explaining his own government.",
-        },
-        {
-          prompt: "Who ruled Minoan Crete?",
-          answer:
-            "We do not know. Evans imagined a priest-king. Other proposals exist. The palace-state is clear. Its government is not.",
-        },
-        {
-          prompt: "What changed at Knossos after the destructions around 1450 BC?",
-          answer:
-            "Knossos continued as a palace. Warrior burials appear, the art shifts toward the mainland, and the scribes write Linear B, an early form of Greek, deciphered by Michael Ventris in 1952. The new rulers are Mycenaeans.",
-        },
+    <Introspection
+      slug="the-birth-of-civilization"
+      prompts={[
+        "A moving band could not support full-time priests, craftsmen or rulers. A farming village with stored food could. What surplus of time, savings or skill would let you take on work you cannot afford to do now?",
+        "Çatalhöyük was a town of households much alike, with no palace and no ruling class. Where in your life do you work best among equals, and where do you need someone clearly in charge?",
+        "Minoan Crete gathered and redistributed through its palaces. Where does your own work depend on a few centers that collect and hand out what everyone else needs? What happens to you if one of them fails?",
+        "We have never read a Minoan explaining his own government, so we do not know who ruled. If your family or company were dug up a thousand years from now, what would the records show about how it was really run?",
+        "After the destructions around 1450 BC, new rulers kept the palace at Knossos and changed its language. When you have taken over something someone else built, what did you keep and what did you change? Would you choose the same now?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        In a few sentences, if you want them: where does your own work depend on
-        a few centers that collect and hand out what everyone else needs? The
-        history above is the course’s account. The sentence is yours, and it
-        stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-birth">Your note</label>
-      <textarea id="note-birth" data-note="the-birth-of-civilization" rows="5"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -453,11 +422,3 @@ import References from "../../components/References.astro";
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.the-birth-of-civilization";
-  const box = document.querySelector("[data-note='the-birth-of-civilization']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

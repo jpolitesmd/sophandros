@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import plate from "../../assets/lessons/flaxman-iliad-hector.jpg";
 import book22 from "../../data/iliad-book22.json";
@@ -157,40 +157,15 @@ import book22 from "../../data/iliad-book22.json";
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "Who begs Hector to come inside, and does he?",
-          answer:
-            "Priam and Hecuba. He stays before the gates. His heart is set on fighting Achilles.",
-        },
-        {
-          prompt: "How does Athena get Hector to stop running?",
-          answer:
-            "She takes the shape and voice of Deiphobus and offers to stand with him. Hector thinks his brother has come outside for his sake.",
-        },
-        {
-          prompt: "What bargain does Hector offer, and what does Achilles answer?",
-          answer:
-            "Hector asks that the winner give the body back and not outrage it. Achilles refuses. He says dogs and vultures will eat the body, though Priam offer Hector’s weight in gold.",
-        },
-        {
-          prompt: "What does Achilles do with the body after the other Greeks have stabbed it?",
-          answer:
-            "He pierces the heels, ties the body to his chariot with ox-hide thongs, and drags it, the head in the dust.",
-        },
+    <Introspection
+      slug="the-limits-of-honor"
+      prompts={[
+        "Priam and Hecuba beg Hector to come inside, and he stays before the gates. When have you refused the counsel of the people who love you most? Looking back, were you right?",
+        "Athena stops Hector by taking his brother’s shape and offering to stand with him. Whose apparent support do you count on in a hard decision? How sure are you that it will be there?",
+        "Hector asks that the winner give the body back, and Achilles refuses. In a contest you are in, at work or elsewhere, what terms of decency would you want both sides to keep no matter who wins?",
+        "Achilles drags Hector’s body after the man is already dead. Where have you watched a justified anger keep going after the person was already beaten? Have you done it yourself?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        If you want one sentence: where have you watched a justified anger keep
-        going after the person was already beaten? It stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-limits">Your note</label>
-      <textarea id="note-limits" data-note="the-limits-of-honor" rows="4"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -221,11 +196,3 @@ import book22 from "../../data/iliad-book22.json";
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.the-limits-of-honor";
-  const box = document.querySelector("[data-note='the-limits-of-honor']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>

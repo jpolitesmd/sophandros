@@ -10,7 +10,7 @@
 import Base from "../../layouts/Base.astro";
 import LessonChrome from "../../components/LessonChrome.astro";
 import Reader from "../../components/Reader.astro";
-import Reveal from "../../components/Reveal.astro";
+import Introspection from "../../components/Introspection.astro";
 import References from "../../components/References.astro";
 import book16 from "../../data/iliad-book16.json";
 import book18 from "../../data/iliad-book18.json";
@@ -160,41 +160,15 @@ const note =
       </p>
     </section>
 
-    <Reveal
-      items={[
-        {
-          prompt: "What does Patroclus ask, and what does he not know?",
-          answer:
-            "He asks to wear Achilles’ armour and lead the Myrmidons. The poem says he does not know he is asking for his own destruction.",
-        },
-        {
-          prompt: "What does Zeus grant, and what does he refuse?",
-          answer:
-            "He grants that Patroclus will drive the war back from the ships. He refuses to let him come safely out of the fight.",
-        },
-        {
-          prompt: "What does Achilles say about anger once he has heard of the death?",
-          answer:
-            "He says anger tastes sweeter than honey, that Agamemnon angered him, and that it is over. He will force his soul into subjection, pursue Hector, and then meet his own doom.",
-        },
-        {
-          prompt: "Name three things on the shield that are not the battle at Troy.",
-          answer:
-            "A city with weddings; a lawsuit over blood-money, with elders giving judgment; a ploughed field, or the harvest, or the dancing-floor.",
-        },
+    <Introspection
+      slug="loyalty-and-the-world"
+      prompts={[
+        "Patroclus asks to wear Achilles’ armour without knowing he is asking for his own destruction. Whose work have you carried when they would not go themselves, and what did it cost?",
+        "Achilles stayed out of the fight, and his friend died in his place. Is there a responsibility you are leaving to someone else right now? What would it mean to take it back?",
+        "Once Patroclus is dead, Achilles says anger tastes sweeter than honey, and that it is over. What anger have you nursed because it felt sweet? What finally made you set it down, or what would?",
+        "The shield shows weddings, a lawsuit judged by elders, a ploughed field and a harvest: the ordinary life the war is not. Which ordinary goods in your own life are you most tempted to neglect for the fight in front of you?",
       ]}
     />
-
-    <section class="reflection" aria-labelledby="reflect-title">
-      <h2 id="reflect-title">A short reflection</h2>
-      <p>
-        If you want a sentence: whose work have you carried when they would not
-        go themselves, and what did it cost? The poem has already told Patroclus’s
-        story. Yours stays in this browser.
-      </p>
-      <label class="reflection-label" for="note-loyalty">Your note</label>
-      <textarea id="note-loyalty" data-note="loyalty-and-the-world" rows="4"></textarea>
-    </section>
 
     <section class="takeaways" aria-labelledby="takeaways-title">
       <h2 id="takeaways-title">Key takeaways</h2>
@@ -225,11 +199,3 @@ const note =
   </LessonChrome>
 </Base>
 
-<script>
-  const key = "sophandros.note.loyalty-and-the-world";
-  const box = document.querySelector("[data-note='loyalty-and-the-world']");
-  if (box instanceof HTMLTextAreaElement) {
-    box.value = localStorage.getItem(key) || "";
-    box.addEventListener("input", () => localStorage.setItem(key, box.value));
-  }
-</script>
