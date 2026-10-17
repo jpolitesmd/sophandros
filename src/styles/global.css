@@ -2127,3 +2127,29 @@ th {
 .lesson-fig .credit a:hover { text-decoration: underline; }
 .lesson-fig.figure-drawing { max-width: 640px; }
 .lesson-fig.figure-drawing img { border: 0; padding: 0; background: transparent; max-height: none; }
+
+/* Layout audit (Oct 2026): centering + heading rhythm */
+.hero {
+  padding-inline: 1.25rem; /* .hero shorthand had zeroed .wrap's side padding */
+}
+/* Cinzel letter-spacing leaves trailing space after the last glyph; balance it on centered text */
+.hero .kicker { padding-left: 0.22em; }
+.button { padding-left: calc(1.2rem + 0.08em); }
+.foundation figcaption .kicker { padding-left: 0.22em; }
+
+/* Heading spacing inside running text */
+.prose > :is(h2, h3, h4, h5, h6),
+.lesson-body :is(h2, h3, h4, h5, h6) {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.lesson-body h4,
+.prose > h4 {
+  margin-top: 1.75rem;
+  font-size: 1.3rem;
+  color: var(--navy);
+}
+.lesson-body :is(h2, h3, h4, h5, h6) + p,
+.prose > :is(h2, h3, h4, h5, h6) + * {
+  margin-top: 0.6rem;
+}
