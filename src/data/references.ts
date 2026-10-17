@@ -448,7 +448,7 @@ export const lessonPhases: LessonPhase[] = [
         id: "iii1",
         heading: "III.1 · Recovering the classics",
         lessons: [
-          lesson(90, "why-a-rebirth", "History: Why a ‘Rebirth’?", ["burckhardt", "grafton"]),
+          lesson(90, "why-a-rebirth", "History: Why a ‘Rebirth’?", ["burckhardt", "grafton"], "/lessons/why-a-rebirth"),
           lesson(91, "petrarch", "Petrarch", ["petrarch"]),
           lesson(92, "finding-lost-books", "Finding lost books", ["greenblatt", "reynolds"]),
           lesson(93, "byzantine-scholars", "Byzantine scholars and Greek in the West", ["wilson"]),
