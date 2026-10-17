@@ -163,8 +163,8 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
       }
     </ol>
 
-    <h2>Mastery check</h2>
-    <p>Pass this to unlock the next module.</p>
+    <h2>Module work</h2>
+    <p>Written work to finish before you move on. It is for you: no marks, no grader.</p>
     <ol class="check-list">
       {
         module.mastery.map((item) => (
@@ -193,41 +193,6 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
       )
     }
 
-    {
-      module.trip && (
-        <>
-          <h2>Athens and Delphi, after the reading</h2>
-          <p>
-            <Rich text={module.trip.intro} />
-          </p>
-          <div class="table-wrap">
-            <table>
-              <caption class="sr-only">Suggested Athens and Delphi itinerary</caption>
-              <thead>
-                <tr>
-                  <th scope="col">When</th>
-                  <th scope="col">Site</th>
-                  <th scope="col">Read on site</th>
-                </tr>
-              </thead>
-              <tbody>
-                {module.trip.days.map((day) => (
-                  <tr>
-                    <th scope="row">{day.when}</th>
-                    <td>
-                      <Rich text={day.site} />
-                    </td>
-                    <td>
-                      <Rich text={day.read} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </>
-      )
-    }
 
     <nav class="pager" aria-label="Modules">
       {

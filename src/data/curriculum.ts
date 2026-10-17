@@ -29,10 +29,6 @@ export interface GreeceModule {
   weeks: Week[];
   mastery: string[];
   capstone?: { intro: string; items: string[] };
-  trip?: {
-    intro: string;
-    days: { when: string; site: string; read: string }[];
-  };
 }
 
 export interface SoonModule {
@@ -137,9 +133,9 @@ export const greeceModules: GreeceModule[] = [
       },
     ],
     mastery: [
-      "A comprehension quiz of 20 questions on Books 1, 3, 6, 9, 16, 18, 22, and 24, including *mēnis*, *timē*, *kleos*, *xenia*, *aristeia*, and *ekphrasis*. Pass mark 80 percent.",
-      "Latin vocabulary and forms: 25 items from chapters 1–6 of the textbook you chose. Pass mark 80 percent.",
-      "An Ascham double translation: a short unseen Latin passage at the level of chapters 1–6, into English and back, compared with the original. A tutor may review it. That review is optional.",
+      "A reflection journal: a short written entry for each of Books 1, 3, 6, 9, 16, 18, 22, and 24. Each entry takes one scene and one of the module’s words (*mēnis*, *timē*, *kleos*, *xenia*, *aristeia*, or *ekphrasis*), says where you have met it in your own life, work, or household, and what the poem would have you do about it.",
+      "Latin vocabulary and forms: 25 items from chapters 1–6 of the textbook you chose. Mark them yourself against your textbook’s key.",
+      "An Ascham double translation: a short unseen Latin passage at the level of chapters 1–6, into English and back, compared with the original, line by line.",
       "Recitation: *Iliad* 1.1–7 in English, or in transliterated Greek, plus four to six lines of your Latin chapter.",
       "A commonplace essay of 500 words, “Is the heroic code worth living by?”, citing at least three passages by book and line.",
       "A sketchbook with three drawings: the Lion Gate, the layout of the shield, and one vase.",
@@ -239,9 +235,9 @@ export const greeceModules: GreeceModule[] = [
       },
     ],
     mastery: [
-      "A comprehension quiz of 20 questions on *Odyssey* Books 1, 5, 6, 9–12, 19, and 21–23, and on *Works and Days* 1–382. Terms include *nostos*, *xenia*, *mētis*, *kleos*, *polytropos*, and *dikē*. Pass mark 80 percent.",
-      "Latin: 25 items from chapters 7–12, plus five review items from chapters 1–6. Pass mark 80 percent.",
-      "An unseen double translation at the level of chapters 1–12, in both directions, compared with the original. Tutor review is optional.",
+      "A reflection journal: a short written entry for each of *Odyssey* Books 1, 5, 6, 9–12, 19, and 21–23, and one on *Works and Days* 1–382. Each entry takes one scene and one of the module’s words (*nostos*, *xenia*, *mētis*, *kleos*, *polytropos*, or *dikē*) and turns it on a problem you face now: a homecoming, a temptation, a debt, a stranger at your door.",
+      "Latin: 25 items from chapters 7–12, plus five review items from chapters 1–6. Mark them yourself against your textbook’s key.",
+      "An unseen double translation at the level of chapters 1–12, in both directions, compared with the original, line by line.",
       "Recitation: *Odyssey* 1.1–10 in English, or in transliterated Greek, plus six to eight lines of your Latin text.",
       "A commonplace essay of 600 words: “Achilles or Odysseus: which is the better model for a modern professional?” Cite both epics by book and line.",
       "A sketchbook with three drawings: the Polyphemus amphora, Odysseus at the mast, and your own map of the wanderings.",
@@ -347,9 +343,9 @@ export const greeceModules: GreeceModule[] = [
       },
     ],
     mastery: [
-      "A comprehension quiz of 20 questions on Herodotus 1 and 6–8 and Thucydides 1–3 and 5–7. Terms include *historiē*, *hubris*, *nemesis*, *isonomia*, and *stasis*, plus the truest cause and the Melian Dialogue. Pass mark 80 percent.",
-      "Latin: 25 items from chapters 13–18, plus five review items. Pass mark 80 percent.",
-      "Greek: write the alphabet with accents and breathings, transliterate five words and read three aloud, and answer 15 vocabulary items from *Athenaze* chapters 1–2. Pass mark 80 percent.",
+      "A reflection journal: a short written entry for each of Herodotus 1 and 6–8 and Thucydides 1–3 and 5–7. Each entry takes one episode and one of the module’s ideas (*historiē*, *hubris*, *nemesis*, *isonomia*, *stasis*, the truest cause, or the Melian Dialogue) and asks where it is at work in your own firm, family, town, or country.",
+      "Latin: 25 items from chapters 13–18, plus five review items. Mark them yourself against your textbook’s key.",
+      "Greek: write the alphabet with accents and breathings, transliterate five words and read three aloud, and answer 15 vocabulary items from *Athenaze* chapters 1–2. Mark them yourself against your textbook’s key.",
       "An unseen Latin double translation through chapter 18, plus one Greek sentence in both directions.",
       "Recitation: Thucydides 2.37.1, the opening of Pericles’ account of the constitution, in English, and Herodotus 1.1 in Greek script.",
       "A commonplace essay of 600 words. Either “Thucydides’ plague narrative as a clinical document: what can a modern physician learn from it?” or “Is the Melian Dialogue right about power?”",
@@ -454,9 +450,9 @@ export const greeceModules: GreeceModule[] = [
       },
     ],
     mastery: [
-      "A comprehension quiz of 20 questions on the *Oresteia*, *Antigone*, *Oedipus the King*, and *Medea*. Terms include *pathei mathos*, *hamartia*, *peripeteia*, *anagnōrisis*, *katharsis*, *chorēgos*, and *ekkyklēma*. Pass mark 80 percent.",
-      "Latin: 25 items from chapters 19–24, plus five review items. Pass mark 80 percent.",
-      "Greek: 20 vocabulary and form items from *Athenaze* chapters 1–5. Read one textbook sentence aloud and translate it. Pass mark 80 percent.",
+      "A reflection journal: a short written entry on each of the *Oresteia*, *Antigone*, *Oedipus the King*, and *Medea*. Each entry takes one scene and one of the module’s ideas (*pathei mathos*, *hamartia*, *peripeteia*, *anagnōrisis*, or *katharsis*) and asks where you have learned by suffering, or missed a truth about yourself until it was too late.",
+      "Latin: 25 items from chapters 19–24, plus five review items. Mark them yourself against your textbook’s key.",
+      "Greek: 20 vocabulary and form items from *Athenaze* chapters 1–5. Read one textbook sentence aloud and translate it. Mark them yourself against your textbook’s key.",
       "An unseen Latin double translation through chapter 24, plus one Greek sentence in both directions.",
       "Recitation: *Antigone* 332–341, the opening of the Ode on Man, in English, and line 332 in Greek.",
       "A commonplace essay of 600 words: “Law, conscience, and the professional: Antigone, Creon, and a hard case from your own field.”",
@@ -554,9 +550,9 @@ export const greeceModules: GreeceModule[] = [
       },
     ],
     mastery: [
-      "A comprehension quiz of 20 questions on *Euthyphro*, *Apology*, *Crito*, the death scene of the *Phaedo*, the *Meno*, and *Republic* I, II, IV, V, VI, and VII. Terms include *elenchus*, *aretē*, *psychē*, *anamnēsis*, *eidos* or Form, and *dikaiosynē*, plus the Ring, the Line, and the Cave. Pass mark 80 percent.",
-      "Latin: 25 items from chapters 25–30, plus five review items. Pass mark 80 percent.",
-      "Greek: 20 items from *Athenaze* chapters 1–8, and a word-by-word translation of *Apology* 38a. Pass mark 80 percent.",
+      "A reflection journal: a short written entry on each of *Euthyphro*, *Apology*, *Crito*, the death scene of the *Phaedo*, the *Meno*, and *Republic* I, II, IV, V, VI, and VII. Each entry takes one argument or image (the *elenchus*, *aretē*, *psychē*, *anamnēsis*, the Forms, *dikaiosynē*, the Ring, the Line, or the Cave) and examines one belief, habit, or decision of your own by it.",
+      "Latin: 25 items from chapters 25–30, plus five review items. Mark them yourself against your textbook’s key.",
+      "Greek: 20 items from *Athenaze* chapters 1–8, and a word-by-word translation of *Apology* 38a. Mark them yourself against your textbook’s key.",
       "An unseen Latin double translation through chapter 30, plus one Greek sentence in both directions.",
       "Geometry: photographed constructions of Euclid I.1 and a proof of I.47, or of the doubling in the *Meno*, with a written justification of each step.",
       "Recitation: *Apology* 38a in Greek and in English, and the opening of the Cave (514a) in English.",
@@ -658,9 +654,9 @@ export const greeceModules: GreeceModule[] = [
       },
     ],
     mastery: [
-      "A comprehension quiz of 20 questions on *Ethics* I, II, VI, and X, *Politics* I, III, and IV, and *Parts of Animals* I.5. Terms include *eudaimonia*, *ergon*, *aretē*, *mesotēs*, *hexis*, *phronēsis*, *theōria*, *polis*, and *politeia*. Pass mark 80 percent.",
-      "Latin: 25 items from Wheelock chapters 31–36, or from *Familia Romana* XXXI–XXXV, plus five review items. Pass mark 80 percent.",
-      "Greek: 20 items from *Athenaze* chapters 1–11, and a translation of *Ethics* 1098a16 or *Politics* 1253a2–3. Pass mark 80 percent.",
+      "A reflection journal: a short written entry on each of *Ethics* I, II, VI, and X, *Politics* I, III, and IV, and *Parts of Animals* I.5. Each entry takes one of the module’s ideas (*eudaimonia*, *ergon*, *aretē*, *mesotēs*, *hexis*, *phronēsis*, *theōria*, *polis*, or *politeia*) and applies it to a habit you are building, a judgement you must make, or the way your household is run.",
+      "Latin: 25 items from Wheelock chapters 31–36, or from *Familia Romana* XXXI–XXXV, plus five review items. Mark them yourself against your textbook’s key.",
+      "Greek: 20 items from *Athenaze* chapters 1–11, and a translation of *Ethics* 1098a16 or *Politics* 1253a2–3. Mark them yourself against your textbook’s key.",
       "An unseen Latin passage, double-translated, and one Greek sentence in both directions.",
       "A commonplace essay of 600 words: “Phronēsis at the bedside: Aristotle’s practical wisdom and clinical judgement.”",
       "A sketchbook: the Doric order, labelled; the Parthenon façade; a vase or sculpture of your choice.",
@@ -673,48 +669,6 @@ export const greeceModules: GreeceModule[] = [
         "A capstone oration or essay of 1,200–1,500 words, recorded if you choose the oration: “The best life and the best city: from Homer to Aristotle.” Trace one idea, honour, justice, wisdom, or the good life, through at least four authors from the phase. Cite them by book and line, or by Stephanus or Bekker number.",
         "A recorded recitation: *Iliad* 1.1–7 or *Odyssey* 1.1–10 in English, one Greek line of your choice (for example *Apology* 38a or *Antigone* 332), and eight to ten lines of Latin.",
         "A sketchbook review: six sketches from the phase.",
-        "Optional, on the tutored tier: a 45-minute oral examination on the portfolio, in a Socratic style.",
-      ],
-    },
-    trip: {
-      intro:
-        "The optional Athens and Delphi journey comes after the capstone, so every site is one you have already read. Milton, in *Of Education*, sends the traveller abroad “not to learn Principles but to enlarge Experience.” About seven to ten days, with a specialist operator.",
-      days: [
-        {
-          when: "Days 1–2",
-          site: "The Acropolis and the Acropolis Museum: the Parthenon, the frieze, the refinements.",
-          read: "Thucydides 2.35–46, the Funeral Oration, and your Module 6 sketches.",
-        },
-        {
-          when: "Day 3",
-          site: "The Ancient Agora: the Stoa of Attalos museum (the kleroterion, ostraca), the Royal Stoa, the Pnyx, the Areopagus.",
-          read: "The opening of the *Euthyphro*, *Apology* 38a, and *Eumenides* 681–710.",
-        },
-        {
-          when: "Day 4",
-          site: "The Theatre of Dionysus, the Lyceum site, and the National Archaeological Museum (the Mask of Agamemnon).",
-          read: "*Antigone* 332–375, *Ethics* I, and *Iliad* Book 1.",
-        },
-        {
-          when: "Day 5",
-          site: "Marathon, the Soros.",
-          read: "Herodotus 6.111–17.",
-        },
-        {
-          when: "Days 6–7",
-          site: "Delphi: the Temple of Apollo, the theatre, the Tholos, and the Delphi Museum, including the Charioteer.",
-          read: "Herodotus 1.46–56, Croesus and the oracle; the opening of the *Eumenides*; “Know thyself.”",
-        },
-        {
-          when: "Day 8, optional",
-          site: "Epidaurus: the theatre, and the sanctuary of Asclepius.",
-          read: "*Oedipus the King* 1–150, and *Phaedo* 118a.",
-        },
-        {
-          when: "Day 9, optional",
-          site: "Mycenae, the Lion Gate.",
-          read: "*Agamemnon* 905–974, and *Iliad* 1.",
-        },
       ],
     },
   },
