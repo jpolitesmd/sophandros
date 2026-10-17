@@ -158,7 +158,7 @@ def rings_svg():
             f'<a href="{href}" aria-label="{esc(label)}, {esc(sub)}">'
             f'<path class="ring" d="M{cx - r} {base}A{r} {r} 0 0 1 {cx + r} {base}"/>'
             f'<text class="lbl-part" x="{cx}" y="{mid - 6:.0f}">{esc(sub.upper())}</text>'
-            f'<text class="lbl" x="{cx}" y="{mid + 13:.0f}">{esc(label)}</text></a>'
+            f'<text class="lbl{" lbl-inner" if i == len(rings) - 1 else ""}" x="{cx}" y="{mid + 13:.0f}">{esc(label)}</text></a>'
         )
     parts.append(
         f'<a href="/chapters/01-the-self/" aria-label="The self, Chapter 1 and Part V">'
