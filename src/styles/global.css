@@ -2153,3 +2153,117 @@ th {
 .prose > :is(h2, h3, h4, h5, h6) + * {
   margin-top: 0.6rem;
 }
+
+/* ==========================================================
+   Spacing system (Oct 2026). One rhythm for every page.
+   ========================================================== */
+:root {
+  --flow: 1rem;        /* paragraph to paragraph, list to text */
+  --h-below: 0.75rem;  /* any heading to its first content */
+  --h2-above: 2.5rem;
+  --h3-above: 2rem;
+  --h4-above: 1.75rem;
+  --block: 2rem;       /* figures, boxes, quotes, tables */
+  --break: 2.5rem;     /* ornamental section break, above and below */
+  --li: 0.4rem;
+}
+
+/* Text flow */
+main p + p,
+.lesson-body p,
+main :is(p, blockquote, figure) + :is(ul, ol),
+main :is(ul, ol) + p,
+.flow-gap { margin-top: var(--flow); }
+main :is(.learn, .takeaways, .questions, .check-list, .lesson-body) li + li { margin-top: var(--li); }
+
+/* Headings: above by level, one gap below */
+main .wrap-narrow > h2, .reading-main > h2, .lesson-body h2, .prose > h2 { margin-top: var(--h2-above); }
+.lesson-body h3, .prose > h3 { margin-top: var(--h3-above); }
+.lesson-body h4, .prose > h4 { margin-top: var(--h4-above); }
+main :is(h2, h3, h4) + :is(p, ul, ol, dl, blockquote, div, .scene-today, .excerpt-note, .references-note),
+.lesson-body :is(h2, h3, h4) + p,
+.prose > :is(h2, h3, h4) + *,
+.learn h2, .takeaways h2, .word-day h2, .check h2, .reflection h2, .go-deeper h2, .quiz h2, .scene h2 { margin-bottom: 0; }
+main :is(h2, h3, h4) + :is(p, ul, ol, dl, blockquote, .scene-today, .excerpt-note, .references-note, .word-greek),
+.lesson-body :is(h2, h3, h4) + p,
+.prose > :is(h2, h3, h4) + * { margin-top: var(--h-below); }
+.learn ul, .takeaways ul { margin-top: var(--h-below); }
+
+/* Figures */
+.lesson-fig, .figure, .lesson-figure { margin-top: var(--block); margin-bottom: var(--block); }
+.lesson-fig + .lesson-fig { margin-top: var(--block); }
+.lesson-fig + p, .figure + p { margin-top: 0; }
+
+/* Boxes and blocks */
+:is(.learn, .takeaways, .word-day, .check, .reflection, .go-deeper, .quiz, .scene, .excerpts,
+    .optional-note, .weeks, .table-wrap, .quote, .facts, .references, .module-lessons) { margin-top: var(--block); }
+.page-head + :is(.learn, .scene) { margin-top: var(--h-below); }
+main .wrap-narrow > :is(.check-list, .facts, .weeks, .table-wrap) + h2 { margin-top: var(--h2-above); }
+.pager { margin-top: var(--h2-above); }
+
+/* Ornamental section break */
+hr.ornament {
+  display: block;
+  width: 282px;
+  max-width: 100%;
+  height: 16px;
+  margin: var(--break) auto;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  background: url("/images/ornaments/key-amphora-thin.svg") center / 282px 16px no-repeat;
+}
+.lesson-body hr.ornament {
+  /* centre on the text column, snapped to whole pixels so the 1px key stays crisp */
+  margin-left: max(0px, round(down, calc((min(100%, var(--measure)) - 282px) / 2), 1px));
+  margin-right: 0;
+}
+hr.ornament + :is(h2, h3, h4) { margin-top: 0; }
+:is(p, ul, ol, figure, blockquote) + hr.ornament { margin-top: var(--break); }
+
+/* Home and long pages: the ornament replaces the plain rule between major sections */
+.section + .section { border-top: 0; position: relative; }
+.section + .section::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 282px;
+  height: 16px;
+  margin-left: -141px;
+  background: url("/images/ornaments/key-amphora-thin.svg") center / 282px 16px no-repeat;
+}
+
+/* Component text inherits the same flow */
+main .scene p:not(:first-of-type), .scene h2 + p,
+main .word-day p + p, main .check > p, main .reflection p, main .go-deeper p,
+main .takeaways .summary, main .lesson-jump,
+main .wrap-narrow > p + p, main .prose p + p { margin-top: var(--flow); }
+main .week h2 + p, main .week h3 + p, main .scene h2 + p { margin-top: var(--h-below); }
+main .scene h2 + p.scene-today { margin-top: var(--h-below); }
+main :is(.questions, .check-list) { margin-top: var(--h-below); }
+main p + :is(.questions, .check-list) { margin-top: var(--h-below); }
+main :is(.check, .reflection, .go-deeper, .word-day) h2 + p { margin-top: var(--h-below); }
+main .excerpt { margin-top: var(--block); }
+
+/* The name: prefix + suffix, joined */
+.etymology .etym-gloss { margin-top: 0.45rem; }
+.etymology .etym-join {
+  grid-column: 1 / -1;
+  margin: var(--h-below) auto 0;
+  max-width: 34rem;
+  text-align: center;
+  font-family: "EB Garamond", var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.45;
+}
+.etym-sign {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--display);
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--gold);
+}

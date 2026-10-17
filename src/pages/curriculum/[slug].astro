@@ -68,7 +68,7 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
     }
 
     <p>{module.theme}</p>
-    <p style="margin-top:1rem;color:var(--brown)">
+    <p style="color:var(--brown)">
       Summary of the drafted syllabus. The readings below are the ones named there.
     </p>
 
@@ -111,8 +111,8 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
       </div>
     </dl>
 
-    <h2 style="margin-top:2.5rem">The readings</h2>
-    <p style="margin-top:0.6rem;max-width:var(--measure)">
+    <h2>The readings</h2>
+    <p style="max-width:var(--measure)">
       The taught lesson, when it is written, is about half an hour on this site.
       The longer syllabus beside it — a language chapter, a double translation —
       is optional. You do not need it to read the lesson.
@@ -163,8 +163,8 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
       }
     </ol>
 
-    <h2 style="margin-top:2rem">Mastery check</h2>
-    <p style="margin-top:0.6rem">Pass this to unlock the next module.</p>
+    <h2>Mastery check</h2>
+    <p>Pass this to unlock the next module.</p>
     <ol class="check-list">
       {
         module.mastery.map((item) => (
@@ -178,8 +178,8 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
     {
       module.capstone && (
         <>
-          <h2 style="margin-top:2.5rem">Phase I capstone</h2>
-          <p style="margin-top:0.75rem">
+          <h2>Phase I capstone</h2>
+          <p>
             <Rich text={module.capstone.intro} />
           </p>
           <ol class="check-list">
@@ -196,8 +196,8 @@ const next = index < greeceModules.length - 1 ? greeceModules[index + 1] : undef
     {
       module.trip && (
         <>
-          <h2 style="margin-top:2.5rem">Athens and Delphi, after the reading</h2>
-          <p style="margin-top:0.75rem">
+          <h2>Athens and Delphi, after the reading</h2>
+          <p>
             <Rich text={module.trip.intro} />
           </p>
           <div class="table-wrap">
