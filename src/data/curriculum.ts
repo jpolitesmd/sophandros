@@ -54,7 +54,7 @@ export const greeceModules: GreeceModule[] = [
       },
       {
         label: "Translations",
-        body: "The lessons use Samuel Butler’s *Iliad* (1898), in the reader on the page. Another translation is optional: Richmond Lattimore (University of Chicago Press) follows the Greek line numbers. Emily Wilson (W. W. Norton, 2023). Robert Fagles (Penguin); his line numbers differ from the Greek, so use the book divisions. Caroline Alexander (Ecco, 2015).",
+        body: "The lessons use Samuel Butler’s *Iliad* (1898), included for reference. Another translation is optional: Richmond Lattimore (University of Chicago Press) follows the Greek line numbers. Emily Wilson (W. W. Norton, 2023). Robert Fagles (Penguin); his line numbers differ from the Greek, so use the book divisions. Caroline Alexander (Ecco, 2015).",
       },
       {
         label: "Line numbers",
