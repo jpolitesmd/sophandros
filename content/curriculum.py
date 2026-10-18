@@ -587,6 +587,7 @@ WEEK = [
     ("Latin phrases", "15 min", "Three to five phrases still used in law, medicine, business or daily life."),
     ("The exercise", "20 min", "One of the classical writing drills, applied to your own work."),
     ("Commonplace book", "10 min", "Copy one passage by hand and write two sentences on what it means for you."),
+    ("Check yourself", "5 min", "Five questions on the week's reading, with answers to reveal when you are done. Course only."),
 ]
 
 # Latin and Greek the reader will know by the end.
@@ -602,13 +603,13 @@ LATIN = [
 EDITIONS = [
     # (name, length, price, description, note)
     ("The core course", "12 weeks", "$99",
-     "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone.",
+     "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone, with a weekly self-check and a printable PDF of each chapter.",
      "Move up to the extended edition later for $100."),
     ("The extended edition", "26 weeks", "$199",
-     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace.",
+     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with every weekly self-check.",
      ""),
     ("The book", "26 chapters", "$50",
-     "Every chapter of the extended edition, with readings, exercises and references, as a digital edition (PDF and e-book).",
+     "All 26 chapters with their readings, exercises and historical illustrations, plus a timeline and a glossary of Greek and Latin, as a digital edition (PDF). The weekly self-checks are in the course.",
      "A printed edition will follow on Amazon."),
     ("The course and the book", "26 weeks + book", "$229",
      "The extended edition with the digital book included.",
