@@ -598,7 +598,7 @@ def education_samples():
 
 
 def families():
-    mail = C.SITE["email"]
+    mail = C.SITE["education_email"]
     body = f"""
 <header class="page-head">
   <div class="container">
@@ -632,7 +632,7 @@ def families():
         <p class="note">Group licenses are available. Write to <a href="mailto:{mail}?subject=Group%20license">{mail}</a> with the size of your group and how you would use it.</p>
       </div>
     </div>
-    <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free.</p>
+    <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free. Questions from parents, instructors and programs: <a href="mailto:{mail}">{mail}</a>.</p>
   </div>
 </section>
 {education_samples()}

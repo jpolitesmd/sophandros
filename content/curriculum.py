@@ -13,6 +13,7 @@ SITE = {
     "promise": "A modern revival of the classical education",
     "url": "https://www.sophandros.com",
     "email": "hello@sophandros.com",
+    "education_email": "education@sophandros.com",  # families, instructors, programs
     "description": (
         "The training that shaped leaders for two thousand years, rebuilt for the modern professional: "
         "26 chapters from the first cities to the American founding, following one man "
