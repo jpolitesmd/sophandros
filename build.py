@@ -238,7 +238,7 @@ def home():
     <span class="kicker">Self-paced · From the first cities to the American founding</span>
     <img class="hero-logo" src="/img/brand/logo-lockup.png" alt="Sophandros" width="923" height="524">
     <h1>{C.SITE['promise']}</h1>
-    <p class="lede">The education that formed the educated elite for two thousand years, rebuilt for people with full weeks: the same texts, the same tools and the same writing drills, applied to your own work.</p>
+    <p class="lede">The training that shaped leaders for two thousand years, rebuilt for the modern professional seeking a deeper foundation and a more complete self: the same texts, the same tools and the same writing drills, applied to your own work.</p>
     <div class="actions">
       <a class="button" href="/chapters/01-the-self/">Read Chapter 1</a>
       <a class="button ghost" href="/curriculum/">See the curriculum</a>

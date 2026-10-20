@@ -14,7 +14,7 @@ SITE = {
     "url": "https://www.sophandros.com",
     "email": "hello@sophandros.com",
     "description": (
-        "The education that formed the educated elite, rebuilt for a working life now: "
+        "The training that shaped leaders for two thousand years, rebuilt for the modern professional: "
         "26 chapters from the first cities to the American founding, following one man "
         "as his circle widens from himself to a republic."
     ),
