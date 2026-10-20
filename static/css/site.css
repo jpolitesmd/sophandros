@@ -182,9 +182,9 @@ em, i { font-style: italic; }
 .rings .lbl-self { fill: var(--cream); }
 .rings .base { stroke: var(--line-strong); stroke-width: 1; }
 @media (max-width: 600px) {
-  .rings .lbl { font-size: 21px; letter-spacing: 0; transform: translateY(-6px); }
+  .rings .lbl { font-size: 21px; letter-spacing: 0; transform: translateY(-1px); }
   .rings .lbl-self { transform: none; }
-  .rings .lbl-inner { font-size: 18px; transform: translateY(4px); }
+  .rings .lbl-inner { font-size: 18px; transform: translateY(7px); }
   .rings .lbl-part { display: none; }
 }
 .rings-caption { text-align: center; margin-top: var(--s3); color: var(--muted); }
