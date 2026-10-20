@@ -313,7 +313,7 @@ def home():
       <p class="lede">Enrollment opens soon. Join the waitlist to hear first.</p>
     </div>
     <div class="grid grid-2 editions">{editions}</div>
-    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool student or a class? <a href="/families-and-instructors/">Options for families and instructors</a>.</p>
+    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool student, a class or a residency cohort? <a href="/families-and-instructors/">Options for families, instructors and programs</a>.</p>
   </div>
 </section>
 
@@ -535,7 +535,7 @@ def families():
   <div class="container">
     <span class="kicker">Families and instructors</span>
     <h1>For students, too</h1>
-    <p class="lede">Sophandros was written for adults, but the education it revives was first given to the young. A strong reader of about fifteen and older can take the course at home, and it can serve as a text for a college seminar.</p>
+    <p class="lede">Sophandros was written for working adults, but the education it revives was first given to the young. A strong reader of about fifteen and older can take the course at home; it can serve as a text for a college seminar; and it suits professional schools and training programs whose graduates will need judgment as much as technique.</p>
   </div>
 </header>
 <section class="section" style="padding-top:var(--s3)">
@@ -556,10 +556,10 @@ def families():
         <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. A printed edition will follow on Amazon.</p>
       </div>
       <div class="card">
-        <span class="meta">Schools and teams</span>
-        <h3>For a class or a group</h3>
-        <p>Classical academies, independent schools and teams at work can use the course with a group.</p>
-        <p class="note">Write to <a href="mailto:{mail}?subject=Group%20use">{mail}</a> with the size of your group and how you would use it.</p>
+        <span class="meta">Professional programs and teams</span>
+        <h3>For a cohort or a group</h3>
+        <p>Medical, law and graduate schools, residency and fellowship programs, classical academies and teams at work can take the course together, a chapter a week, with the writing exercises as shared assignments.</p>
+        <p class="note">Group licenses are available. Write to <a href="mailto:{mail}?subject=Group%20license">{mail}</a> with the size of your group and how you would use it.</p>
       </div>
     </div>
     <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free.</p>
@@ -567,7 +567,7 @@ def families():
 </section>
 """
     return page("/families-and-instructors/", "Families and instructors",
-                "Sophandros for advanced homeschool students, college seminars and groups: a free parent's guide, review copies for instructors, and group use.", body)
+                "Sophandros for advanced homeschool students, college seminars, professional schools and residency programs: a free parent's guide, review copies for instructors, and group licenses.", body)
 
 
 def not_found():
