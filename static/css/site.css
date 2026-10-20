@@ -371,3 +371,12 @@ em, i { font-style: italic; }
 .edition .price { font-family: var(--display); font-size: 2rem; color: var(--navy); margin: var(--s2) 0 var(--s2); line-height: 1; }
 .edition .note { font-size: 0.95rem; color: var(--gold-ink); font-style: italic; margin-top: var(--s2); }
 .edition .price + p { margin-top: 0; }
+
+/* ---------- Education samples ---------- */
+.sample { max-width: var(--measure); margin: 0 auto; background: var(--cream); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: var(--s3); }
+details.sample { margin-top: var(--s3); }
+.sample > summary { cursor: pointer; font-family: var(--display); font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); }
+.sample h4 { font-family: var(--display); font-weight: 500; font-size: 1.1rem; margin-top: var(--s3); }
+.sample .note { font-size: 0.95rem; color: var(--muted); font-style: italic; border-top: 1px solid var(--line); padding-top: var(--s2); }
+.sample-label { font-family: var(--display); font-size: 1.1rem; }
+.sample-figure { max-width: 46rem; margin: 0 auto var(--s4); box-shadow: 0 10px 30px rgba(20, 33, 61, 0.15); }

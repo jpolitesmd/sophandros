@@ -529,6 +529,74 @@ def waitlist():
     return page("/waitlist/", "Join the waitlist", "Be told when Sophandros opens.", body, active="/waitlist/")
 
 
+def education_samples():
+    """Samples of what the course adds, all taken from Chapter 1, so instructors and parents can see a week in practice."""
+    ch1 = (CHAPTER_DIR / "01-the-self.html").read_text(encoding="utf-8")
+    import re
+    quiz = re.search(r'<ol class="check">(.*?)</ol>', ch1, re.S)
+    items = re.findall(r"<li>.*?</li>", quiz.group(1), re.S)[:3] if quiz else []
+    ex = re.search(r"<h2>The exercise:.*?</h2>(.*?)(?=<h3>For your commonplace book)", ch1, re.S)
+    exercise = ex.group(1) if ex else ""
+    model = (ROOT / "content" / "samples" / "model-answer-01.html").read_text(encoding="utf-8")
+    week = "".join(
+        f'<li><div class="what">{w}<span class="time">{t}</span></div><div>{d}</div></li>'
+        for w, t, d in C.WEEK
+    )
+    return f"""
+<section class="section tint" id="in-practice">
+  <div class="container">
+    <div class="head">
+      <span class="kicker">In practice</span>
+      <h2>What a week looks like</h2>
+      <p class="lede">Every chapter has the same shape, so a week settles into a routine of about three and a half hours. Everything below is taken from Chapter 1, as a student would meet it in the course.</p>
+    </div>
+    <ol class="week">{week}</ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head">
+      <span class="kicker">Sample · Course only</span>
+      <h2>The weekly self-check</h2>
+      <p class="lede">Five questions on the week's reading, with the answers hidden until the student is ready. Here are three from Chapter 1.</p>
+    </div>
+    <div class="sample prose"><ol class="check">{"".join(items)}</ol></div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="container">
+    <div class="head">
+      <span class="kicker">Sample · Course only</span>
+      <h2>The writing exercise, and a model answer</h2>
+      <p class="lede">Each chapter ends with one of the graded writing drills of the classical schools. The course adds a model answer for every one, folded away until the student has written his own. This is Chapter 1's.</p>
+    </div>
+    <div class="sample prose">
+      <p class="sample-label">The exercise: a chreia</p>
+      {exercise}
+    </div>
+    <details class="sample prose model-answer">
+      <summary>Show the model answer</summary>
+      {model}
+    </details>
+    <p class="center muted" style="margin-top:var(--s4)">For parents and instructors, the parent's guide has a simple checklist for marking any of the drills.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head">
+      <span class="kicker">Sample · Course only</span>
+      <h2>The certificate of completion</h2>
+      <p class="lede">Every student who finishes a course receives a certificate for the edition completed, ready to fill in, print and keep, or to include in a homeschool portfolio.</p>
+    </div>
+    <figure class="sample-figure"><img src="/img/samples/certificate.jpg" alt="Sample Sophandros certificate of completion for the extended edition" width="1210" height="935" loading="lazy"></figure>
+    <div class="actions"><a class="button ghost" href="/guides/sophandros-parents-guide.pdf">The parent's guide (PDF)</a><a class="button ghost" href="/chapters/01-the-self/">Read all of Chapter 1</a></div>
+  </div>
+</section>"""
+
+
 def families():
     mail = C.SITE["email"]
     body = f"""
@@ -566,6 +634,7 @@ def families():
     <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free.</p>
   </div>
 </section>
+{education_samples()}
 """
     return page("/education/", "Education",
                 "Sophandros for advanced homeschool students, college seminars, professional schools and residency programs: a free parent's guide, review copies for instructors, and group licenses.", body, active="/education/")
