@@ -313,7 +313,7 @@ def home():
       <p class="lede">Enrollment opens soon. Join the waitlist to hear first.</p>
     </div>
     <div class="grid grid-2 editions">{editions}</div>
-    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool student, a class or a residency cohort? <a href="/families-and-instructors/">Options for families, instructors and programs</a>.</p>
+    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate or postgraduate course? <a href="/families-and-instructors/">Options for families, instructors and programs</a>.</p>
   </div>
 </section>
 
@@ -542,7 +542,7 @@ def families():
   <div class="container">
     <div class="grid grid-3">
       <div class="card">
-        <span class="meta">Homeschool families</span>
+        <span class="meta">Homeschool</span>
         <h3>At home, with a parent alongside</h3>
         <p>Suited to an advanced student of about fifteen and older who reads well above grade level. The extended edition fills a school year at one chapter a week; the core course fits a semester.</p>
         <p>The free parent's guide covers pacing, adapting the writing exercises to a student's life, checking the writing, and recording the course on a transcript.</p>
@@ -550,13 +550,13 @@ def families():
         <p class="note">Teaching more than one child? A family license covers every student in one household: the core course for $225, the extended edition for $375.</p>
       </div>
       <div class="card">
-        <span class="meta">College instructors</span>
+        <span class="meta">Collegiate</span>
         <h3>A text for a seminar</h3>
         <p>Twenty-six chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course or a first-year program.</p>
         <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. A printed edition will follow on Amazon.</p>
       </div>
       <div class="card">
-        <span class="meta">Professional programs and teams</span>
+        <span class="meta">Graduate and postgraduate</span>
         <h3>For a cohort or a group</h3>
         <p>Medical, law and graduate schools, residency and fellowship programs, classical academies and teams at work can take the course together, a chapter a week, with the writing exercises as shared assignments.</p>
         <p class="note">Group licenses are available. Write to <a href="mailto:{mail}?subject=Group%20license">{mail}</a> with the size of your group and how you would use it.</p>
