@@ -93,6 +93,7 @@ def page(path, title, description, body, active=None):
           <li><a href="/curriculum/">Curriculum</a></li>
           <li><a href="/chapters/01-the-self/">Read Chapter 1</a></li>
           <li><a href="/american-series/">The American series</a></li>
+          <li><a href="/families-and-instructors/">Families and instructors</a></li>
         </ul>
       </div>
       <div>
@@ -182,7 +183,8 @@ def waitlist_form(compact=False):
         <option value="">Choose one</option>
         <option>The core course (12 weeks)</option>
         <option>The extended edition (26 weeks)</option>
-        <option>The book</option>
+        <option>The printed book</option>
+        <option>Homeschool or classroom use</option>
         <option>The American series</option>
         <option>Not sure yet</option>
       </select>
@@ -306,11 +308,12 @@ def home():
 <section class="section">
   <div class="container">
     <div class="head">
-      <span class="kicker">Two editions and a book</span>
+      <span class="kicker">Two editions</span>
       <h2>Choose your pace</h2>
       <p class="lede">Enrollment opens soon. Join the waitlist to hear first.</p>
     </div>
     <div class="grid grid-2 editions">{editions}</div>
+    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool student or a class? <a href="/families-and-instructors/">Options for families and instructors</a>.</p>
   </div>
 </section>
 
@@ -525,6 +528,48 @@ def waitlist():
     return page("/waitlist/", "Join the waitlist", "Be told when Sophandros opens.", body, active="/waitlist/")
 
 
+def families():
+    mail = C.SITE["email"]
+    body = f"""
+<header class="page-head">
+  <div class="container">
+    <span class="kicker">Families and instructors</span>
+    <h1>For students, too</h1>
+    <p class="lede">Sophandros was written for adults, but the education it revives was first given to the young. A strong reader of about fifteen and older can take the course at home, and it can serve as a text for a college seminar.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:var(--s3)">
+  <div class="container">
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="meta">Homeschool families</span>
+        <h3>At home, with a parent alongside</h3>
+        <p>Suited to an advanced student of about fifteen and older who reads well above grade level. The extended edition fills a school year at one chapter a week; the core course fits a semester.</p>
+        <p>The free parent's guide covers pacing, adapting the writing exercises to a student's life, checking the writing, and recording the course on a transcript.</p>
+        <p><a class="button ghost" href="/guides/sophandros-parents-guide.pdf">The parent's guide (PDF)</a></p>
+        <p class="note">Teaching more than one child? A family license covers every student in one household: the core course for $225, the extended edition for $375.</p>
+      </div>
+      <div class="card">
+        <span class="meta">College instructors</span>
+        <h3>A text for a seminar</h3>
+        <p>Twenty-six chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course or a first-year program.</p>
+        <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. A printed edition will follow on Amazon.</p>
+      </div>
+      <div class="card">
+        <span class="meta">Schools and teams</span>
+        <h3>For a class or a group</h3>
+        <p>Classical academies, independent schools and teams at work can use the course with a group.</p>
+        <p class="note">Write to <a href="mailto:{mail}?subject=Group%20use">{mail}</a> with the size of your group and how you would use it.</p>
+      </div>
+    </div>
+    <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free.</p>
+  </div>
+</section>
+"""
+    return page("/families-and-instructors/", "Families and instructors",
+                "Sophandros for advanced homeschool students, college seminars and groups: a free parent's guide, review copies for instructors, and group use.", body)
+
+
 def not_found():
     body = """
 <header class="page-head" style="padding-bottom:var(--s7)">
@@ -559,8 +604,9 @@ def build():
     write("about/index.html", about())
     write("american-series/index.html", american_series())
     write("waitlist/index.html", waitlist())
+    write("families-and-instructors/index.html", families())
     write("404.html", not_found())
-    urls = ["/", "/curriculum/", "/about/", "/american-series/", "/waitlist/"] + [
+    urls = ["/", "/curriculum/", "/about/", "/american-series/", "/waitlist/", "/families-and-instructors/"] + [
         f"/chapters/{c['slug']}/" for c in C.CHAPTERS
     ]
     write(

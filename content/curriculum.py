@@ -599,21 +599,15 @@ LATIN = [
     ("Mottos of the republic", "E pluribus unum, Annuit coeptis, Novus ordo seclorum, and the Founders' pen names"),
 ]
 
-# The two editions and the book. Prices are announced at launch.
+# The two editions. The digital book comes with a course; a print edition follows on Amazon.
 EDITIONS = [
     # (name, length, price, description, note)
-    ("The core course", "12 weeks", "$99",
+    ("The core course", "12 weeks", "$149",
      "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone, with a weekly self-check and a printable PDF of each chapter.",
-     "Move up to the extended edition later for $100."),
-    ("The extended edition", "26 weeks", "$199",
-     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with every weekly self-check.",
-     ""),
-    ("The book", "26 chapters", "$50",
-     "All 26 chapters with their readings, exercises and historical illustrations, plus a timeline and a glossary of Greek and Latin, as a digital edition (PDF). The weekly self-checks are in the course.",
-     "A printed edition will follow on Amazon."),
-    ("The course and the book", "26 weeks + book", "$229",
-     "The extended edition with the digital book included.",
-     "Saves $20."),
+     "Add the digital book for $30. Move up to the extended edition later for $100."),
+    ("The extended edition", "26 weeks + book", "$249",
+     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with every weekly self-check. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
+     "A printed edition of the book will follow on Amazon."),
 ]
 
 
