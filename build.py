@@ -33,6 +33,7 @@ esc = html.escape
 NAV = [
     ("/curriculum/", "Curriculum"),
     ("/chapters/01-the-self/", "Read a chapter"),
+    ("/education/", "Education"),
     ("/about/", "About"),
 ]
 
@@ -93,7 +94,7 @@ def page(path, title, description, body, active=None):
           <li><a href="/curriculum/">Curriculum</a></li>
           <li><a href="/chapters/01-the-self/">Read Chapter 1</a></li>
           <li><a href="/american-series/">The American series</a></li>
-          <li><a href="/families-and-instructors/">Families and instructors</a></li>
+          <li><a href="/education/">Education</a></li>
         </ul>
       </div>
       <div>
@@ -313,7 +314,7 @@ def home():
       <p class="lede">Enrollment opens soon. Join the waitlist to hear first.</p>
     </div>
     <div class="grid grid-2 editions">{editions}</div>
-    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate or postgraduate course? <a href="/families-and-instructors/">Options for families, instructors and programs</a>.</p>
+    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate or postgraduate course? <a href="/education/">Options for families, instructors and programs</a>.</p>
   </div>
 </section>
 
@@ -533,7 +534,7 @@ def families():
     body = f"""
 <header class="page-head">
   <div class="container">
-    <span class="kicker">Families and instructors</span>
+    <span class="kicker">Education</span>
     <h1>For students, too</h1>
     <p class="lede">Sophandros was written for working adults, but the education it revives was first given to the young. A strong reader of about fifteen and older can take the course at home; it can serve as a text for a college seminar; and it suits professional schools and training programs whose graduates will need judgment as much as technique.</p>
   </div>
@@ -566,8 +567,8 @@ def families():
   </div>
 </section>
 """
-    return page("/families-and-instructors/", "Families and instructors",
-                "Sophandros for advanced homeschool students, college seminars, professional schools and residency programs: a free parent's guide, review copies for instructors, and group licenses.", body)
+    return page("/education/", "Education",
+                "Sophandros for advanced homeschool students, college seminars, professional schools and residency programs: a free parent's guide, review copies for instructors, and group licenses.", body, active="/education/")
 
 
 def not_found():
@@ -604,9 +605,14 @@ def build():
     write("about/index.html", about())
     write("american-series/index.html", american_series())
     write("waitlist/index.html", waitlist())
-    write("families-and-instructors/index.html", families())
+    write("education/index.html", families())
+    # the page's first address, kept so earlier links still work
+    write("families-and-instructors/index.html",
+          '<!doctype html><meta charset="utf-8"><title>Education · Sophandros</title>'
+          '<link rel="canonical" href="https://www.sophandros.com/education/">'
+          '<meta http-equiv="refresh" content="0; url=/education/"><a href="/education/">Education</a>')
     write("404.html", not_found())
-    urls = ["/", "/curriculum/", "/about/", "/american-series/", "/waitlist/", "/families-and-instructors/"] + [
+    urls = ["/", "/curriculum/", "/about/", "/american-series/", "/waitlist/", "/education/"] + [
         f"/chapters/{c['slug']}/" for c in C.CHAPTERS
     ]
     write(
