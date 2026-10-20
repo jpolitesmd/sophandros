@@ -309,6 +309,7 @@ em, i { font-style: italic; }
 .text p + p { margin-top: var(--s2); }
 .text .src { margin-top: var(--s2); font-style: normal; font-size: 0.86em; color: var(--muted); }
 .plate { margin-block: var(--s5); }
+.prose > .plate:first-child { margin-top: 0; }
 .plate img { border: 1px solid var(--line); background: #fff; padding: 6px; }
 .plate figcaption { margin-top: var(--s1); font-size: 0.88em; color: var(--muted); text-align: center; }
 .word { text-align: center; }
