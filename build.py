@@ -628,6 +628,7 @@ def families():
         <span class="meta">Graduate and postgraduate</span>
         <h3>For a cohort or a group</h3>
         <p>Medical, law and graduate schools, residency and fellowship programs, classical academies and teams at work can take the course together, a chapter a week, with the writing exercises as shared assignments.</p>
+        <p>Residency and fellowship programs can also offer it to their trainees on its own, as part of a wellness program: a course in the whole person, not only the profession, that prepares them for life beyond training.</p>
         <p class="note">Group licenses are available. Write to <a href="mailto:{mail}?subject=Group%20license">{mail}</a> with the size of your group and how you would use it.</p>
       </div>
     </div>
