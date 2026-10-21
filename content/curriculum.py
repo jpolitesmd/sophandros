@@ -44,7 +44,7 @@ PARTS = [
         "weeks": "2 weeks",
         "summary": "Farming, writing and the first laws, then the first Greeks and the collapse of their palaces.",
         "intro": (
-            "Homer sang in the eighth century BC about a world already 500 years gone, and that "
+            "Homer's poems, sung in the eighth century BC, told of a world already 500 years gone, and that "
             "world stood on thousands of years of earlier civilization. The prologue sets the stage "
             "so the reader meets Achilles knowing what came before him."
         ),

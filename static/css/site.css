@@ -191,6 +191,7 @@ em, i { font-style: italic; }
   .rings .lbl-inner { font-size: 18px; transform: translateY(7px); }
   .rings .lbl-part { display: none; }
 }
+.curriculum-rings { margin-top: var(--s5); margin-bottom: var(--s4); }
 .rings-caption { text-align: center; margin-top: var(--s3); color: var(--muted); }
 
 /* ---------- Cards and grids ---------- */

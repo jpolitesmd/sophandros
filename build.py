@@ -380,6 +380,9 @@ def curriculum():
     <span class="kicker">The course</span>
     <h1>Curriculum</h1>
     <p class="lede">{C.THESIS}</p>
+    <figure class="rings-figure curriculum-rings">{rings_svg()}
+      <figcaption class="rings-caption">The widening circle. Each part below is one ring, from the self outward to a new nation; the last part carries it all back to the center: your own work.</figcaption>
+    </figure>
     <nav class="part-nav" aria-label="Parts">{nav}</nav>
   </div>
 </header>
