@@ -417,7 +417,17 @@ def chapter(ch):
 </div>"""
     written = CHAPTER_DIR / f"{ch['slug']}.html"
     if ch["status"] == "written" and written.exists():
-        main = f'<div class="reading"><div class="column prose">{written.read_text()}</div></div>'
+        text = written.read_text()
+        if ch["slug"] == "01-the-self":
+            # The free sample opens with the book's preface, then the chapter.
+            preface = (ROOT / "content" / "samples" / "preface.html").read_text().replace("<h1>Preface</h1>", "<h2>Preface</h2>", 1)
+            text = (
+                f'<div class="preface">{preface}</div>'
+                f'<hr class="section-mark">'
+                f'<h2 class="chapter-start">{ch_label(ch)}. {esc(ch["circle"])}: {ch["theme"]}</h2>'
+                + text
+            )
+        main = f'<div class="reading"><div class="column prose">{text}</div></div>'
         facts_block = f'<section class="section tint"><div class="container"><div class="head"><span class="kicker">At a glance</span><h2>This chapter in brief</h2></div>{facts}</div></section>'
         content = main + facts_block
     else:

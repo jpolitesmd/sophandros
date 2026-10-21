@@ -386,3 +386,6 @@ details.sample { margin-top: var(--s3); }
 .sample .note { font-size: 0.95rem; color: var(--muted); font-style: italic; border-top: 1px solid var(--line); padding-top: var(--s2); }
 .sample-label { font-family: var(--display); font-size: 1.1rem; }
 .sample-figure { max-width: 46rem; margin: 0 auto var(--s4); box-shadow: 0 10px 30px rgba(20, 33, 61, 0.15); }
+
+.reading .prose .preface > h2 { text-align: center; }
+.reading .prose > h2.chapter-start { text-align: center; margin-bottom: var(--s4); }
