@@ -169,6 +169,10 @@ em, i { font-style: italic; }
 .hero-logo { width: min(440px, 80%); margin: var(--s3) auto 0; }
 .hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-top: var(--s3); }
 .hero .lede { max-width: 36rem; margin: var(--s3) auto 0; }
+.hero-aim { margin: var(--s2) auto 0; font-family: var(--display); font-size: clamp(1rem, 1.8vw, 1.3rem); letter-spacing: 0.04em; color: var(--gold-ink); }
+.aim-quote { max-width: 40rem; margin: var(--s4) auto 0; text-align: center; }
+.aim-quote p { font-size: clamp(1.15rem, 2vw, 1.4rem); font-style: italic; line-height: 1.5; color: var(--navy); }
+.aim-quote cite { display: block; margin-top: var(--s2); font-style: normal; font-family: var(--display); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 
 /* ---------- Home: the rings ---------- */
 .rings-figure { max-width: 46rem; margin: 0 auto; }

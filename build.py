@@ -241,11 +241,26 @@ def home():
     <span class="kicker">Self-paced · From the first cities to the American founding</span>
     <img class="hero-logo" src="/img/brand/logo-lockup.png" alt="Sophandros" width="923" height="524">
     <h1>{C.SITE['promise']}</h1>
+    <p class="hero-aim">{C.SITE['aim']}</p>
     <p class="lede">The training that shaped leaders for two thousand years, rebuilt for the modern professional seeking a deeper foundation and a more complete self: the same texts, the same tools and the same writing drills, applied to your own work.</p>
     <div class="actions">
       <a class="button" href="/chapters/01-the-self/">Read Chapter 1</a>
       <a class="button ghost" href="/curriculum/">See the curriculum</a>
     </div>
+  </div>
+</section>
+
+<section class="section" id="aim">
+  <div class="container">
+    <div class="head">
+      <span class="kicker">The aim</span>
+      <h2>Practical wisdom</h2>
+      <p class="lede">Knowledge can be looked up. Judgment cannot. The Greeks called it <em>phronēsis</em>, practical wisdom: the ability to see what ought to be done in the case in front of you, at home, at work and in public life. Aristotle held that it is learned from experience of particular cases, not from rules alone. The classics are the largest store of such cases we have, and every chapter of Sophandros puts them to that use: to develop the judgment of the complete professional.</p>
+    </div>
+    <blockquote class="aim-quote">
+      <p>&ldquo;For this reason we think Pericles and men of that stamp to be Practically Wise, because they can see what is good for themselves and for men in general.&rdquo;</p>
+      <cite>Aristotle, <em>Nicomachean Ethics</em> 6.5. Translated by D. P. Chase, 1847</cite>
+    </blockquote>
   </div>
 </section>
 
@@ -460,6 +475,7 @@ def about():
     <div class="head" style="margin-bottom:var(--s4)"><span class="kicker">Why</span><h2>What a professional's education leaves out</h2></div>
     <p>For centuries the educated of Europe and America were formed the same way: Latin and Greek, Homer and Plato, Cicero and Virgil, and the history of every republic that rose and fell. Harvard's rules of 1642 asked a student to read Cicero and decline Greek nouns before he could be admitted. The men who wrote the American Constitution were products of that training, and they used it.</p>
     <p>A modern professional has a long education, but usually not that one. What it leaves out is the progression: why each age built what it did, why it failed, and what the next age learned. Sophandros restores that progression at a working pace, and turns it on the reader's own work.</p>
+    <p>The wisdom in the name is the practical kind. Aristotle called it <em>phronēsis</em>: the judgment that sees what ought to be done in a particular case, and that he said comes only from experience. A professional already has the experience. Sophandros adds the store of cases and the habits of reasoning that turn it into judgment, from Achilles' anger to Madison's design.</p>
     <p>It is written for anyone with a full week who wants the foundation under their profession: in law, medicine, business, government, the military or the trades of the mind.</p>
   </div>
 </section>
