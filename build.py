@@ -247,6 +247,7 @@ def home():
       <a class="button" href="/chapters/01-the-self/">Read Chapter 1</a>
       <a class="button ghost" href="/curriculum/">See the curriculum</a>
     </div>
+    <img class="hero-flourish" src="/img/brand/flourish.png" alt="" width="670" height="140">
   </div>
 </section>
 
