@@ -165,11 +165,12 @@ em, i { font-style: italic; }
 @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid > :first-child { grid-column: 1 / -1; } }
 
 /* ---------- Home: hero ---------- */
-.hero { text-align: center; padding-block: var(--s6) var(--s4); }
+.hero { text-align: center; padding-block: var(--s6) 0; }
 .hero-logo { width: min(440px, 80%); margin: var(--s3) auto 0; }
 .hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-top: var(--s3); }
 .hero .lede { max-width: 36rem; margin: var(--s3) auto 0; }
-.hero-flourish { display: block; width: min(360px, 70%); height: auto; margin: var(--s7) auto 0; }
+.hero-flourish { display: block; width: min(200px, 50%); height: auto; margin: var(--s5) auto 0; }
+.hero + #aim { padding-top: var(--s5); }
 .hero-aim { margin: var(--s2) auto 0; font-family: var(--display); font-size: clamp(1rem, 1.8vw, 1.3rem); letter-spacing: 0.04em; color: var(--gold-ink); }
 .aim-quote { max-width: 40rem; margin: var(--s4) auto 0; text-align: center; }
 .aim-quote p { font-size: clamp(1.15rem, 2vw, 1.4rem); font-style: italic; line-height: 1.5; color: var(--navy); }
