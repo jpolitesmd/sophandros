@@ -282,7 +282,7 @@ def home():
     <div class="head">
       <span class="kicker">The course</span>
       <h2>A prologue and five parts</h2>
-      <p class="lede">Twenty-six chapters, one a week. Each adds a layer to the man and names what the age before it failed to solve.</p>
+      <p class="lede">Twenty-six chapters, one a week. The course grows as the circle grows: each chapter adds a layer to the man, a larger body to govern, and names what the age before it failed to solve.</p>
     </div>
     <div class="parts">{''.join(part_cards)}</div>
     <div class="actions"><a class="button ghost" href="/curriculum/">The full curriculum</a></div>

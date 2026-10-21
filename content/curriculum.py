@@ -25,10 +25,13 @@ SITE = {
 
 # The thesis, stated once and reused on the home and curriculum pages.
 THESIS = (
-    "As civilization grew, the circle a man had to govern widened: from himself to his "
-    "household, his city, a republic, an empire, the wider world and finally a new nation. "
-    "Sophandros follows that widening, chapter by chapter, and then brings everything back "
-    "to the reader's own work."
+    "As civilization grew, so did the circle each man had to govern. First he had to rule "
+    "himself; then a household; then a city; then a republic, an empire, the wider world and "
+    "finally a new nation. Each larger circle demanded skills the smaller one never taught: "
+    "the honor that governs a man cannot run a household, and what runs a household cannot "
+    "run a city. Sophandros is built the same way. The course grows as the circle grows: "
+    "each chapter widens the ring by one step and adds the skill that step required, and "
+    "the last part brings it all back to the center, to the reader's own work."
 )
 
 # --------------------------------------------------------------------------
