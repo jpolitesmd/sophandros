@@ -613,17 +613,6 @@ def education_samples():
       {model}
     </details>
     <p class="center muted" style="margin-top:var(--s4)">For parents and instructors, the parent's guide has a simple checklist for marking any of the drills.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="head">
-      <span class="kicker">Sample · Course only</span>
-      <h2>The certificate of completion</h2>
-      <p class="lede">Every student who finishes a course receives a certificate for the edition completed, ready to fill in, print and keep, or to include in a homeschool portfolio.</p>
-    </div>
-    <figure class="sample-figure"><img src="/img/samples/certificate.jpg" alt="Sample Sophandros certificate of completion for the extended edition" width="1210" height="935" loading="lazy"></figure>
     <div class="actions"><a class="button ghost" href="/guides/sophandros-parents-guide.pdf">The parent's guide (PDF)</a><a class="button ghost" href="/chapters/01-the-self/">Read all of Chapter 1</a></div>
   </div>
 </section>"""
@@ -637,6 +626,7 @@ def families():
     <span class="kicker">Education</span>
     <h1>For students, too</h1>
     <p class="lede">Sophandros was written for working adults, but the education it revives was first given to the young. A strong reader of about fifteen and older can take the course at home; it can serve as a text for a college seminar; and it suits professional schools and training programs whose graduates will need judgment as much as technique.</p>
+    <p class="muted">Sophandros is a supplement to a student's own education. It is not an accredited course, and it does not award grades, credit or certificates.</p>
   </div>
 </header>
 <section class="section" style="padding-top:var(--s3)">
