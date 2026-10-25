@@ -646,7 +646,7 @@ def families():
         <p>Suited to an advanced student of about fifteen and older who reads well above grade level. The extended edition fills a school year at one chapter a week; the core course fits a semester.</p>
         <p>The free parent's guide covers pacing, adapting the writing exercises to a student's life, checking the writing, and recording the course on a transcript.</p>
         <p><a class="button ghost" href="/guides/sophandros-parents-guide.pdf">The parent's guide (PDF)</a></p>
-        <p class="note">Teaching more than one child? A family license covers every student in one household: the core course for $225, the extended edition for $375.</p>
+        <p class="note">Teaching more than one child? A family license covers every student in one household: the core course for $175, the extended edition for $325.</p>
       </div>
       <div class="card">
         <span class="meta">Collegiate</span>
