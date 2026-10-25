@@ -116,7 +116,7 @@ PARTS = [
             "The American Founders are the clearest case of this education put to use: men trained in "
             "these exact texts who then had to design a government from scratch."
         ),
-        "failed": "The founding left slavery in place, and the union broke into civil war within a lifetime.",
+        "failed": "The founding depended on a virtue it could not guarantee: parties formed within a decade, and the union broke into civil war within a lifetime.",
         "carried": "A written constitution of separated powers, and the lesson that it needs citizens educated to keep it.",
     },
     {
