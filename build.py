@@ -394,7 +394,7 @@ def curriculum():
     <p class="center muted small" style="margin-bottom:var(--s5)">Chapters marked <span class="badge core">Core</span> make up the 12-week core course; the extended edition and the book include every chapter.</p>
     {''.join(blocks)}
     <div class="part-close" style="grid-template-columns:1fr;margin-top:var(--s6)">
-      <div><strong>The capstone, in chapter 24</strong><ol style="padding-left:1.2em;margin-top:.4rem">{capstone}</ol></div>
+      <div><strong>The capstone, in chapter 23</strong><ol style="padding-left:1.2em;margin-top:.4rem">{capstone}</ol></div>
     </div>
   </div>
 </section>

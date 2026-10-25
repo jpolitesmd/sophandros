@@ -494,36 +494,23 @@ CHAPTERS = [
     },
     # Part V, today
     {
-        "num": "22", "slug": "22-your-writing", "part": "today",
-        "circle": "Your writing", "theme": "persuasion",
+        "num": "22", "slug": "22-your-judgment-and-your-words", "part": "today",
+        "circle": "Your judgment and your words", "theme": "deciding and persuading",
         "era": "Today",
         "readings": [
-            "Aristotle, <em>Rhetoric</em> 1.2, revisited",
+            "Aristotle, <em>Nicomachean Ethics</em> 3.3 and 6, revisited",
+            "Cicero, <em>On Duties</em> 3: when the honorable and the useful seem to conflict",
             "<em>Federalist</em> 1 as a model public argument",
             "Lincoln's Gettysburg Address beside Pericles' Funeral Oration",
         ],
-        "tool": "Rhetoric, applied.",
-        "exercise": ("The memo", "Write a one-page memo or proposal on a real issue at work, using character, reason and feeling."),
+        "tool": "Practical wisdom and rhetoric, applied: decide, then write it up.",
+        "exercise": ("The decision memo", "Decide a real dilemma from your work, arguing it both ways, then write the decision up as a one-page memo for the people who must act on it."),
         "graduate": "You.",
-        "lesson": "Every tool of persuasion in the course fits on one page addressed to the people who must agree.",
-        "core": 12, "status": "planned",
-    },
-    {
-        "num": "23", "slug": "23-your-decisions", "part": "today",
-        "circle": "Your decisions", "theme": "judging the hard case",
-        "era": "Today",
-        "readings": [
-            "Aristotle, <em>Nicomachean Ethics</em> 6, revisited",
-            "Cicero, <em>On Duties</em> 3: when the honorable and the useful seem to conflict",
-        ],
-        "tool": "Practical wisdom, applied.",
-        "exercise": ("The decision", "Decide a real dilemma from your work, arguing it both ways before you choose."),
-        "graduate": "You.",
-        "lesson": "Good judgment is a habit: name the case, argue both sides, then choose and own it.",
+        "lesson": "Decide first, then persuade: name the case, argue both sides, choose, and put the decision on one page for the people who must act.",
         "core": 11, "status": "planned",
     },
     {
-        "num": "24", "slug": "24-your-leadership", "part": "today",
+        "num": "23", "slug": "23-your-leadership", "part": "today",
         "circle": "Your leadership", "theme": "self-command, and the capstone",
         "era": "Today",
         "readings": [
@@ -539,7 +526,7 @@ CHAPTERS = [
     },
 ]
 
-# The capstone, completed in chapter 24.
+# The capstone, completed in chapter 23.
 CAPSTONE = [
     ("A personal constitution", "About 1,000 words, modeled on Franklin's thirteen virtues: one paragraph per layer of the figure, each grounded in a text from the course."),
     ("A real problem, solved with the tools", "Take a current problem from your work and write it up in three parts: its history, the argument, and the recommendation."),
