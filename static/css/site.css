@@ -379,6 +379,11 @@ em, i { font-style: italic; }
 .edition .price { font-family: var(--display); font-size: 2rem; color: var(--navy); margin: var(--s2) 0 var(--s2); line-height: 1; }
 .edition .note { font-size: 0.95rem; color: var(--gold-ink); font-style: italic; margin-top: var(--s2); }
 .edition .price + p { margin-top: 0; }
+.edition .price-launch { display: inline-block; width: fit-content; align-self: flex-start; margin: var(--s2) 0 0; padding: 0.15rem 0.6rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--gold-ink); border-radius: 999px; }
+.edition .price-launch + .price { margin-top: var(--s1); }
+.edition .price .was { font-size: 1.25rem; color: var(--muted); text-decoration-thickness: 2px; margin-right: 0.35rem; vertical-align: 0.2em; }
+.edition .price-sub { font-size: 0.85rem; color: var(--muted); margin: calc(-1 * var(--s1)) 0 var(--s2); }
+.edition .price-sub + p { margin-top: 0; }
 
 /* ---------- Education samples ---------- */
 .sample { max-width: var(--measure); margin: 0 auto; background: var(--cream); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: var(--s3); }
