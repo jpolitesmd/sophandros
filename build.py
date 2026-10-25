@@ -232,7 +232,7 @@ def home():
         f'<div class="card edition"><span class="meta">{length}</span><h3>{name}</h3>'
         f'<p class="price-launch">Launch price</p>'
         f'<p class="price"><s class="was" aria-label="Regular price {regular}">{regular}</s> {price}</p>'
-        f'<p class="price-sub">Regular price {regular} after launch</p><p>{desc}</p>'
+        f'<p class="price-sub">Launch price through December 25; {regular} after</p><p>{desc}</p>'
         + (f'<p class="note">{note}</p>' if note else "")
         + "</div>"
         for name, length, price, regular, desc, note in C.EDITIONS
@@ -648,7 +648,7 @@ def families():
         <p>Suited to an advanced student of about fifteen and older who reads well above grade level. The extended edition fills a school year at one chapter a week; the core course fits a semester.</p>
         <p>The free parent's guide covers pacing, adapting the writing exercises to a student's life, checking the writing, and recording the course on a transcript.</p>
         <p><a class="button ghost" href="/guides/sophandros-parents-guide.pdf">The parent's guide (PDF)</a></p>
-        <p class="note">Teaching more than one child? A family license covers every student in one household. At launch prices, the core course is $175 and the extended edition $325.</p>
+        <p class="note">Teaching more than one child? A family license covers every student in one household. Through December 25, the core course is $175 and the extended edition $325 (regularly $225 and $375).</p>
       </div>
       <div class="card">
         <span class="meta">Collegiate</span>
