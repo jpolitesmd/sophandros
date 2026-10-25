@@ -127,6 +127,8 @@ def chapters_in(part_id):
 
 
 def ch_label(ch):
+    if ch.get("label"):
+        return ch["label"]
     return f"Prologue {ch['num']}" if ch["num"].startswith("P") else f"Chapter {ch['num']}"
 
 
@@ -212,7 +214,8 @@ def home():
         if p["id"] == "prologue":
             rng = "P1–P2"
         elif len(chs) > 1:
-            rng = f"Ch. {chs[0]['num']}–{chs[-1]['num']}"
+            nums = [c for c in chs if not c["num"].startswith("P")]
+            rng = f"Ch. {nums[0]['num']}–{nums[-1]['num']}" if len(nums) > 1 else f"Ch. {nums[0]['num']}"
         part_cards.append(
             f'<a class="part-card" href="/curriculum/#{p["id"]}">'
             f'<span class="meta"><span>{p["label"]}</span><span>{rng}</span></span>'

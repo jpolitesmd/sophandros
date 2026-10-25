@@ -78,7 +78,7 @@ PARTS = [
         "label": "Part II",
         "title": "Rome: the republic and the empire",
         "ring": "The family, the nation, the empire",
-        "weeks": "6 weeks",
+        "weeks": "7 weeks",
         "summary": "Duty, the mixed constitution, eloquence, character, self-command and government at scale.",
         "intro": (
             "Rome adds duty, law and a state that lasts. For 1,800 years it was the model every "
@@ -124,7 +124,7 @@ PARTS = [
         "label": "Part V",
         "title": "Your own circle: the tools at work today",
         "ring": "Back to the center",
-        "weeks": "3 weeks",
+        "weeks": "2 weeks",
         "summary": "Writing, judgment and leadership in your own work, and the capstone.",
         "intro": (
             "The course ends where the old education always aimed: at the reader's own work. Each "
