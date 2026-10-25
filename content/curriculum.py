@@ -18,7 +18,7 @@ SITE = {
     "description": (
         "The training that shaped leaders for two thousand years, rebuilt for the modern professional "
         "to build practical wisdom: "
-        "26 chapters from the first cities to the American founding, following one man "
+        "27 chapters from the first cities to the American founding, following one man "
         "as his circle widens from himself to a republic."
     ),
 }
@@ -78,8 +78,8 @@ PARTS = [
         "label": "Part II",
         "title": "Rome: the republic and the empire",
         "ring": "The family, the nation, the empire",
-        "weeks": "6 weeks",
-        "summary": "Duty, the mixed constitution, eloquence, character, self-command and government at scale.",
+        "weeks": "7 weeks",
+        "summary": "The founding legends and the Etruscan kings, then duty, the mixed constitution, eloquence, character, self-command and government at scale.",
         "intro": (
             "Rome adds duty, law and a state that lasts. For 1,800 years it was the model every "
             "educated European and American measured public life against."
@@ -283,6 +283,23 @@ CHAPTERS = [
         "core": 5, "status": "planned",
     },
     # Part II, Rome
+    {
+        "num": "P3", "slug": "p3-before-the-republic", "part": "rome",
+        "circle": "Before the Republic", "theme": "legends, neighbors and kings",
+        "era": "about 1000–509 BC",
+        "readings": [
+            "Livy, <em>History of Rome</em>, Preface and 1.4–8 (Romulus and Remus, the refuge)",
+            "Livy 1.34–60 (the Etruscan kings) and 6.1 (why the records are thin)",
+            "The Palatine huts, the Forum drained, and the Lapis Niger inscription",
+            "Herodotus 1.94 on the Etruscans, and the François Tomb at Vulci",
+            "Polybius 3.22 (the first treaty with Carthage); Tacitus, <em>Annals</em> 11.24 (Claudius on the open city)",
+        ],
+        "tool": "History: weighing a written history against documents and the ground.",
+        "exercise": ("Refutation and confirmation", "Test your organization's founding story: what is true, and what is it good for?"),
+        "graduate": "Barthold Georg Niebuhr began the critical history of early Rome in 1811; Macaulay turned his idea into the <em>Lays of Ancient Rome</em>.",
+        "lesson": "Rome grew by borrowing from its neighbors and making strangers into citizens. Its founding stories taught what to value, but they are not the record.",
+        "core": 6, "status": "planned",
+    },
     {
         "num": "9", "slug": "09-the-family-and-the-nation", "part": "rome",
         "circle": "The family and the nation", "theme": "duty",
@@ -611,8 +628,8 @@ EDITIONS = [
     ("The core course", "12 weeks", "$99", "$149",
      "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone, with a weekly self-check, a model answer for every writing exercise, a printable PDF of each chapter, and a certificate of completion.",
      "Add the digital book for $30. Move up to the extended edition later for $100."),
-    ("The extended edition", "26 weeks + book", "$199", "$249",
-     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with a self-check and a model answer for every week, and the certificate. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
+    ("The extended edition", "27 weeks + book", "$199", "$249",
+     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with a self-check and a model answer for every week, and the certificate. Includes the digital book: all 27 chapters with a timeline and a glossary of Greek and Latin.",
      "A printed edition of the book will follow on Amazon."),
 ]
 

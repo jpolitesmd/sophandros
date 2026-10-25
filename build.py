@@ -183,7 +183,7 @@ def waitlist_form(compact=False):
       <select name="interest">
         <option value="">Choose one</option>
         <option>The core course (12 weeks)</option>
-        <option>The extended edition (26 weeks)</option>
+        <option>The extended edition (27 weeks)</option>
         <option>The printed book</option>
         <option>Homeschool or classroom use</option>
         <option>The American series</option>
@@ -285,7 +285,7 @@ def home():
     <div class="head">
       <span class="kicker">The course</span>
       <h2>A prologue and five parts</h2>
-      <p class="lede">Twenty-six chapters, one a week. The course grows as the circle grows: each chapter adds a layer to the man, a larger body to govern, and names what the age before it failed to solve.</p>
+      <p class="lede">Twenty-seven chapters, one a week. The course grows as the circle grows: each chapter adds a layer to the man, a larger body to govern, and names what the age before it failed to solve.</p>
     </div>
     <div class="parts">{''.join(part_cards)}</div>
     <div class="actions"><a class="button ghost" href="/curriculum/">The full curriculum</a></div>
@@ -399,7 +399,7 @@ def curriculum():
   </div>
 </section>
 """
-    return page("/curriculum/", "Curriculum", "Twenty-six chapters in a prologue and five parts, from the first cities to the American founding and back to your own work.", body, active="/curriculum/")
+    return page("/curriculum/", "Curriculum", "Twenty-seven chapters in a prologue and five parts, from the first cities to the American founding and back to your own work.", body, active="/curriculum/")
 
 
 def chapter(ch):
@@ -653,7 +653,7 @@ def families():
       <div class="card">
         <span class="meta">Collegiate</span>
         <h3>A text for a seminar</h3>
-        <p>Twenty-six chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course or a first-year program.</p>
+        <p>Twenty-seven chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course or a first-year program.</p>
         <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. A printed edition will follow on Amazon.</p>
       </div>
       <div class="card">
