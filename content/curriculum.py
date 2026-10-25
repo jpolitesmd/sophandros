@@ -427,7 +427,7 @@ CHAPTERS = [
         ],
         "tool": "Astronomy and the scientific method.",
         "exercise": ("Refutation, again", "Test a received authority in your field against the evidence."),
-        "graduate": "Benjamin Franklin's electrical experiments; Benjamin Banneker's almanac.",
+        "graduate": "Benjamin Franklin's electrical experiments; Jefferson's answer to Buffon in his <em>Notes on the State of Virginia</em>.",
         "lesson": "Reverence for the ancients must yield to evidence; nature has laws that observation and mathematics can find.",
         "core": None, "status": "planned",
     },
