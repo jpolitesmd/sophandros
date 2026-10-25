@@ -284,6 +284,22 @@ CHAPTERS = [
     },
     # Part II, Rome
     {
+        "num": "P3", "label": "Prologue to Rome", "slug": "p3-the-first-romans", "part": "rome",
+        "circle": "The first Romans", "theme": "a ford, seven hills and the kings",
+        "era": "about 1000–509 BC",
+        "readings": [
+            "The site of Rome: the Tiber ford, the Salt Road and the seven hills (Livy 5.54)",
+            "Huts on the Palatine, hut urns and the graves beneath the Forum",
+            "Greeks and Etruscans: the alphabet, the Tarquins and the temple of Jupiter",
+            "Livy, Preface 6–7 and 6.1: what the Romans knew of their own beginnings",
+        ],
+        "tool": "Geography: reading a site to understand what happened there.",
+        "exercise": ("Narrative, again", "Write your organization's founding story, then the record, and compare them."),
+        "graduate": "Macaulay's <em>Lays of Ancient Rome</em>; Churchill learned twelve hundred lines of them by heart at school.",
+        "lesson": "Rome grew from Latin villages at a river crossing, learned from Greek and Etruscan neighbors, and remembered itself as a city of newcomers. Its kings ended in tyranny.",
+        "core": None, "status": "planned",
+    },
+    {
         "num": "9", "slug": "09-the-family-and-the-nation", "part": "rome",
         "circle": "The family and the nation", "theme": "duty",
         "era": "Virgil's <em>Aeneid</em>",
