@@ -144,7 +144,7 @@ PARTS = [
 CHAPTERS = [
     # Prologue
     {
-        "num": "P1", "slug": "p1-before-the-greeks", "part": "prologue",
+        "num": "P1", "label": "Prologue to Civilization", "slug": "p1-before-the-greeks", "part": "prologue",
         "circle": "Before the Greeks", "theme": "farming, writing and the first laws",
         "era": "about 9500–1500 BC",
         "readings": [
@@ -160,7 +160,7 @@ CHAPTERS = [
         "core": 1, "status": "planned",
     },
     {
-        "num": "P2", "slug": "p2-the-first-greeks", "part": "prologue",
+        "num": "P2", "label": "Prologue to Greece", "slug": "p2-the-first-greeks", "part": "prologue",
         "circle": "The first Greeks", "theme": "palaces, collapse and memory",
         "era": "about 3000–750 BC",
         "readings": [
