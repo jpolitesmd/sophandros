@@ -49,7 +49,7 @@ def page(path, title, description, body, active=None):
     OPEN = C.ENROLLMENT_OPEN
     CTA_NAV = '<a class="cta" href="/#enroll">Enroll</a>' if OPEN else '<a class="cta" href="/waitlist/">Join the waitlist</a>'
     CTA_MENU = '<a href="/#enroll">Enroll</a>' if OPEN else '<a href="/waitlist/">Join the waitlist</a>'
-    FINE = ("Enrollment is open. Sophandros is a supplement to your own education; it is not accredited and does not award credit or certificates."
+    FINE = ("Enrollment is open. Sophandros is a supplement to your own education; it is not accredited and does not award grades or credit. Students who finish receive a certificate of completion."
             if OPEN else "Enrollment is not yet open. Chapters are published as they are written.")
     return f"""<!doctype html>
 <html lang="en">
@@ -643,7 +643,7 @@ def families():
     <span class="kicker">Education</span>
     <h1>For students, too</h1>
     <p class="lede">Sophandros was written for working adults, but the education it revives was first given to the young. A strong reader of about fifteen and older can take the course at home; it can serve as a text for a college seminar; and it suits professional schools and training programs whose graduates will need judgment as much as technique.</p>
-    <p class="muted">Sophandros is a supplement to a student's own education. It is not an accredited course, and it does not award grades, credit or certificates.</p>
+    <p class="muted">Sophandros is a supplement to a student's own education. It is not an accredited course, and it does not award grades or credit. Students who finish receive a certificate of completion.</p>
   </div>
 </header>
 <section class="section" style="padding-top:var(--s3)">
