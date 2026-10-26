@@ -9,7 +9,7 @@ Text may contain simple HTML: <em> for titles of works, <strong> for emphasis.
 
 SITE = {
     "name": "Sophandros",
-    "tagline": "A Classical Education for the Modern Professional",
+    "tagline": "A Modern Revival of the Classical Education",
     "promise": "A modern revival of the classical education",
     "aim": "Practical wisdom for the complete professional",
     "url": "https://www.sophandros.com",
@@ -609,12 +609,25 @@ LATIN = [
     ("Mottos of the republic", "E pluribus unum, Annuit coeptis, Novus ordo seclorum, and the Founders' pen names"),
 ]
 
-# The two editions. The digital book comes with a course; a print edition follows on Amazon.
+# Payhip checkout links: (edition name) -> [(label, url, launch price, regular price)].
+BUY = {
+    "The core course": [
+        ("One student", "https://payhip.com/order?link=gVYPN&pricing_plan=V6B734wVBr", "$99", "$149"),
+        ("Family license", "https://payhip.com/order?link=gVYPN&pricing_plan=PVBrn0A6B8", "$175", "$225"),
+    ],
+    "The extended edition": [
+        ("One student", "https://payhip.com/order?link=rkJAO&pricing_plan=nKGvxVAxzb", "$199", "$249"),
+        ("Family license", "https://payhip.com/order?link=rkJAO&pricing_plan=0XB0R7w8WL", "$325", "$375"),
+    ],
+}
+COURSE_PAGE = {"The core course": "https://payhip.com/b/gVYPN", "The extended edition": "https://payhip.com/b/rkJAO"}
+
+# The two editions. The digital book comes with the extended edition; a print edition follows on Amazon.
 EDITIONS = [
     # (name, length, launch price, regular price after launch, description, note)
     ("The core course", "12 weeks", "$99", "$149",
-     "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone, with a weekly self-check, a model answer for every writing exercise, and a printable PDF of each chapter.",
-     "Add the digital book for $30. Move up to the extended edition later for $100."),
+     "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone, with a weekly self-check and a model answer for every writing exercise.",
+     "Already in the core course? Write to us to move up to the extended edition."),
     ("The extended edition", "26 weeks + book", "$199", "$249",
      "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with a self-check and a model answer for every week. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
      "A printed edition of the book will follow on Amazon."),
