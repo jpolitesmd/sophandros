@@ -66,9 +66,9 @@ PARTS = [
         "weeks": "8 weeks",
         "summary": "Honor, the household, the citizen-soldier, the court, Socrates, proof and practical wisdom.",
         "intro": (
-            "Greece lays the six layers of the complete man and teaches most of the tools: honor, "
-            "mind and home, the citizen who fights, conscience and law, the examined mind, and "
-            "practical wisdom."
+            "Greece lays the first eight layers of the complete man and teaches most of the tools: honor, "
+            "mind and home, the citizen who fights, conscience and law, the examined mind, proof, "
+            "practical wisdom, and citizenship in a balanced constitution."
         ),
         "failed": "The Greek cities never united, and fell to Macedon at Chaeronea in 338 BC.",
         "carried": "The figure is complete in himself, but he has no durable state to serve. Rome supplies one.",
@@ -99,7 +99,8 @@ PARTS = [
         "summary": "Natural law, the Renaissance, the new science, and rights, consent and balanced power.",
         "intro": (
             "Four chapters carry the inheritance across 1,700 years, keeping only what the Founders "
-            "actually used. The layer added is natural rights: every person stands under a law higher "
+            "actually used. They add four layers: law above kings, the ancients reborn as models, the laws "
+            "of nature found by evidence, and natural rights: every person stands under a law higher "
             "than any ruler, and government rests on consent."
         ),
         "failed": "Liberty was claimed for some and denied to many, and no large republic had ever lasted.",
