@@ -609,6 +609,9 @@ LATIN = [
     ("Mottos of the republic", "E pluribus unum, Annuit coeptis, Novus ordo seclorum, and the Founders' pen names"),
 ]
 
+# Flip to True once both courses are set to Published on Payhip (Course > Publish).
+ENROLLMENT_OPEN = False
+
 # Payhip checkout links: (edition name) -> [(label, url, launch price, regular price)].
 BUY = {
     "The core course": [

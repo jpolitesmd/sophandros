@@ -46,6 +46,11 @@ def page(path, title, description, body, active=None):
         for href, label in NAV
     )
     menu = "".join(f'<a href="{href}">{label}</a>' for href, label in NAV)
+    OPEN = C.ENROLLMENT_OPEN
+    CTA_NAV = '<a class="cta" href="/#enroll">Enroll</a>' if OPEN else '<a class="cta" href="/waitlist/">Join the waitlist</a>'
+    CTA_MENU = '<a href="/#enroll">Enroll</a>' if OPEN else '<a href="/waitlist/">Join the waitlist</a>'
+    FINE = ("Enrollment is open. Sophandros is a supplement to your own education; it is not accredited and does not award credit or certificates."
+            if OPEN else "Enrollment is not yet open. Chapters are published as they are written.")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -74,8 +79,8 @@ def page(path, title, description, body, active=None):
 <header class="site-header">
   <div class="container">
     <a class="brand" href="/"><img src="/img/brand/mark-disk.png" alt="" width="42" height="42"><span>SOPHANDROS</span></a>
-    <nav class="nav" aria-label="Main">{nav}<a class="cta" href="/#enroll">Enroll</a></nav>
-    <details class="menu"><summary>Menu</summary><nav class="menu-panel" aria-label="Main">{menu}<a href="/#enroll">Enroll</a></nav></details>
+    <nav class="nav" aria-label="Main">{nav}{CTA_NAV}</nav>
+    <details class="menu"><summary>Menu</summary><nav class="menu-panel" aria-label="Main">{menu}{CTA_MENU}</nav></details>
   </div>
 </header>
 <main id="main">
@@ -101,12 +106,12 @@ def page(path, title, description, body, active=None):
         <h2>Sophandros</h2>
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#enroll">Enroll</a></li>
+          <li>{CTA_MENU}</li>
           <li><a href="mailto:{C.SITE['email']}">{C.SITE['email']}</a></li>
         </ul>
       </div>
     </div>
-    <p class="fine">Enrollment is open. Sophandros is a supplement to your own education; it is not accredited and does not award credit or certificates.</p>
+    <p class="fine">{FINE}</p>
   </div>
 </footer>
 </body>
@@ -184,6 +189,7 @@ def waitlist_form(compact=False):
     <label>Which interests you<span class="opt">(optional)</span>
       <select name="interest">
         <option value="">Choose one</option>
+        {'' if C.ENROLLMENT_OPEN else '<option>The core course (12 weeks)</option><option>The extended edition (26 weeks)</option>'}
         <option>The printed book</option>
         <option>Homeschool or classroom use</option>
         <option>The American series</option>
@@ -235,13 +241,27 @@ def home():
         f'<p class="price"><s class="was" aria-label="Regular price {regular}">{regular}</s> {price}</p>'
         f'<p class="price-sub">Launch price through December 25; {regular} after</p><p>{desc}</p>'
         + (f'<p class="note">{note}</p>' if note else "")
-        + '<div class="buy">' + "".join(
+        + ('<div class="buy">' + "".join(
             f'<a class="button{" ghost" if i else ""}" href="{url}">{label}: {lp}</a>'
             for i, (label, url, lp, rp) in enumerate(C.BUY[name]))
-        + f'</div><p class="buy-more"><a href="{C.COURSE_PAGE[name]}">More about this edition</a></p>'
+        + f'</div><p class="buy-more"><a href="{C.COURSE_PAGE[name]}">More about this edition</a></p>' if C.ENROLLMENT_OPEN else "")
         + "</div>"
         for name, length, price, regular, desc, note in C.EDITIONS
     )
+    enroll_lede = ("Enrollment is open, at $50 off every plan through December 25. A family license covers every student in one household. The course makes a fine Christmas gift."
+                   if C.ENROLLMENT_OPEN else "Enrollment opens soon. Join the waitlist to hear first.")
+    waitlist_section = "" if C.ENROLLMENT_OPEN else f"""
+<section class="section tint" id="waitlist">
+  <div class="container">
+    <div class="head">
+      <span class="kicker">Not yet open</span>
+      <h2>Be told when it opens</h2>
+      <p class="lede">Leave an address and we will write when the first places are offered.</p>
+    </div>
+    {waitlist_form(compact=True)}
+  </div>
+</section>
+"""
     body = f"""
 <section class="hero">
   <div class="container">
@@ -334,13 +354,13 @@ def home():
     <div class="head">
       <span class="kicker">Two editions</span>
       <h2>Choose your pace</h2>
-      <p class="lede">Enrollment is open, at $50 off every plan through December 25. A family license covers every student in one household. The course makes a fine Christmas gift.</p>
+      <p class="lede">{enroll_lede}</p>
     </div>
     <div class="grid grid-2 editions">{editions}</div>
     <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate or postgraduate course? <a href="/education/">Options for families, instructors and programs</a>.</p>
   </div>
 </section>
-
+{waitlist_section}
 """
     return page("/", None, C.SITE["description"], body)
 
@@ -508,7 +528,7 @@ def about():
   <div class="column center">
     <span class="kicker">Write to us</span>
     <p style="margin-top:var(--s2)"><a href="mailto:{C.SITE['email']}">{C.SITE['email']}</a></p>
-    <div class="actions"><a class="button" href="/#enroll">Enroll</a></div>
+    <div class="actions">{'<a class="button" href="/#enroll">Enroll</a>' if C.ENROLLMENT_OPEN else '<a class="button" href="/waitlist/">Join the waitlist</a>'}</div>
   </div>
 </section>
 """
@@ -541,19 +561,21 @@ def american_series():
 
 
 def waitlist():
+    wl_lede = ('Leave a way to reach you, and we will write when the American series or the printed book is ready. A place on this list is not a purchase or an application. The main course is open now: <a href="/#enroll">enroll here</a>.'
+               if C.ENROLLMENT_OPEN else "Leave a way to reach you. When the first places are offered, we will write. A place on this list is not a purchase or an application.")
     body = f"""
 <header class="page-head">
   <div class="container">
-    <span class="kicker">Coming next</span>
+    <span class="kicker">{'Coming next' if C.ENROLLMENT_OPEN else 'Not yet open'}</span>
     <h1>Join the waitlist</h1>
-    <p class="lede">Leave a way to reach you, and we will write when the American series or the printed book is ready. A place on this list is not a purchase or an application. The main course is open now: <a href="/#enroll">enroll here</a>.</p>
+    <p class="lede">{wl_lede}</p>
   </div>
 </header>
 <section class="section" style="padding-top:var(--s3)">
   <div class="container">{waitlist_form()}</div>
 </section>
 """
-    return page("/waitlist/", "Join the waitlist", "Be told when the American series and the printed book are ready.", body, active="/waitlist/")
+    return page("/waitlist/", "Join the waitlist", ("Be told when the American series and the printed book are ready." if C.ENROLLMENT_OPEN else "Be told when Sophandros opens."), body, active="/waitlist/")
 
 
 def education_samples():
