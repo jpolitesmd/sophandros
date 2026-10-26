@@ -38,6 +38,10 @@ NAV = [
 ]
 
 
+import hashlib as _h
+CSS_V = _h.md5((Path(__file__).parent / "static/css/site.css").read_bytes()).hexdigest()[:8]
+
+
 def page(path, title, description, body, active=None):
     full_title = C.SITE["name"] if title is None else f"{title} · {C.SITE['name']}"
     canonical = C.SITE["url"] + path
@@ -72,7 +76,7 @@ def page(path, title, description, body, active=None):
 <link rel="apple-touch-icon" href="/apple-touch.png?v=2">
 <link rel="preload" href="/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.css?v={CSS_V}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
