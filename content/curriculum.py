@@ -610,7 +610,7 @@ LATIN = [
 ]
 
 # Flip to True once both courses are set to Published on Payhip (Course > Publish).
-ENROLLMENT_OPEN = False
+ENROLLMENT_OPEN = True
 
 # Payhip checkout links: (edition name) -> [(label, url, launch price, regular price)].
 BUY = {
