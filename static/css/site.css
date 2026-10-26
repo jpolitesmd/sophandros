@@ -400,3 +400,5 @@ details.sample { margin-top: var(--s3); }
 .edition .buy .button { flex: 1 1 12rem; text-align: center; }
 .edition .buy-more { font-size: 0.9rem; margin-top: var(--s2); text-align: center; }
 #enroll { scroll-margin-top: 6rem; }
+/* Chapter pages: a wider reading column so less scrolling (John, 26 Oct) */
+.reading .column { width: min(54rem, 100% - 2 * var(--gutter)); }
