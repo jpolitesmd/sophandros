@@ -453,11 +453,14 @@ def chapter(ch):
         facts_block = f'<section class="section tint"><div class="container"><div class="head"><span class="kicker">At a glance</span><h2>This chapter in brief</h2></div>{facts}</div></section>'
         content = main + facts_block
     else:
+        where = (f"It is in both editions: week {ch['core']} of the core course, and the extended edition."
+                 if ch["core"] else "It is in the extended edition.")
         content = (
             f'<section class="section" style="padding-top:var(--s3)"><div class="container">{facts}'
-            f'<div class="status-note"><p><strong>This chapter is being written.</strong></p>'
-            f'<p class="muted">Chapter 1 is ready to read now as a sample of what every chapter will hold.</p>'
-            f'<div class="actions" style="margin-top:var(--s2)"><a class="button ghost" href="/chapters/01-the-self/">Read Chapter 1</a></div></div>'
+            f'<div class="status-note"><p><strong>Read this chapter in the course.</strong></p>'
+            f'<p class="muted">{where} Chapter 1 is free to read here as a sample.</p>'
+            f'<div class="actions" style="margin-top:var(--s2)"><a class="button" href="/#enroll">Enroll</a>'
+            f'<a class="button ghost" href="/chapters/01-the-self/">Read Chapter 1</a></div></div>'
             f'</div></section>'
         )
     pager = '<nav class="pager" aria-label="Chapters">'
