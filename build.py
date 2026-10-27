@@ -393,12 +393,14 @@ def curriculum():
                 f'<div class="part-close"><div><strong>What failed</strong>{p["failed"]}</div>'
                 f'<div><strong>What carries forward</strong>{p["carried"]}</div></div>'
             )
+        tint = " tint" if len(blocks) % 2 == 0 else ""
         blocks.append(
-            f'<section class="part-block" id="{p["id"]}">'
+            f'<section class="section{tint}"><div class="container">'
+            f'<div class="part-block" id="{p["id"]}">'
             f'<div class="part-head"><span class="kicker">{p["label"]} · {p["weeks"]}</span>'
             f'<h2>{esc(p["title"])}</h2><p class="ring-name">{p["ring"]}</p>'
             f'<p class="intro">{p["intro"]}</p></div>'
-            f'<ol class="chapters">{"".join(rows)}</ol>{close}</section>'
+            f'<ol class="chapters">{"".join(rows)}</ol>{close}</div></div></section>'
         )
     capstone = "".join(f"<li><strong>{t}.</strong> {d}</li>" for t, d in C.CAPSTONE)
     body = f"""
@@ -413,11 +415,11 @@ def curriculum():
     <nav class="part-nav" aria-label="Parts">{nav}</nav>
   </div>
 </header>
-<section class="section" style="padding-top:var(--s4)">
+<p class="center muted small" style="margin:0 auto var(--s5);padding-inline:var(--s3)">Chapters marked <span class="badge core">Core</span> make up the 12-week core course; the extended edition and the book include every chapter.</p>
+{''.join(blocks)}
+<section class="section{' tint' if len(blocks) % 2 == 0 else ''}">
   <div class="container">
-    <p class="center muted small" style="margin-bottom:var(--s5)">Chapters marked <span class="badge core">Core</span> make up the 12-week core course; the extended edition and the book include every chapter.</p>
-    {''.join(blocks)}
-    <div class="part-close" style="grid-template-columns:1fr;margin-top:var(--s6)">
+    <div class="part-close" style="grid-template-columns:1fr">
       <div><strong>The capstone, in chapter 23</strong><ol style="padding-left:1.2em;margin-top:.4rem">{capstone}</ol></div>
     </div>
   </div>

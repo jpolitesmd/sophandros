@@ -258,6 +258,7 @@ em, i { font-style: italic; }
 .chapter-row { border-bottom: 1px solid var(--line); }
 .chapter-row a { display: grid; grid-template-columns: 3.4rem 1fr auto; gap: var(--s2); align-items: baseline; padding: var(--s3) var(--s1); color: var(--ink); text-decoration: none; transition: background 0.15s; }
 .chapter-row a:hover { background: var(--paper); }
+.tint .chapter-row a:hover { background: var(--cream); }
 .chapter-row .num { font-family: var(--display); font-size: 1.35rem; color: var(--gold-ink); text-align: right; }
 .chapter-row h3 { font-size: 1.2rem; }
 .chapter-row h3 .circle { color: var(--navy); }
