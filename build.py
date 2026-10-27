@@ -10,6 +10,7 @@ No dependencies beyond Python 3.9+. Content lives in content/:
   chapters/<slug>.html the full text of each written chapter
 """
 import html
+import re
 import os
 import shutil
 import sys
@@ -55,6 +56,10 @@ def page(path, title, description, body, active=None):
     CTA_MENU = '<a href="/#enroll">Enroll</a>' if OPEN else '<a href="/waitlist/">Join the waitlist</a>'
     FINE = ("Enrollment is open. Sophandros is a supplement to your own education; it is not accredited and does not award grades or credit. Students who finish receive a certificate of completion."
             if OPEN else "Enrollment is not yet open. Chapters are published as they are written.")
+    if path != "/":
+        body = re.sub(r'(<header class="page-head[^"]*"[^>]*>\s*<div class="container">)',
+                      r'\1\n    <img class="page-mark" src="/img/brand/mark-medallion.png" alt="" width="240" height="240">',
+                      body, count=1)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -542,7 +547,7 @@ def about():
     <p>In 2026, John watched a speech on the history and importance of the West, given at the Pnyx in Athens, one of the great sites of antiquity. It awoke the same spirit he had felt on that trip years before. Soon after, he imagined a revival of the classical education he had first learned about, with an emphasis on catering to today's professionals. He designed the course and the book, using AI as a drafting tool, and built them on the original texts, quoted word for word in public-domain translations. His goal was to give future professionals the strong classical foundation he wishes he had had before beginning his own career.</p>
   </div>
 </section>
-<section class="section">
+<section class="section tint">
   <div class="column center">
     <span class="kicker">Write to us</span>
     <p style="margin-top:var(--s2)"><a href="mailto:{C.SITE['email']}">{C.SITE['email']}</a></p>

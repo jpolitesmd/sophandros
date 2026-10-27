@@ -405,3 +405,4 @@ details.sample { margin-top: var(--s3); }
 #enroll { scroll-margin-top: 6rem; }
 /* Chapter pages: a wider reading column so less scrolling (John, 26 Oct) */
 .reading .column { width: min(54rem, 100% - 2 * var(--gutter)); }
+.page-mark { display: block; width: 96px; height: 96px; margin: 0 auto var(--s3); }
