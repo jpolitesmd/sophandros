@@ -532,6 +532,17 @@ def about():
   </div>
 </section>
 <section class="section">
+  <div class="column prose">
+    <div class="head" style="margin-bottom:var(--s4)"><h2>About the author</h2></div>
+    <figure class="plate author">
+      <img src="/img/plates/author.jpg" alt="Portrait of John Polites" width="900" height="1038">
+    </figure>
+    <p>John Polites grew up Greek Orthodox, the child of two architects, and learned the importance of art and design at a young age, visiting job sites and galleries with his mother and father. In middle school he took up drafting in AutoCAD in his spare time, learning the intricacies of design. In high school he was fortunate enough to join a fundraising trip to the United Kingdom with the National Monuments Foundation, full of lectures on the history of classical education and discussions with artists, sculptors, and architects. That is where his interest in the classics began.</p>
+    <p>He planned to follow his parents and become an architect, but fell in love with another design: the human form.</p>
+    <p>In 2026, John watched a speech on the history and importance of the West, given at the Pnyx in Athens, one of the great sites of antiquity. It awoke the same spirit he had felt on that trip years before. Soon after, he imagined a revival of the classical education he had first learned about, with an emphasis on catering to today's professionals. He designed the course and the book, using AI as a drafting tool, and built them on the original texts, quoted word for word in public-domain translations. His goal was to give future professionals the strong classical foundation he wishes he had had before beginning his own career.</p>
+  </div>
+</section>
+<section class="section">
   <div class="column center">
     <span class="kicker">Write to us</span>
     <p style="margin-top:var(--s2)"><a href="mailto:{C.SITE['email']}">{C.SITE['email']}</a></p>
@@ -539,7 +550,7 @@ def about():
   </div>
 </section>
 """
-    return page("/about/", "About", "Why Sophandros exists, what the name means, and the method behind it.", body, active="/about/")
+    return page("/about/", "About", "Why Sophandros exists, what the name means, the method behind it, and its author.", body, active="/about/")
 
 
 def american_series():
