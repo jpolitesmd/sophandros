@@ -633,7 +633,7 @@ EDITIONS = [
      "Already in the core course? Write to us to move up to the extended edition."),
     ("The extended edition", "26 weeks + book", "$199", "$249",
      "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with a self-check and a model answer for every week. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
-     "A printed edition of the book will follow on Amazon."),
+     "A printed edition of the book will follow on Amazon. The online lessons carry every plate, including some that didn't make the paperback or the ebook."),
 ]
 
 
