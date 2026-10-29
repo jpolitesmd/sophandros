@@ -407,3 +407,11 @@ details.sample { margin-top: var(--s3); }
 /* Chapter pages: a wider reading column so less scrolling (John, 26 Oct) */
 .reading .column { width: min(54rem, 100% - 2 * var(--gutter)); }
 .page-mark { display: block; width: 96px; height: 96px; margin: 0 auto var(--s3); }
+
+/* Book-style indents in running prose: a paragraph that follows another starts
+   with an indent instead of a blank line. Paragraphs after headings, quotations,
+   pictures and lists stay flush, as in the printed book. Classed paragraphs
+   (sources, notes, centered lines) are left as they are. */
+.prose > p:not([class]) + p:not([class]) { margin-top: 0.35rem; text-indent: 1.5em; }
+/* Quotations are inset on both sides. */
+.text { padding-right: var(--s3); }
