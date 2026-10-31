@@ -35,6 +35,7 @@ NAV = [
     ("/curriculum/", "Curriculum"),
     ("/chapters/01-the-self/", "Read a chapter"),
     ("/education/", "Education"),
+    ("/books/", "Books"),
     ("/about/", "About"),
 ]
 
@@ -107,6 +108,7 @@ def page(path, title, description, body, active=None):
         <ul>
           <li><a href="/curriculum/">Curriculum</a></li>
           <li><a href="/chapters/01-the-self/">Read Chapter 1</a></li>
+          <li><a href="/books/">The book</a></li>
           <li><a href="/american-series/">The American series</a></li>
           <li><a href="/education/">Education</a></li>
         </ul>
@@ -199,7 +201,7 @@ def waitlist_form(compact=False):
       <select name="interest">
         <option value="">Choose one</option>
         {'' if C.ENROLLMENT_OPEN else '<option>The core course (12 weeks)</option><option>The extended edition (26 weeks)</option>'}
-        <option>The printed book</option>
+        <option>The illustrated edition</option>
         <option>Homeschool or classroom use</option>
         <option>The American series</option>
         <option>Not sure yet</option>
@@ -560,6 +562,42 @@ def about():
     return page("/about/", "About", "Why Sophandros exists, what the name means, the method behind it, and its author.", body, active="/about/")
 
 
+def books():
+    amazon = "https://www.amazon.com/dp/B0HPLRTRF9"
+    kindle = "https://www.amazon.com/dp/B0GXLC992Q"
+    body = f"""
+<header class="page-head">
+  <div class="container">
+    <span class="kicker">Books</span>
+    <h1>The book</h1>
+    <p class="lede">The course began as a book. It reads the great texts in public-domain translations, asks what each one built and where it failed, and turns every lesson to your own work.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:var(--s3)">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:var(--s5);align-items:flex-start;justify-content:center;max-width:52rem;margin:0 auto">
+      <a href="{amazon}" rel="noopener" style="flex:0 1 16rem;max-width:16rem;width:100%"><img src="/img/brand/book-cover.jpg" alt="Cover of Sophandros: A Modern Revival of the Classical Education, by John P. Polites" width="720" height="1080" style="width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 10px 28px rgba(20,33,61,.28)"></a>
+      <div style="flex:1 1 20rem;min-width:0">
+        <span class="meta">Paperback and Kindle · Second edition</span>
+        <h2 style="margin-top:.2em">Sophandros</h2>
+        <p><em>A Modern Revival of the Classical Education</em><br>by John P. Polites</p>
+        <p>For two thousand years, the people who led free societies were formed by the same books and the same drills: Homer and Plato, Cicero and Plutarch, and the graded writing exercises of the classical schools. The American Founders were among their last great graduates.</p>
+        <p><em>Sophandros</em> follows one idea through that inheritance. As civilization grew, the circle a man had to govern widened: from himself to his household, his city, a republic, an empire, and the world, until the Founders used the whole of it to build a new nation. Twenty-six chapters read the great texts in public-domain translations, ask what each one built and where it failed, and turn every lesson to your own work: your writing, your decisions, your leadership.</p>
+        <p class="muted small">Paperback: 6 × 9 in, 300 pages, ISBN 979-8-9824402-0-4. Kindle edition: ISBN 979-8-9824402-1-1. Both include a timeline and a who&rsquo;s who of the people in the book.</p>
+        <div class="actions" style="justify-content:flex-start"><a class="button" href="{amazon}" rel="noopener">Paperback on Amazon</a><a class="button" href="{kindle}" rel="noopener">Kindle edition</a><a class="button ghost" href="/chapters/01-the-self/">Read a sample chapter</a></div>
+      </div>
+    </div>
+    <div class="grid grid-2" style="max-width:52rem;margin:var(--s5) auto 0">
+      <div class="card"><span class="meta">Planned</span><h3>The Illustrated Edition</h3><p>The same book with every picture kept. The second edition runs about half the pictures to keep the page count down.</p></div>
+      <div class="card"><span class="meta">With the course</span><h3>The online lessons</h3><p>The course follows the book chapter by chapter, with a lesson, a reading, a check and a writing drill each week. <a href="/curriculum/">See the curriculum</a>.</p></div>
+    </div>
+    <p class="center muted" style="margin:var(--s4) auto 0;max-width:var(--measure)">Instructors considering the book for a course can ask for a free review copy: <a href="mailto:{C.SITE['education_email']}?subject=Review%20copy">{C.SITE['education_email']}</a>.</p>
+  </div>
+</section>
+"""
+    return page("/books/", "The book", "Sophandros: A Modern Revival of the Classical Education, by John P. Polites. Now available in paperback and Kindle on Amazon.", body, active="/books/")
+
+
 def american_series():
     body = f"""
 <header class="page-head">
@@ -586,7 +624,7 @@ def american_series():
 
 
 def waitlist():
-    wl_lede = ('Leave a way to reach you, and we will write when the American series or the printed book is ready. A place on this list is not a purchase or an application. The main course is open now: <a href="/#enroll">enroll here</a>.'
+    wl_lede = ('Leave a way to reach you, and we will write when the American series or the illustrated edition is ready. A place on this list is not a purchase or an application. The main course is open now: <a href="/#enroll">enroll here</a>.'
                if C.ENROLLMENT_OPEN else "Leave a way to reach you. When the first places are offered, we will write. A place on this list is not a purchase or an application.")
     body = f"""
 <header class="page-head">
@@ -600,7 +638,7 @@ def waitlist():
   <div class="container">{waitlist_form()}</div>
 </section>
 """
-    return page("/waitlist/", "Join the waitlist", ("Be told when the American series and the printed book are ready." if C.ENROLLMENT_OPEN else "Be told when Sophandros opens."), body, active="/waitlist/")
+    return page("/waitlist/", "Join the waitlist", ("Be told when the American series and the illustrated edition are ready." if C.ENROLLMENT_OPEN else "Be told when Sophandros opens."), body, active="/waitlist/")
 
 
 def education_samples():
@@ -686,7 +724,7 @@ def families():
         <span class="meta">Collegiate</span>
         <h3>A text for a seminar</h3>
         <p>Twenty-six chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course or a first-year program.</p>
-        <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. A printed edition will follow on Amazon.</p>
+        <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. The book is <a href="/books/">now available on Amazon</a>, in paperback and Kindle.</p>
       </div>
       <div class="card">
         <span class="meta">Graduate and postgraduate</span>
@@ -737,6 +775,7 @@ def build():
     for ch in C.CHAPTERS:
         write(f"chapters/{ch['slug']}/index.html", chapter(ch))
     write("about/index.html", about())
+    write("books/index.html", books())
     write("american-series/index.html", american_series())
     write("waitlist/index.html", waitlist())
     write("education/index.html", families())
@@ -746,7 +785,7 @@ def build():
           '<link rel="canonical" href="https://www.sophandros.com/education/">'
           '<meta http-equiv="refresh" content="0; url=/education/"><a href="/education/">Education</a>')
     write("404.html", not_found())
-    urls = ["/", "/curriculum/", "/about/", "/american-series/", "/waitlist/", "/education/"] + [
+    urls = ["/", "/curriculum/", "/about/", "/books/", "/american-series/", "/waitlist/", "/education/"] + [
         f"/chapters/{c['slug']}/" for c in C.CHAPTERS
     ]
     write(

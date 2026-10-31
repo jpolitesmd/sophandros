@@ -625,7 +625,7 @@ BUY = {
 }
 COURSE_PAGE = {"The core course": "https://payhip.com/b/gVYPN", "The extended edition": "https://payhip.com/b/rkJAO"}
 
-# The two editions. The digital book comes with the extended edition; a print edition follows on Amazon.
+# The two editions. The digital book comes with the extended edition; the paperback is on Amazon.
 EDITIONS = [
     # (name, length, launch price, regular price after launch, description, note)
     ("The core course", "12 weeks", "$99", "$149",
@@ -633,7 +633,7 @@ EDITIONS = [
      "Already in the core course? Write to us to move up to the extended edition."),
     ("The extended edition", "26 weeks + book", "$199", "$249",
      "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with a self-check and a model answer for every week. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
-     "A printed edition of the book will follow on Amazon. The online lessons keep every picture in the chapters; the print and ebook editions run leaner, about half the pictures, to keep the page count down."),
+     "The paperback and Kindle editions are now available on Amazon. The online lessons keep every picture in the chapters; the second edition of the paperback runs about half the pictures, to keep the page count down."),
 ]
 
 
