@@ -568,7 +568,6 @@ def books():
     body = f"""
 <header class="page-head">
   <div class="container">
-    <span class="kicker">Books</span>
     <h1>The book</h1>
     <p class="lede">The course began as a book. It reads the great texts in public-domain translations, asks what each one built and where it failed, and turns every lesson to your own work.</p>
   </div>
