@@ -587,7 +587,7 @@ def books():
       </div>
     </div>
     <div class="grid grid-2" style="max-width:52rem;margin:var(--s5) auto 0">
-      <div class="card"><span class="meta">Planned</span><h3>The Illustrated Edition</h3><p>The same book with every picture kept. The second edition runs about half the pictures to keep the page count down.</p></div>
+      <div class="card"><span class="meta">Planned</span><h3>The Illustrated Edition</h3><p>The same book with every picture kept. The second edition runs about half the pictures, trimmed so they don't break up the flow of reading.</p></div>
       <div class="card"><span class="meta">With the course</span><h3>The online lessons</h3><p>The course follows the book chapter by chapter, with a lesson, a reading, a check and a writing drill each week. <a href="/curriculum/">See the curriculum</a>.</p></div>
     </div>
     <p class="center muted" style="margin:var(--s4) auto 0;max-width:var(--measure)">Instructors considering the book for a course can ask for a free review copy: <a href="mailto:{C.SITE['education_email']}?subject=Review%20copy">{C.SITE['education_email']}</a>.</p>
