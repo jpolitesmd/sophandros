@@ -53,8 +53,8 @@ def page(path, title, description, body, active=None):
     )
     menu = "".join(f'<a href="{href}">{label}</a>' for href, label in NAV)
     OPEN = C.ENROLLMENT_OPEN
-    CTA_NAV = '<a class="cta" href="/#enroll">Enroll</a>' if OPEN else '<a class="cta" href="/waitlist/">Join the waitlist</a>'
-    CTA_MENU = '<a href="/#enroll">Enroll</a>' if OPEN else '<a href="/waitlist/">Join the waitlist</a>'
+    CTA_NAV = '<a class="cta" href="/#enroll">Enroll</a>' if OPEN else f'<a class="cta" href="mailto:{C.SITE["email"]}">Write to us</a>'
+    CTA_MENU = '<a href="/#enroll">Enroll</a>' if OPEN else f'<a href="mailto:{C.SITE["email"]}">Write to us</a>'
     FINE = ("Enrollment is open. Sophandros is a supplement to your own education; it is not accredited and does not award grades or credit. Students who finish receive a certificate of completion."
             if OPEN else "Enrollment is not yet open. Chapters are published as they are written.")
     if path != "/":
@@ -195,28 +195,6 @@ def rings_svg():
     )
 
 
-def waitlist_form(compact=False):
-    extra = "" if compact else f"""
-    <label>Which interests you<span class="opt">(optional)</span>
-      <select name="interest">
-        <option value="">Choose one</option>
-        {'' if C.ENROLLMENT_OPEN else '<option>The core course (12 weeks)</option><option>The extended edition (26 weeks)</option>'}
-        <option>The illustrated edition</option>
-        <option>Homeschool or classroom use</option>
-        <option>The American series</option>
-        <option>Not sure yet</option>
-      </select>
-    </label>
-    <label>A note<span class="opt">(optional)</span><textarea name="note"></textarea></label>"""
-    return f"""
-  <form class="form" action="mailto:{C.SITE['email']}?subject=Sophandros%20waitlist" method="post" enctype="text/plain">
-    <label>Name<span class="opt">(optional)</span><input type="text" name="name" autocomplete="name"></label>
-    <label>Email<input type="email" name="email" autocomplete="email" required></label>{extra}
-    <button class="button" type="submit">Join the waitlist</button>
-    <p class="note">This opens a short email to {C.SITE['email']} in your own mail app. Nothing is stored on this site.</p>
-  </form>"""
-
-
 # --------------------------------------------------------------------------
 # Pages
 # --------------------------------------------------------------------------
@@ -260,16 +238,16 @@ def home():
         for name, length, price, regular, desc, note in C.EDITIONS
     )
     enroll_lede = ("Enrollment is open, at $50 off every plan through December 25. A family license covers every student in one household. The course makes a fine Christmas gift."
-                   if C.ENROLLMENT_OPEN else "Enrollment opens soon. Join the waitlist to hear first.")
-    waitlist_section = "" if C.ENROLLMENT_OPEN else f"""
-<section class="section tint" id="waitlist">
+                   if C.ENROLLMENT_OPEN else f"Enrollment opens soon. Write to us at {C.SITE['email']} to hear first.")
+    not_open_section = "" if C.ENROLLMENT_OPEN else f"""
+<section class="section tint" id="not-open">
   <div class="container">
     <div class="head">
       <span class="kicker">Not yet open</span>
       <h2>Be told when it opens</h2>
-      <p class="lede">Leave an address and we will write when the first places are offered.</p>
+      <p class="lede">Write to us and we will tell you when the first places are offered.</p>
     </div>
-    {waitlist_form(compact=True)}
+    <div class="actions"><a class="button" href="mailto:{C.SITE['email']}?subject=Sophandros%20enrollment">Write to us</a></div>
   </div>
 </section>
 """
@@ -371,7 +349,7 @@ def home():
     <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate or postgraduate course? <a href="/education/">Options for families, instructors and programs</a>.</p>
   </div>
 </section>
-{waitlist_section}
+{not_open_section}
 """
     return page("/", None, C.SITE["description"], body)
 
@@ -555,7 +533,7 @@ def about():
   <div class="column center">
     <span class="kicker">Write to us</span>
     <p style="margin-top:var(--s2)"><a href="mailto:{C.SITE['email']}">{C.SITE['email']}</a></p>
-    <div class="actions">{'<a class="button" href="/#enroll">Enroll</a>' if C.ENROLLMENT_OPEN else '<a class="button" href="/waitlist/">Join the waitlist</a>'}</div>
+    <div class="actions">{'<a class="button" href="/#enroll">Enroll</a>' if C.ENROLLMENT_OPEN else f'<a class="button" href="mailto:{C.SITE["email"]}">Write to us</a>'}</div>
   </div>
 </section>
 """
@@ -577,7 +555,7 @@ def books():
     <div style="display:flex;flex-wrap:wrap;gap:var(--s5);align-items:flex-start;justify-content:center;max-width:52rem;margin:0 auto">
       <a href="{amazon}" rel="noopener" style="flex:0 1 16rem;max-width:16rem;width:100%"><img src="/img/brand/book-cover.jpg" alt="Cover of Sophandros: A Modern Revival of the Classical Education, by John P. Polites" width="720" height="1080" style="width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 10px 28px rgba(20,33,61,.28)"></a>
       <div style="flex:1 1 20rem;min-width:0">
-        <span class="meta">Paperback and Kindle · Second edition</span>
+        <span class="meta">Paperback and Kindle</span>
         <h2 style="margin-top:.2em">Sophandros</h2>
         <p><em>A Modern Revival of the Classical Education</em><br>by John P. Polites</p>
         <p>For two thousand years, the people who led free societies were formed by the same books and the same drills: Homer and Plato, Cicero and Plutarch, and the graded writing exercises of the classical schools. The American Founders were among their last great graduates.</p>
@@ -587,7 +565,7 @@ def books():
       </div>
     </div>
     <div class="grid grid-2" style="max-width:52rem;margin:var(--s5) auto 0">
-      <div class="card"><span class="meta">Planned</span><h3>The Illustrated Edition</h3><p>The same book with every picture kept. The second edition runs about half the pictures, trimmed so they don't break up the flow of reading.</p></div>
+      <div class="card"><span class="meta">Planned</span><h3>The Illustrated Edition</h3><p>The same book with every picture kept. The current paperback and Kindle run about half the pictures, trimmed so they don't break up the flow of reading.</p></div>
       <div class="card"><span class="meta">With the course</span><h3>The online lessons</h3><p>The course follows the book chapter by chapter, with a lesson, a reading, a check and a writing drill each week. <a href="/curriculum/">See the curriculum</a>.</p></div>
     </div>
     <p class="center muted" style="margin:var(--s4) auto 0;max-width:var(--measure)">Instructors considering the book for a course can ask for a free review copy: <a href="mailto:{C.SITE['education_email']}?subject=Review%20copy">{C.SITE['education_email']}</a>.</p>
@@ -615,29 +593,11 @@ def american_series():
       <div class="card"><span class="meta">Later</span><h3>The American century</h3><p>The Progressive era, the world wars and after.</p></div>
     </div>
     <p class="center muted" style="margin:var(--s4) auto 0;max-width:var(--measure)">Each course uses the same lesson shape and the same writing drills, so a reader who finishes the main course can move straight into any of them.</p>
-    <div class="actions"><a class="button" href="/waitlist/">Join the waitlist</a><a class="button ghost" href="/curriculum/#founding">The founding in the main course</a></div>
+    <div class="actions"><a class="button" href="mailto:{C.SITE['email']}?subject=American%20series">Write to us</a><a class="button ghost" href="/curriculum/#founding">The founding in the main course</a></div>
   </div>
 </section>
 """
     return page("/american-series/", "The American series", "A separate series on American history for readers of Sophandros: the Founding, the Early Republic, the Civil War.", body)
-
-
-def waitlist():
-    wl_lede = ('Leave a way to reach you, and we will write when the American series or the illustrated edition is ready. A place on this list is not a purchase or an application. The main course is open now: <a href="/#enroll">enroll here</a>.'
-               if C.ENROLLMENT_OPEN else "Leave a way to reach you. When the first places are offered, we will write. A place on this list is not a purchase or an application.")
-    body = f"""
-<header class="page-head">
-  <div class="container">
-    <span class="kicker">{'Coming next' if C.ENROLLMENT_OPEN else 'Not yet open'}</span>
-    <h1>Join the waitlist</h1>
-    <p class="lede">{wl_lede}</p>
-  </div>
-</header>
-<section class="section" style="padding-top:var(--s3)">
-  <div class="container">{waitlist_form()}</div>
-</section>
-"""
-    return page("/waitlist/", "Join the waitlist", ("Be told when the American series and the illustrated edition are ready." if C.ENROLLMENT_OPEN else "Be told when Sophandros opens."), body, active="/waitlist/")
 
 
 def education_samples():
@@ -776,15 +736,19 @@ def build():
     write("about/index.html", about())
     write("books/index.html", books())
     write("american-series/index.html", american_series())
-    write("waitlist/index.html", waitlist())
     write("education/index.html", families())
     # the page's first address, kept so earlier links still work
     write("families-and-instructors/index.html",
           '<!doctype html><meta charset="utf-8"><title>Education · Sophandros</title>'
           '<link rel="canonical" href="https://www.sophandros.com/education/">'
           '<meta http-equiv="refresh" content="0; url=/education/"><a href="/education/">Education</a>')
+    # retired page, kept as a redirect so earlier links and search results still land somewhere
+    write("waitlist/index.html",
+          '<!doctype html><meta charset="utf-8"><title>Sophandros</title>'
+          '<link rel="canonical" href="https://www.sophandros.com/">'
+          '<meta http-equiv="refresh" content="0; url=/#enroll"><a href="/#enroll">Enroll in Sophandros</a>')
     write("404.html", not_found())
-    urls = ["/", "/curriculum/", "/about/", "/books/", "/american-series/", "/waitlist/", "/education/"] + [
+    urls = ["/", "/curriculum/", "/about/", "/books/", "/american-series/", "/education/"] + [
         f"/chapters/{c['slug']}/" for c in C.CHAPTERS
     ]
     write(
