@@ -234,6 +234,8 @@ def home():
             f'<a class="button{" ghost" if i else ""}" href="{url}">{label}: {lp}</a>'
             for i, (label, url, lp, rp) in enumerate(C.BUY[name]))
         + f'</div><p class="buy-more"><a href="{C.COURSE_PAGE[name]}">More about this edition</a></p>' if C.ENROLLMENT_OPEN else "")
+        + (f'<div class="buy"><a class="button ghost" href="{C.BOOK["amazon"]}" rel="noopener">Buy the paperback on Amazon</a></div>'
+           if name == "The extended edition" else "")
         + "</div>"
         for name, length, price, regular, desc, note in C.EDITIONS
     )
@@ -541,8 +543,8 @@ def about():
 
 
 def books():
-    amazon = "https://www.amazon.com/dp/B0HPLRTRF9"
-    kindle = "https://www.amazon.com/dp/B0GXLC992Q"
+    amazon = C.BOOK["amazon"]
+    kindle = C.BOOK["kindle"]
     body = f"""
 <header class="page-head">
   <div class="container">

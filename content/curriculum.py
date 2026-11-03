@@ -23,6 +23,11 @@ SITE = {
     ),
 }
 
+BOOK = {
+    "amazon": "https://www.amazon.com/dp/B0HPLRTRF9",
+    "kindle": "https://www.amazon.com/dp/B0GXLC992Q",
+}
+
 # The thesis, stated once and reused on the home and curriculum pages.
 THESIS = (
     "As civilization grew, so did the circle each man had to govern. First he had to rule "
