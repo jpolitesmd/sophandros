@@ -196,7 +196,7 @@ def rings_svg():
 
 
 def waitlist_form(compact=False):
-    extra = "" if compact else """
+    extra = "" if compact else f"""
     <label>Which interests you<span class="opt">(optional)</span>
       <select name="interest">
         <option value="">Choose one</option>
