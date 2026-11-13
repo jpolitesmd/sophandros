@@ -526,7 +526,7 @@ def about():
     <figure class="plate author">
       <img src="/img/plates/author.jpg" alt="Portrait of John Polites" width="900" height="1038">
     </figure>
-    <p>John Polites grew up Greek Orthodox, the child of two architects, and learned the importance of art and design at a young age, visiting job sites and galleries with his mother and father. In middle school he took up drafting in AutoCAD in his spare time, learning the intricacies of design. In high school he was fortunate enough to join a fundraising trip to the United Kingdom with the National Monuments Foundation, full of lectures on the history of classical education and discussions with artists, sculptors, and architects. That is where his interest in the classics began.</p>
+    <p>John P. Polites, MD, grew up Greek Orthodox, the child of two architects, and learned the importance of art and design at a young age, visiting job sites and galleries with his mother and father. In middle school he took up drafting in AutoCAD in his spare time, learning the intricacies of design. In high school he was fortunate enough to join a fundraising trip to the United Kingdom with the National Monuments Foundation, full of lectures on the history of classical education and discussions with artists, sculptors, and architects. That is where his interest in the classics began.</p>
     <p>He planned to follow his parents and become an architect, but fell in love with another design: the human form.</p>
     <p>In 2026, John watched a speech on the history and importance of the West, given at the Pnyx in Athens, one of the great sites of antiquity. It awoke the same spirit he had felt on that trip years before. Soon after, he imagined a revival of the classical education he had first learned about, with an emphasis on catering to today's professionals. He designed the course and the book, using AI as a drafting tool, and built them on the original texts, quoted word for word in public-domain translations. His goal was to give future professionals the strong classical foundation he wishes he had had before beginning his own career.</p>
   </div>
@@ -555,11 +555,11 @@ def books():
 <section class="section" style="padding-top:var(--s3)">
   <div class="container">
     <div style="display:flex;flex-wrap:wrap;gap:var(--s5);align-items:flex-start;justify-content:center;max-width:52rem;margin:0 auto">
-      <a href="{amazon}" rel="noopener" style="flex:0 1 16rem;max-width:16rem;width:100%"><img src="/img/brand/book-cover.jpg" alt="Cover of Sophandros: A Modern Revival of the Classical Education, by John P. Polites" width="720" height="1080" style="width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 10px 28px rgba(20,33,61,.28)"></a>
+      <a href="{amazon}" rel="noopener" style="flex:0 1 16rem;max-width:16rem;width:100%"><img src="/img/brand/book-cover.jpg" alt="Cover of Sophandros: A Modern Revival of the Classical Education, by John P. Polites, MD" width="720" height="1080" style="width:100%;height:auto;display:block;border-radius:2px;box-shadow:0 10px 28px rgba(20,33,61,.28)"></a>
       <div style="flex:1 1 20rem;min-width:0">
         <span class="meta">Paperback and Kindle</span>
         <h2 style="margin-top:.2em">Sophandros</h2>
-        <p><em>A Modern Revival of the Classical Education</em><br>by John P. Polites</p>
+        <p><em>A Modern Revival of the Classical Education</em><br>by John P. Polites, MD</p>
         <p>For two thousand years, the people who led free societies were formed by the same books and the same drills: Homer and Plato, Cicero and Plutarch, and the graded writing exercises of the classical schools. The American Founders were among their last great graduates.</p>
         <p><em>Sophandros</em> follows one idea through that inheritance. As civilization grew, the circle a man had to govern widened: from himself to his household, his city, a republic, an empire, and the world, until the Founders used the whole of it to build a new nation. Twenty-six chapters read the great texts in public-domain translations, ask what each one built and where it failed, and turn every lesson to your own work: your writing, your decisions, your leadership.</p>
         <p class="muted small">Paperback: 6 × 9 in, 300 pages, ISBN 979-8-9824402-0-4. Kindle edition: ISBN 979-8-9824402-1-1. Both include a timeline and a who&rsquo;s who of the people in the book.</p>
@@ -574,7 +574,7 @@ def books():
   </div>
 </section>
 """
-    return page("/books/", "The book", "Sophandros: A Modern Revival of the Classical Education, by John P. Polites. Now available in paperback and Kindle on Amazon.", body, active="/books/")
+    return page("/books/", "The book", "Sophandros: A Modern Revival of the Classical Education, by John P. Polites, MD. Now available in paperback and Kindle on Amazon.", body, active="/books/")
 
 
 def american_series():
