@@ -260,7 +260,7 @@ def home():
     <img class="hero-logo" src="/img/brand/logo-lockup.png" alt="Sophandros" width="923" height="524">
     <h1>{C.SITE['promise']}</h1>
     <p class="hero-aim">{C.SITE['aim']}</p>
-    <p class="lede">The training that shaped leaders for two thousand years, rebuilt for the modern professional seeking a deeper foundation and a more complete self: the same texts, the same tools and the same writing drills, applied to your own work.</p>
+    <p class="lede">The training that shaped leaders for two thousand years, rebuilt for the modern professional seeking a deeper foundation and a more complete self: the same texts, the same tools, and the same writing drills, applied to your own work.</p>
     <div class="actions">
       <a class="button" href="/chapters/01-the-self/">Read Chapter 1</a>
       <a class="button ghost" href="/curriculum/">See the curriculum</a>
@@ -274,7 +274,7 @@ def home():
     <div class="head">
       <span class="kicker">The aim</span>
       <h2>Practical wisdom</h2>
-      <p class="lede">Knowledge can be looked up. Judgment cannot. The Greeks called it <em>phronēsis</em>, practical wisdom: the ability to see what ought to be done in the case in front of you, at home, at work and in public life. Aristotle held that it is learned from experience of particular cases, not from rules alone. The classics are the largest store of such cases we have, and every chapter of Sophandros puts them to that use: to develop the judgment of the complete professional.</p>
+      <p class="lede">Knowledge can be looked up. Judgment cannot. The Greeks called it <em>phronēsis</em>, practical wisdom: the ability to see what ought to be done in the case in front of you, at home, at work, and in public life. Aristotle held that it is learned from experience of particular cases, not from rules alone. The classics are the largest store of such cases we have, and every chapter of Sophandros puts them to that use: to develop the judgment of the complete professional.</p>
     </div>
     <blockquote class="aim-quote">
       <p>&ldquo;For this reason we think Pericles and men of that stamp to be Practically Wise, because they can see what is good for themselves and for men in general.&rdquo;</p>
@@ -348,7 +348,7 @@ def home():
       <p class="lede">{enroll_lede}</p>
     </div>
     <div class="grid grid-2 editions">{editions}</div>
-    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate or postgraduate course? <a href="/education/">Options for families, instructors and programs</a>.</p>
+    <p class="center muted" style="margin-top:var(--s4)">Teaching a homeschool, collegiate, graduate, or postgraduate course? <a href="/education/">Options for families, instructors, and programs</a>.</p>
   </div>
 </section>
 {not_open_section}
@@ -503,7 +503,7 @@ def about():
     <p>For centuries the educated of Europe and America were formed the same way: Latin and Greek, Homer and Plato, Cicero and Virgil, and the history of every republic that rose and fell. Harvard's rules of 1642 asked a student to read Cicero and decline Greek nouns before he could be admitted. The men who wrote the American Constitution were products of that training, and they used it.</p>
     <p>A modern professional has a long education, but usually not that one. What it leaves out is the progression: why each age built what it did, why it failed, and what the next age learned. Sophandros restores that progression at a working pace, and turns it on the reader's own work.</p>
     <p>The wisdom in the name is the practical kind. Aristotle called it <em>phronēsis</em>: the judgment that sees what ought to be done in a particular case, and that he said comes only from experience. A professional already has the experience. Sophandros adds the store of cases and the habits of reasoning that turn it into judgment, from Achilles' anger to Madison's design.</p>
-    <p>It is written for anyone with a full week who wants the foundation under their profession: in law, medicine, business, government, the military or the trades of the mind.</p>
+    <p>It is written for anyone with a full week who wants the foundation under their profession: in law, medicine, business, government, the military, or the trades of the mind.</p>
   </div>
 </section>
 <section class="section">
@@ -516,7 +516,7 @@ def about():
 <section class="section tint">
   <div class="container">
     <div class="head"><span class="kicker">The languages</span><h2>The Latin you will actually use</h2>
-      <p class="lede">About fifteen minutes a week and a hundred phrases, chosen because they still run through law, medicine, business and everyday writing. Reading Cicero in the original is an optional course for later.</p></div>
+      <p class="lede">About fifteen minutes a week and a hundred phrases, chosen because they still run through law, medicine, business, and everyday writing. Reading Cicero in the original is an optional course for later.</p></div>
     <div class="table-wrap"><table class="table"><tbody>{latin_rows}</tbody></table></div>
   </div>
 </section>
@@ -568,7 +568,7 @@ def books():
     </div>
     <div class="grid grid-2" style="max-width:52rem;margin:var(--s5) auto 0">
       <div class="card"><span class="meta">Planned</span><h3>The Illustrated Edition</h3><p>The same book with every picture kept. The current paperback and Kindle run about half the pictures, trimmed so they don't break up the flow of reading.</p></div>
-      <div class="card"><span class="meta">With the course</span><h3>The online lessons</h3><p>The course follows the book chapter by chapter, with a lesson, a reading, a check and a writing drill each week. <a href="/curriculum/">See the curriculum</a>.</p></div>
+      <div class="card"><span class="meta">With the course</span><h3>The online lessons</h3><p>The course follows the book chapter by chapter, with a lesson, a reading, a check, and a writing drill each week. <a href="/curriculum/">See the curriculum</a>.</p></div>
     </div>
     <p class="center muted" style="margin:var(--s4) auto 0;max-width:var(--measure)">Instructors considering the book for a course can ask for a free review copy: <a href="mailto:{C.SITE['education_email']}?subject=Review%20copy">{C.SITE['education_email']}</a>.</p>
   </div>
@@ -589,10 +589,10 @@ def american_series():
 <section class="section" style="padding-top:var(--s3)">
   <div class="container">
     <div class="grid grid-2" style="max-width:52rem;margin:0 auto">
-      <div class="card"><span class="meta">First · in preparation</span><h3>The Founding</h3><p>The classical education of the Founders, the Declaration, the Convention, ratification and Washington's precedents, in about twelve weeks.</p></div>
+      <div class="card"><span class="meta">First · in preparation</span><h3>The Founding</h3><p>The classical education of the Founders, the Declaration, the Convention, ratification, and Washington's precedents, in about twelve weeks.</p></div>
       <div class="card"><span class="meta">Planned</span><h3>The Early Republic</h3><p>Parties, the Marshall Court, Jefferson and Hamilton, and the Jacksonian era.</p></div>
       <div class="card"><span class="meta">Planned</span><h3>The Civil War</h3><p>Slavery and the Constitution, Lincoln as a self-taught classicist, Gettysburg beside Pericles, and Reconstruction.</p></div>
-      <div class="card"><span class="meta">Later</span><h3>The American century</h3><p>The Progressive era, the world wars and after.</p></div>
+      <div class="card"><span class="meta">Later</span><h3>The American century</h3><p>The Progressive era, the world wars, and after.</p></div>
     </div>
     <p class="center muted" style="margin:var(--s4) auto 0;max-width:var(--measure)">Each course uses the same lesson shape and the same writing drills, so a reader who finishes the main course can move straight into any of them.</p>
     <div class="actions"><a class="button" href="mailto:{C.SITE['email']}?subject=American%20series">Write to us</a><a class="button ghost" href="/curriculum/#founding">The founding in the main course</a></div>
@@ -684,24 +684,24 @@ def families():
       <div class="card">
         <span class="meta">Collegiate</span>
         <h3>A text for a seminar</h3>
-        <p>Twenty-six chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course or a first-year program.</p>
+        <p>Twenty-six chapters of primary sources in translation, from <em>Gilgamesh</em> and Homer to the <em>Federalist</em>, each with a writing exercise from the classical schools. It fits an honors seminar, a Great Books course, or a first-year program.</p>
         <p class="note">Instructors considering the book for a course can ask for a free review copy: write to <a href="mailto:{mail}?subject=Review%20copy">{mail}</a> with your institution and course. The book is <a href="/books/">now available on Amazon</a>, in paperback and Kindle.</p>
       </div>
       <div class="card">
         <span class="meta">Graduate and postgraduate</span>
         <h3>For a cohort or a group</h3>
-        <p>Medical, law and graduate schools, residency and fellowship programs, classical academies and teams at work can take the course together, a chapter a week, with the writing exercises as shared assignments.</p>
+        <p>Medical, law, and graduate schools; residency and fellowship programs; classical academies; and teams at work can take the course together, a chapter a week, with the writing exercises as shared assignments.</p>
         <p>Postgraduate programs can also offer it to their students and trainees on its own, as part of a wellness program: a course in the whole person, not only the profession, that prepares them for life beyond the program.</p>
         <p class="note">Group licenses are available. Write to <a href="mailto:{mail}?subject=Group%20license">{mail}</a> with the size of your group and how you would use it.</p>
       </div>
     </div>
-    <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free. Questions from parents, instructors and programs: <a href="mailto:{mail}">{mail}</a>.</p>
+    <p class="center muted" style="margin-top:var(--s5)">Not sure it suits your student? <a href="/chapters/01-the-self/">Read Chapter 1</a>, which is free. Questions from parents, instructors, and programs: <a href="mailto:{mail}">{mail}</a>.</p>
   </div>
 </section>
 {education_samples()}
 """
     return page("/education/", "Education",
-                "Sophandros for advanced homeschool students, college seminars, professional schools and residency programs: a free parent's guide, review copies for instructors, and group licenses.", body, active="/education/")
+                "Sophandros for advanced homeschool students, college seminars, professional schools, and residency programs: a free parent's guide, review copies for instructors, and group licenses.", body, active="/education/")
 
 
 def not_found():

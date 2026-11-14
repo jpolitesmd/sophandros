@@ -31,7 +31,7 @@ BOOK = {
 # The thesis, stated once and reused on the home and curriculum pages.
 THESIS = (
     "As civilization grew, so did the circle each man had to govern. First he had to rule "
-    "himself; then a household; then a city; then a republic, an empire, the wider world and "
+    "himself; then a household; then a city; then a republic, an empire, the wider world, and "
     "finally a new nation. Each larger circle demanded skills the smaller one never taught: "
     "the honor that governs a man cannot run a household, and what runs a household cannot "
     "run a city. Sophandros is built the same way. The course grows as the circle grows: "
@@ -50,14 +50,14 @@ PARTS = [
         "title": "The stage: the first cities",
         "ring": "Before the circles open",
         "weeks": "2 weeks",
-        "summary": "Farming, writing and the first laws, then the first Greeks and the collapse of their palaces.",
+        "summary": "Farming, writing, and the first laws, then the first Greeks and the collapse of their palaces.",
         "intro": (
             "Homer's poems, sung in the eighth century BC, told of a world already 500 years gone, and that "
             "world stood on thousands of years of earlier civilization. The prologue sets the stage "
             "so the reader meets Achilles knowing what came before him."
         ),
         "failed": (
-            "The god-kings of the Near East and the palace states of the Aegean held power, knowledge "
+            "The god-kings of the Near East and the palace states of the Aegean held power, knowledge, "
             "and writing in a few hands. When the palaces fell, writing in Greece was lost for about "
             "400 years."
         ),
@@ -69,7 +69,7 @@ PARTS = [
         "title": "Greece: from the self to the city",
         "ring": "The self, the household, the city",
         "weeks": "8 weeks",
-        "summary": "Honor, the household, the citizen-soldier, the court, Socrates, proof and practical wisdom.",
+        "summary": "Honor, the household, the citizen-soldier, the court, Socrates, proof, and practical wisdom.",
         "intro": (
             "Greece lays the first eight layers of the complete man and teaches most of the tools: honor, "
             "mind and home, the citizen who fights, conscience and law, the examined mind, proof, "
@@ -84,9 +84,9 @@ PARTS = [
         "title": "Rome: the republic and the empire",
         "ring": "The family, the nation, the empire",
         "weeks": "7 weeks",
-        "summary": "Duty, the mixed constitution, eloquence, character, self-command and government at scale.",
+        "summary": "Duty, the mixed constitution, eloquence, character, self-command, and government at scale.",
         "intro": (
-            "Rome adds duty, law and a state that lasts. For 1,800 years it was the model every "
+            "Rome adds duty, law, and a state that lasts. For 1,800 years it was the model every "
             "educated European and American measured public life against."
         ),
         "failed": "The Republic fell to civil war and one-man rule, and the empire later fell in the West.",
@@ -101,7 +101,7 @@ PARTS = [
         "title": "The wider world: toward 1776",
         "ring": "Christendom, Europe, the cosmos",
         "weeks": "4 weeks",
-        "summary": "Natural law, the Renaissance, the new science, and rights, consent and balanced power.",
+        "summary": "Natural law, the Renaissance, the new science, and rights, consent, and balanced power.",
         "intro": (
             "Four chapters carry the inheritance across 1,700 years, keeping only what the Founders "
             "actually used. They add four layers: law above kings, the ancients reborn as models, the laws "
@@ -131,7 +131,7 @@ PARTS = [
         "title": "Your own circle: the tools at work today",
         "ring": "Back to the center",
         "weeks": "2 weeks",
-        "summary": "Writing, judgment and leadership in your own work, and the capstone.",
+        "summary": "Writing, judgment, and leadership in your own work, and the capstone.",
         "intro": (
             "The course ends where the old education always aimed: at the reader's own work. Each "
             "chapter revisits earlier texts and turns them on a real professional task."
@@ -151,11 +151,11 @@ CHAPTERS = [
     # Prologue
     {
         "num": "P1", "label": "Prologue to Civilization", "slug": "p1-before-the-greeks", "part": "prologue",
-        "circle": "Before the Greeks", "theme": "farming, writing and the first laws",
+        "circle": "Before the Greeks", "theme": "farming, writing, and the first laws",
         "era": "about 9500–1500 BC",
         "readings": [
             "Göbekli Tepe and Çatalhöyük: the first monuments and towns",
-            "<em>The Epic of Gilgamesh</em>, tablets 1, 10 and 11 (friendship, death, the flood)",
+            "<em>The Epic of Gilgamesh</em>, tablets 1, 10, and 11 (friendship, death, the flood)",
             "The prologue and selected laws of Hammurabi (about 1754 BC)",
             "The Egyptian <em>Instruction of Ptahhotep</em>: advice to an official",
         ],
@@ -167,11 +167,11 @@ CHAPTERS = [
     },
     {
         "num": "P2", "label": "Prologue to Greece", "slug": "p2-the-first-greeks", "part": "prologue",
-        "circle": "The first Greeks", "theme": "palaces, collapse and memory",
+        "circle": "The first Greeks", "theme": "palaces, collapse, and memory",
         "era": "about 3000–750 BC",
         "readings": [
-            "Minoan Crete: Knossos, Linear A and the Thera eruption",
-            "The Mycenaeans: Linear B, the Lion Gate and Grave Circle A",
+            "Minoan Crete: Knossos, Linear A, and the Thera eruption",
+            "The Mycenaeans: Linear B, the Lion Gate, and Grave Circle A",
             "The Late Bronze Age collapse around 1200 BC, and the Dark Age",
             "Thucydides 1.2–12: how the Greeks reconstructed their own early past",
             "Hesiod, <em>Works and Days</em> 106–201: the Five Ages",
@@ -187,7 +187,7 @@ CHAPTERS = [
         "num": "1", "slug": "01-the-self", "part": "greece",
         "circle": "The self", "theme": "honor",
         "era": "Homer's <em>Iliad</em>",
-        "readings": ["Homer, <em>Iliad</em> 1, 9, 22 and 24 (selections)"],
+        "readings": ["Homer, <em>Iliad</em> 1, 9, 22, and 24 (selections)"],
         "tool": "Poetry, and the first Greek words: timē and kleos.",
         "exercise": ("Chreia", "Explain why a leader's single action mattered."),
         "graduate": "Alexander the Great kept the <em>Iliad</em> with him on campaign.",
@@ -199,13 +199,13 @@ CHAPTERS = [
         "circle": "The household", "theme": "mind and home",
         "era": "Homer's <em>Odyssey</em>; Hesiod",
         "readings": [
-            "Homer, <em>Odyssey</em> 9, 19 and 21–23 (selections)",
+            "Homer, <em>Odyssey</em> 9, 19, and 21–23 (selections)",
             "Hesiod, <em>Works and Days</em> (selections)",
         ],
         "tool": "Grammar: how a sentence is built, in English and in Latin.",
         "exercise": ("Maxim", "Argue for a rule you live by at work."),
         "graduate": "Cato the Elder ran his estate by the farmer's ethic and wrote it down in <em>On Agriculture</em>.",
-        "lesson": "Cunning, self-command, hospitality and honest work make a man able to keep a house. A good household still cannot protect itself from bad public justice.",
+        "lesson": "Cunning, self-command, hospitality, and honest work make a man able to keep a house. A good household still cannot protect itself from bad public justice.",
         "core": 2, "status": "planned",
     },
     {
@@ -279,11 +279,11 @@ CHAPTERS = [
         "era": "Aristotle's <em>Politics</em>; the Parthenon",
         "readings": [
             "Aristotle, <em>Politics</em> 1.2 (the political animal), 3.7 (the forms of government), 4.11 (the middle class)",
-            "Aristotle, <em>Rhetoric</em> 1.2 (character, reason and feeling)",
+            "Aristotle, <em>Rhetoric</em> 1.2 (character, reason, and feeling)",
             "The Parthenon and the three orders",
         ],
         "tool": "Rhetoric; architecture.",
-        "exercise": ("Comparison", "Compare two options, people or strategies side by side."),
+        "exercise": ("Comparison", "Compare two options, people, or strategies side by side."),
         "graduate": "Jefferson named Aristotle among the books behind the Declaration of Independence.",
         "lesson": "Man is a political animal. The best practical constitution mixes rule by the few and the many and rests on a broad middle.",
         "core": 5, "status": "planned",
@@ -291,12 +291,12 @@ CHAPTERS = [
     # Part II, Rome
     {
         "num": "P3", "label": "Prologue to Rome", "slug": "p3-the-first-romans", "part": "rome",
-        "circle": "The first Romans", "theme": "a ford, seven hills and the kings",
+        "circle": "The first Romans", "theme": "a ford, seven hills, and the kings",
         "era": "about 1000–509 BC",
         "readings": [
-            "The site of Rome: the Tiber ford, the Salt Road and the seven hills (Livy 5.54)",
-            "Huts on the Palatine, hut urns and the graves beneath the Forum",
-            "Greeks and Etruscans: the alphabet, the Tarquins and the temple of Jupiter",
+            "The site of Rome: the Tiber ford, the Salt Road, and the seven hills (Livy 5.54)",
+            "Huts on the Palatine, hut urns, and the graves beneath the Forum",
+            "Greeks and Etruscans: the alphabet, the Tarquins, and the temple of Jupiter",
             "Livy, Preface 6–7 and 6.1: what the Romans knew of their own beginnings",
         ],
         "tool": "Geography: reading a site to understand what happened there.",
@@ -314,9 +314,9 @@ CHAPTERS = [
             "Livy, <em>History of Rome</em>, Preface",
         ],
         "tool": "Poetry; Latin: a line of Virgil read aloud.",
-        "exercise": ("Characterization", "Write as your client, patient or customer would see it."),
+        "exercise": ("Characterization", "Write as your client, patient, or customer would see it."),
         "graduate": "Charles Thomson drew two of the Great Seal's mottos from Virgil (1782).",
-        "lesson": "Pietas puts duty to family, country and the gods above personal glory, the opposite of Achilles.",
+        "lesson": "Pietas puts duty to family, country, and the gods above personal glory, the opposite of Achilles.",
         "core": None, "status": "planned",
     },
     {
@@ -330,7 +330,7 @@ CHAPTERS = [
         "tool": "Political philosophy; history.",
         "exercise": ("Description", "Describe a process or institution so a stranger understands it."),
         "graduate": "John Adams defended balanced government from Polybius.",
-        "lesson": "Rome lasted by balancing consuls, Senate and people, each checking the others.",
+        "lesson": "Rome lasted by balancing consuls, Senate, and people, each checking the others.",
         "core": 6, "status": "planned",
     },
     {
@@ -389,7 +389,7 @@ CHAPTERS = [
         "tool": "Architecture and proportion; law.",
         "exercise": ("Description, again", "Describe a building or a place so the reader can see it."),
         "graduate": "Leonardo's Vitruvian Man; Jefferson's Virginia State Capitol, modeled on a Roman temple.",
-        "lesson": "Roads, law and citizenship held a world together for centuries. Civil war, money and overstretch brought the West down.",
+        "lesson": "Roads, law, and citizenship held a world together for centuries. Civil war, money, and overstretch brought the West down.",
         "core": None, "status": "planned",
     },
     # Part III, the wider world
@@ -416,10 +416,10 @@ CHAPTERS = [
             "Machiavelli, <em>Discourses on Livy</em> 1.2 (Polybius' cycle)",
             "Palladio, <em>The Four Books of Architecture</em> 1 (1570, selections)",
         ],
-        "tool": "Architecture, proportion and music; one-point perspective.",
+        "tool": "Architecture, proportion, and music; one-point perspective.",
         "exercise": ("Comparison, again", "Compare the old way and the new way of doing something in your field."),
         "graduate": "Jefferson owned and studied Palladio's book, and used it at the University of Virginia.",
-        "lesson": "Recovering the ancients was not imitation for its own sake; it gave a new age models for cities, buildings and power.",
+        "lesson": "Recovering the ancients was not imitation for its own sake; it gave a new age models for cities, buildings, and power.",
         "core": None, "status": "planned",
     },
     {
@@ -439,10 +439,10 @@ CHAPTERS = [
     },
     {
         "num": "18", "slug": "18-the-nation-state", "part": "world",
-        "circle": "The nation-state", "theme": "rights, consent and balanced power",
+        "circle": "The nation-state", "theme": "rights, consent, and balanced power",
         "era": "Locke to Montesquieu",
         "readings": [
-            "Locke, <em>Second Treatise of Government</em> 2, 8 and 19 (selections, 1689)",
+            "Locke, <em>Second Treatise of Government</em> 2, 8, and 19 (selections, 1689)",
             "Montesquieu, <em>The Spirit of the Laws</em> 11.6 (1748)",
             "Hume, \"Idea of a Perfect Commonwealth\"",
         ],
@@ -462,8 +462,8 @@ CHAPTERS = [
             "Franklin, <em>Autobiography</em>: the thirteen virtues",
             "The Declaration of Independence, beside Jefferson's draft",
         ],
-        "tool": "Logic, natural law and rhetoric, all at once.",
-        "exercise": ("Confirmation, again", "Lay out the Declaration's argument as premises, evidence and conclusion."),
+        "tool": "Logic, natural law, and rhetoric, all at once.",
+        "exercise": ("Confirmation, again", "Lay out the Declaration's argument as premises, evidence, and conclusion."),
         "graduate": "The Founders themselves.",
         "lesson": "The Declaration is a syllogism addressed to a candid world: stated premises, submitted facts, a conclusion.",
         "core": 10, "status": "planned",
@@ -548,16 +548,16 @@ TOOLS = [
         "group": "The trivium",
         "note": "The arts of language",
         "items": [
-            ("Grammar", "The Latin and Greek still used in law, medicine and business."),
+            ("Grammar", "The Latin and Greek still used in law, medicine, and business."),
             ("Logic", "Defining terms, testing claims, building a valid argument."),
-            ("Rhetoric", "Persuading by character, reason and feeling."),
+            ("Rhetoric", "Persuading by character, reason, and feeling."),
         ],
     },
     {
         "group": "The quadrivium",
         "note": "The arts of number",
         "items": [
-            ("Arithmetic and geometry", "Proof, proportion and measurement."),
+            ("Arithmetic and geometry", "Proof, proportion, and measurement."),
             ("Music", "Harmony as ratio, from Pythagoras to Palladio."),
             ("Astronomy", "The order of nature and the method of science."),
         ],
@@ -567,7 +567,7 @@ TOOLS = [
         "note": "The arts of public life",
         "items": [
             ("History", "A store of examples: why states rose and fell."),
-            ("Poetry", "Character, memory and a shared culture."),
+            ("Poetry", "Character, memory, and a shared culture."),
             ("Moral and political philosophy", "Self-command, judgment, and how constitutions balance power."),
             ("Law and architecture", "Order made public, in statutes and in stone."),
         ],
@@ -588,8 +588,8 @@ EXERCISES = [
     ("Commonplace", "Amplifying against a vice", "A short talk against a common failing in your field"),
     ("Encomium", "Praise grounded in virtues", "A recommendation letter or a tribute"),
     ("Invective", "Blame grounded in vices", "A frank critique of a failed project, aimed at conduct"),
-    ("Comparison", "Weighing two things side by side", "Compare two options, people or strategies"),
-    ("Characterization", "Writing in another's voice", "Write as your client, patient or customer would see it"),
+    ("Comparison", "Weighing two things side by side", "Compare two options, people, or strategies"),
+    ("Characterization", "Writing in another's voice", "Write as your client, patient, or customer would see it"),
     ("Description", "Making the reader see", "Describe a process so a stranger understands it"),
     ("Thesis", "Arguing a general question both ways", "Should a professional ever put duty above a client's wishes?"),
     ("Proposal of a law", "Arguing for a rule for everyone", "Propose a policy for your organization and answer its objections"),
@@ -599,7 +599,7 @@ EXERCISES = [
 WEEK = [
     ("Two lessons", "2 × 30 min", "The teacher's essay: the setting, the passage, what it means, and someone who used it."),
     ("The reading", "60–75 min", "The week's selection on the page, in a public-domain translation."),
-    ("Latin phrases", "15 min", "Three to five phrases still used in law, medicine, business or daily life."),
+    ("Latin phrases", "15 min", "Three to five phrases still used in law, medicine, business, or daily life."),
     ("The exercise", "20 min", "One of the classical writing drills, applied to your own work."),
     ("Commonplace book", "10 min", "Copy one passage by hand and write two sentences on what it means for you."),
     ("Check yourself", "5 min", "Five questions on the week's reading, with answers to reveal when you are done. Course only."),
@@ -637,7 +637,7 @@ EDITIONS = [
      "The prologue, the six Greek layers, Rome's republic and its statesmen, natural rights, the founding, and the capstone, with a weekly self-check and a model answer for every writing exercise.",
      "Already in the core course? Write to us to move up to the extended edition."),
     ("The extended edition", "26 weeks + book", "$199", "$249",
-     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance and the new science, at a fuller pace, with a self-check and a model answer for every week. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
+     "Everything in the core, plus tragedy, Virgil, the Roman empire, the Renaissance, and the new science, at a fuller pace, with a self-check and a model answer for every week. Includes the digital book: all 26 chapters with a timeline and a glossary of Greek and Latin.",
      'The paperback and Kindle editions are now available on <a href="/books/">Amazon</a>. The online lessons keep every picture in the chapters; the paperback runs about half the pictures, trimmed so they don\'t break up the flow of reading.'),
 ]
 
